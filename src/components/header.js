@@ -14,6 +14,7 @@ function Header() {
                         <li className="li-main"><Link to="/home">Home</Link> </li>
                         <li className="li-main"> <Link to="/about"> About</Link></li>
                         <li className="li-main"><Link to="/course">Courses</Link> </li>
+                        <li className="li-main"><Link to="/contact-us">Contact Us</Link> </li>
                         <li className="li-main"> <Link to="/userProfile">My Profile</Link></li>
                     </ul>
                 </div>
