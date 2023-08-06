@@ -10,6 +10,7 @@ import Header from './components/header';
 import Enroll from './components/Enrollment';
 import UserProfile from './components/profile';
 import axios from 'axios';
+import Privacy from './components/privacy';
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
         <Route path='/About' element={<About/>}></Route>
         <Route path='/enroll'element={<Enroll/>}></Route>
         <Route path='/' element={<Goggle/>}></Route>
-        <Route path='userProfile' element={<UserProfile/>}></Route>
+        <Route path='/userProfile' element={<UserProfile/>}></Route>
+        <Route path='/Privacy' element={<Privacy/>}></Route>
       </Routes>
  
     </div>
