@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Home from './components/home';
+import About from './components/About';
+import Course from './components/course';
+import Goggle from './components/googleLogin';
+import { GoogleLogin } from '@react-oauth/google';
+import Header from './components/header';
+import Enroll from './components/Enrollment';
+import UserProfile from './components/profile';
+import axios from 'axios';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  
+      <Routes>
+        <Route path='/home' element={<Home/>}></Route>
+        <Route path='/course' element={<Course/>}></Route>
+        <Route path='/About' element={<About/>}></Route>
+        <Route path='/enroll'element={<Enroll/>}></Route>
+        <Route path='/' element={<Goggle/>}></Route>
+        <Route path='userProfile' element={<UserProfile/>}></Route>
+      </Routes>
+ 
     </div>
   );
 }
