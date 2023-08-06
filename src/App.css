@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600&family=Poppins&display=swap');
 
 
 .home-head{
@@ -394,6 +395,160 @@ text-transform: capitalize;
 
 /* ----------------------Contact us css Start----------------------- */
 
+.contactus-area{
+margin-left: 20px;
+margin-right: 30px;
+margin-top: 15px;
+}
+
+.contactus-container1{
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+}
+
+.contactus-map{
+  width: 49%;
+  height: 613px;
+}
+.contactus-map>img{
+  width: 100%;
+  height: 100%;
+}
+
+
+.contactus-form{
+  width: 49%;
+  height: 613px;
+}
+
+.formparentbox{
+  border: 1px solid #E2E2E2;
+  padding: 0px 2rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.form-heading{
+  color: #12037F;
+  text-align: center;
+  font-family: Nunito Sans;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.form-box1{
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+.formname{
+  width: 48%;
+}
+.formemail{
+  width: 48%;
+}
+.form-box1>div>label{
+  color: #737373;
+font-family: Nunito Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.form-box1>div>input{
+  border: 1px solid #E1E1E1;
+height: 34px;
+flex-shrink: 0;
+width: 100%;
+outline: none;
+}
+.required:after {
+  content:"*";
+  color: #737373;
+}
+.formbox2{
+  text-align: left;
+  margin-top: 2rem;
+}
+.formbox2>label{
+  color: #737373;
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: block;
+}
+.formbox2>input{
+  border: 1px solid #E1E1E1;
+height: 34px;
+flex-shrink: 0;
+width: 100%;
+outline: none;
+}
+.formbox3{
+  text-align: left;
+  margin-top: 2rem;
+}
+.formbox3>label{
+  color: #737373;
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: block;
+}
+.formbox3>input{
+  border: 1px solid #E1E1E1;
+height: 34px;
+flex-shrink: 0;
+width: 100%;
+outline: none;
+}
+.formbox4{
+  text-align: left;
+  margin-top: 2rem;
+}
+.formbox4>label{
+  color: #737373;
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: block;
+  
+}
+.formbox4>textarea{
+  border: 1px solid #E1E1E1;
+height: 113px;
+flex-shrink: 0;
+width: 100%;
+outline: none;
+}
+.submitbtn>input{
+  margin-top: 2rem;
+  background: #12037F;
+  display: flex;
+width: 100%;
+padding: 10px 231px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+color: #fff;
+font-family: Poppins;
+font-weight: 500;
+font-size: 20px;
+line-height: normal;
+border: none;
+}
 
 
 /* ----------------------Contact us css Ends----------------------- */

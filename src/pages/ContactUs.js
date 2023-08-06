@@ -3,6 +3,7 @@ import Header from '../components/header'
 import PageHeaer from '../components/PageHeaer'
 import Avatar from "../images/enroll-now.png"
 import Map from "../images/map.png"
+import ContactUsForm from '../components/ContactUsForm'
 
 
 function ContactUs() {
@@ -10,11 +11,17 @@ function ContactUs() {
     <div>
         <Header/>
         <PageHeaer heading={"Contact Us"} backgroundimage={Avatar}  />
+        <section className='contactus-area' >
 
-        <section className='contactus-container' >
-              <div children="contactus-map" >
+        <section className='contactus-container1' >
+
+              <div className="contactus-map" >
                    <img src={Map} alt='map' />
               </div>
+
+               <ContactUsForm/>
+        </section>
+
         </section>
 
     </div>
