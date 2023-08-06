@@ -11,6 +11,7 @@ import Enroll from './components/Enrollment';
 import UserProfile from './components/profile';
 import axios from 'axios';
 import Privacy from './components/privacy';
+import ContactUs from './pages/ContactUs';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/' element={<Goggle/>}></Route>
         <Route path='/userProfile' element={<UserProfile/>}></Route>
         <Route path='/Privacy' element={<Privacy/>}></Route>
+        <Route path='/contact-us' element={<ContactUs/>}></Route>
       </Routes>
  
     </div>
