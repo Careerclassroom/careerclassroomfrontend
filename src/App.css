@@ -903,5 +903,39 @@ line-height: normal;
 border: none;
 }
 
-
+.contactus-container2{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  gap: 5%;
+}
+.contactus-card{
+  border: 3.14px solid rgba(115, 115, 115, 0.04);
+  padding: 1rem;
+  width: 100%;
+}
+.contactus-card-icon{
+  margin-bottom: 1rem;
+}
+.contactus-card-icon>img{
+  width: 38px;
+  height: 30.4px;
+}
+.contactus-card-heading{
+  color: var(--dark-blue, #14252C);
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.contactus-card-text{
+  color: #737373;
+text-align: center;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
 /* ----------------------Contact us css Ends----------------------- */
