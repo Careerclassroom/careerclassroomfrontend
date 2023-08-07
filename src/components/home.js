@@ -19,7 +19,7 @@ function Home() {
                     <div className='join'>
                         <h2 className='join-content'>Join us for an exclusive LIVE workshop on Power BI, starting on 10th August!</h2>
                     </div>
-                    <button style={{ marginTop: "50px" }} className='head-btn'>Click to know  more <img width="20px" style={{ position: "relative", top: "5px" }} src={no_profile}></img> </button>
+                    <button style={{ marginTop: "50px" }} className='head-btn'>Enroll Now <img width="20px"  src={no_profile}></img> </button>
 
                 </div>
             </div>
