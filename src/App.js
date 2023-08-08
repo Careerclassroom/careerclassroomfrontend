@@ -27,7 +27,7 @@ function App() {
         <Route path='/userProfile' element={<UserProfile/>}></Route>
         <Route path='/Privacy' element={<Privacy/>}></Route>
         <Route path='/contact-us' element={<ContactUs/>}></Route>
-        <Route path='/privacy-policy' element={<RefundPolicy/>}></Route>
+        <Route path='/refund-policy' element={<RefundPolicy/>}></Route>
       </Routes>
  
     </div>
