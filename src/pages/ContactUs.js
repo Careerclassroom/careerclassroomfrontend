@@ -9,6 +9,7 @@ import Location from "../images/location.svg"
 import Timer from "../images/timer.svg"
 import Mail from "../images/mail.svg"
 import Call from "../images/phone.svg"
+import Footer from '../components/footer'
 
 
 
@@ -53,7 +54,7 @@ function ContactUs() {
         <section className='contactus-container1' >
 
           <div className="contactus-map" >
-            <img src={Map} alt='map' />
+            <img src="https://img.freepik.com/free-vector/flat-customer-support-illustration_23-2148899114.jpg?size=626&ext=jpg" alt='map' />
           </div>
 
           <ContactUsForm />
@@ -66,7 +67,7 @@ function ContactUs() {
         </section>
 
       </section>
-
+     <Footer/>
     </div>
   )
 }

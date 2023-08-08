@@ -12,6 +12,7 @@ import UserProfile from './components/profile';
 import axios from 'axios';
 import Privacy from './components/privacy';
 import ContactUs from './pages/ContactUs';
+import RefundPolicy from './pages/RefundPolicy';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/userProfile' element={<UserProfile/>}></Route>
         <Route path='/Privacy' element={<Privacy/>}></Route>
         <Route path='/contact-us' element={<ContactUs/>}></Route>
+        <Route path='/privacy-policy' element={<RefundPolicy/>}></Route>
       </Routes>
  
     </div>
