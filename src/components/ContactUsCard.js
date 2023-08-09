@@ -13,7 +13,9 @@ function ContactUsCard({name,text,icon}) {
             <div className='contactus-card-text' >
             <p>{text}</p>
             </div>
-        </div>
+        
+        
+      </div>
     </div>
   )
 }
