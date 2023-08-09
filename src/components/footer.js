@@ -20,8 +20,9 @@ function Footer() {
          <Link to="/" className='footer-brand'> <img src={logo2} width="200px" alt = "loading..."></img></Link>
           <p className='foot-para' style={{
 
-          }}>We make it easy for you to choose a counselor for your study abroad journey by bringing multiple consultants under one roof.
-            Our aim is to enable every aspirant to get the best service and guidance and to help them find their most suited study abroad counselor. </p>
+          }}>Learn In-Demand Skill To Start your Career Like a Boss ! Climb to the Top 1%: Learn from Industry Titans. Make each day count with upskilling through Career Classroom </p>
+    
+
     
           <div className="footer-link-main">
           {/* <Link classname="footlink" to="https://www.facebook.com/Kounselo" target="_blank"><img src={facebook} className="social-media" alt=""></img></Link>
