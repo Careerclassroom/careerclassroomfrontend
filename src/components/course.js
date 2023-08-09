@@ -11,6 +11,11 @@ function Course() {
                 <div className='about-child'>
                     <span className='about-text'>Course</span>
 
+ 
+ 
+ 
+ 
+ 
                 </div>
                 <div>
                     <h1>
