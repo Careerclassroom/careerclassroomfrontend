@@ -13,6 +13,7 @@ import axios from 'axios';
 import Privacy from './components/privacy';
 import ContactUs from './pages/ContactUs';
 import Terms from './components/terms';
+import Checkout from './components/checkout';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path='/Privacy' element={<Privacy/>}></Route>
         <Route path='/contact-us' element={<ContactUs/>}></Route>
         <Route path='/terms' element={<Terms/>}></Route>
+        <Route path='/checkout' element={<Checkout/>}></Route>
       </Routes>
  
     </div>
