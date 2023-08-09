@@ -22,6 +22,8 @@ function Footer() {
 
           }}>Learn In-Demand Skill To Start your Career Like a Boss ! Climb to the Top 1%: Learn from Industry Titans. Make each day count with upskilling through Career Classroom </p>
     
+
+    
           <div className="footer-link-main">
           {/* <Link classname="footlink" to="https://www.facebook.com/Kounselo" target="_blank"><img src={facebook} className="social-media" alt=""></img></Link>
           <Link classname="footlink" to="https://twitter.com/kounseloindia?s=11&t=l_7ZXQszpxBTPvBPrtej9g" target="_blank"><img src={twitter} className="social-media" alt=""></img></Link>
