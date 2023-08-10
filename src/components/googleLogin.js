@@ -19,7 +19,7 @@ function Goggle() {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://127.0.0.1:8000/api/v1/user/signup", {
+      const response = await axios.post("https://bronze-ladybug-tutu.cyclic.app/api/v1/user/signup", {
         name: name,
         // lastname:lastname,
         email: email,
