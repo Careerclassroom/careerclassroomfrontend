@@ -1,4 +1,5 @@
 import React from "react"
+import Header from "./header"
 
 
 
@@ -6,14 +7,15 @@ import React from "react"
 function Checkout() {
     return (
         <>
+    <Header/>
             <div>
 
-                <div className='about-main'>
-                    <div className='about-child'>
-                        <span className='about-text'>Enrollment Form</span>
+                <div  style={{position:"relative",top:"80px"}}className='about-main'>
+                    <div className=''>
+                        <span className='about-text'>Checkout </span>
 
                     </div>
-                    <div style={{ width: "100%", backgroundColor: "rgba(18, 3, 127, 1)", height: "70px", color: "white", fontSize: "30px", padding: "10px", marginTop: "20px" }}>
+                    <div style={{ width: "100%", backgroundColor: "rgba(18, 3, 127, 1)", height: "70px", color: "white", fontSize: "30px", padding: "10px", marginTop: "160px" }}>
                         You are just one step away to start new journey
                     </div>
                     <div className="checkout">
@@ -82,10 +84,10 @@ function Checkout() {
 
                         </div>
 
-                        <div className="coupon">
+                        {/* <div className="coupon">
                             <input className="coupon-code" type="text" placeholder="Have a coupon?"></input><button className="apply-now">Apply</button>
 
-                        </div>
+                        </div> */}
 
                     </div>
                     <div className="Benefits">
@@ -109,6 +111,7 @@ function Checkout() {
                    <h5>Pay securely by Credit or Debit card or Internet Banking through cash free</h5>
                    Pay securely by Credit or Debit card or Internet Banking through Razorpay.
                    <p style={{marginTop:"20px"}}>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
+                   <button className='Proceed' style={{marginTop:"0px"}} type='submit'>Pay Now</button>
                     </div>
 
                 </div>

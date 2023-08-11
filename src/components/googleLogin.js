@@ -14,16 +14,16 @@ function Goggle() {
   const [confirm_password, setconfirm_passwod] = useState("")
   const [token, settoken] = useState("")
   const [sign, setsign] = useState("signup")
-  const navigate=useNavigate("")
-  const dispatch=useDispatch("")
-  const baseUrls="http://localhost:8000"
-  const baseUrl="https://server.careerclassroom.in"
+  const navigate = useNavigate("")
+  const dispatch = useDispatch("")
+  const baseUrls = "http://localhost:8000"
+  const baseUrl = "https://server.careerclassroom.in"
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post(`${baseUrl}/api/v1/user/signup`, {
         name: name,
-        // lastname:lastname,
+        lastname: lastname,
         email: email,
         password: password,
         confirm_password: confirm_password,
@@ -32,13 +32,13 @@ function Goggle() {
         }
 
 
-        
+
 
         // isEmailVerified: isEmailVerified
       });
       // dispatch(getUserIdFromAuth(response.data.data.user._id, response.data.data.user.name, response.data.data.user.email));
       if (response.data.statusbar === "success") {
-        dispatch(getUserIdFromAuth(response.data.data.user._id,  response.data.data.user.name, response.data.data.user.email));
+        dispatch(getUserIdFromAuth(response.data.data.user._id,response.data.data.user.lastname, response.data.data.user.name, response.data.data.user.email));
 
 
         settoken(response.data.token);
@@ -69,8 +69,8 @@ function Goggle() {
         // isEmailVerified: isEmailVerified
       });
       if (response.data.statusbar === "success") {
-        dispatch(getUserIdFromAuth(response.data.data.user._id,  response.data.data.user.name, response.data.data.user.email));
-       navigate("/home")
+        dispatch(getUserIdFromAuth(response.data.data.user._id,response.data.data.user.lastname, response.data.data.user.name, response.data.data.user.email));
+        navigate("/home")
       }
     } catch (error) {
       console.log(error)
@@ -86,14 +86,14 @@ function Goggle() {
           <div>
             <h4 className='sign-head'>Create Your Account </h4>
             <form onSubmit={handleSignUp}>
-              <input className='sign-form' value={name} onChange={(e) => setName(e.target.value)} type='text' placeholder='first Name' ></input>
-              {/* <input onChange={(e)=>setLastName(e.target.value)} type='text' placeholder='last Name' ></input> */}
+              <input required className='sign-form' value={name} onChange={(e) => setName(e.target.value)} type='text' placeholder='first Name' ></input>
+              <input required className='sign-form' onChange={(e) => setLastName(e.target.value)} type='text' placeholder='last Name' ></input>
 
-              <input className='sign-form' value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='email' ></input>
+              <input required className='sign-form' value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='email' ></input>
 
-              <input className='sign-form' value={password} onChange={(e) => setpasswod(e.target.value)} type='password' placeholder='******' ></input>
+              <input required className='sign-form' value={password} onChange={(e) => setpasswod(e.target.value)} type='password' placeholder='******' ></input>
 
-              <input className='sign-form' value={confirm_password} onChange={(e) => setconfirm_passwod(e.target.value)} type='password' placeholder='*****'></input><br></br>
+              <input required className='sign-form' value={confirm_password} onChange={(e) => setconfirm_passwod(e.target.value)} type='password' placeholder='*****'></input><br></br>
               <button className='sign-btn' type='submit'>Sign Up</button>
 
             </form>
@@ -101,14 +101,14 @@ function Goggle() {
         }
         {sign == "login" &&
           <div>
-              <h4 className='sign-head'>Login to your account</h4>
+            <h4 className='sign-head'>Login to your account</h4>
             <form onSubmit={handleLogin}>
 
               {/* <input onChange={(e)=>setLastName(e.target.value)} type='text' placeholder='last Name' ></input> */}
-        
-              <input className='sign-form' value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='email' ></input>
-         
-              <input className='sign-form' value={password} onChange={(e) => setpasswod(e.target.value)} type='password' placeholder='******' ></input>
+
+              <input required className='sign-form' value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='email' ></input>
+
+              <input required className='sign-form' value={password} onChange={(e) => setpasswod(e.target.value)} type='password' placeholder='******' ></input>
 
               <button className='sign-btn' type='submit'>Login </button>
 

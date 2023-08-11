@@ -30,10 +30,10 @@ function App() {
         <Route path='/enroll'element={<Enroll/>}></Route>
         <Route path='/' element={<Goggle/>}></Route>
         <Route path='/userProfile' element={<UserProfile/>}></Route>
-        <Route path='/Privacy' element={<Privacy/>}></Route>
+        <Route path='/privacy' element={<Privacy/>}></Route>
         <Route path='/contact-us' element={<ContactUs/>}></Route>
 
-        <Route path='/terms' element={<Terms/>}></Route>
+        <Route path='/terms-condition' element={<Terms/>}></Route>
         <Route path='/checkout' element={<Checkout/>}></Route>
 
         <Route path='/refund-policy' element={<RefundPolicy/>}></Route>

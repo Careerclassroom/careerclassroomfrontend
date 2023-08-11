@@ -1,19 +1,49 @@
 import React, { useState } from 'react'
-
+const baseUrl = "https://server.careerclassroom.in"
 function ContactUsForm() {
 
-    const [inputs, setInputs] = useState({});
+    const [name, setname] = useState("");
+    const [email, setemail] = useState("");
+    const [contact, setcontact] = useState("");
+    const [message, setmessage] = useState("");
+    const [subject, setsubject] = useState("");
 
-    const handleChange = (event) => {
-      const name = event.target.name;
-      const value = event.target.value;
-      setInputs(values => ({...values, [name]: value}))
+    const handleSubmit= async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post(`${baseUrl}/api/v1/mail/send`, {
+                name: name,
+                email: email,
+                contact:contact,
+                message:message,
+                subject:subject
+
+
+
+
+
+                // isEmailVerified: isEmailVerified
+            });
+            // dispatch(getUserIdFromAuth(response.data.data.user._id, response.data.data.user.name, response.data.data.user.email));
+            if (response.data.statusbar === "success") {
+
+
+                settoken(response.data.token);
+                navigate("/home")
+                console.log(response.data.data.user.name)
+                settoken(response.data.token);
+                console.log(response.data)
+            }
+        } catch (error) {
+            console.log(error)
+
+        }
     }
-  
-    const handleSubmit = (event) => {
-      event.preventDefault();
-      console.log(inputs)
-    }
+
+
+
+
+
 
     return (
         <div className='contactus-form'>
@@ -24,24 +54,24 @@ function ContactUsForm() {
                     <div className='form-box1' >
                         <div className='formname' >
                             <label className='required' >Nama</label>
-                            <input type='text' name='name' value={inputs.name || ""} onChange={handleChange} required />
+                            <input type='text' name='name' value={name} onChange={(e)=>setname(e.target.value)} required />
                         </div>
                         <div className='formemail' >
                             <label className='required' >Email Address</label>
-                            <input type='email' name='email' value={inputs.email || ""} onChange={handleChange} required />
+                            <input type='email' name='email' value={email} onChange={(e)=>setemail(e.target.value)} required />
                         </div>
                     </div>
                     <div className='formbox2' >
                         <label className='required'>Phone</label>
-                        <input type='number' name='contact'  value={inputs.contact || ""} onChange={handleChange} required />
+                        <input type='number' name='contact' value={contact} onChange={(e)=>setcontact(e.target.value)} required />
                     </div>
                     <div className='formbox3' >
                         <label className='required'>Subject</label>
-                        <input name='subject' type='text' value={inputs.subject || ""} onChange={handleChange} required />
+                        <input name='subject' type='text' value={subject} onChange={(e)=>setsubject(e.target.value)} required />
                     </div>
                     <div className='formbox4' >
                         <label className='required'>Your Message</label>
-                        <textarea type="text" name='message' value={inputs.message || ""} onChange={handleChange} required />
+                        <textarea type="text" name='message' value={message} onChange={(e)=>setmessage(e.target.value)} required />
                     </div>
                 </div>
 

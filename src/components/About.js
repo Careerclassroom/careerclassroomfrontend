@@ -10,7 +10,7 @@ function About() {
         <>
             <Header />
             <div style={{ marginTop: "80px" }} className='about-main'>
-                <div className='about-child'>
+                <div className=''>
                     <span className='about-text'>About</span>
 
                 </div>
