@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import axios from 'axios';
 const baseUrl = "https://server.careerclassroom.in"
 function ContactUsForm() {
 
@@ -28,10 +29,10 @@ function ContactUsForm() {
             if (response.data.statusbar === "success") {
 
 
-                settoken(response.data.token);
-                navigate("/home")
-                console.log(response.data.data.user.name)
-                settoken(response.data.token);
+            
+               
+                
+               
                 console.log(response.data)
             }
         } catch (error) {
