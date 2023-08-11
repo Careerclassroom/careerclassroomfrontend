@@ -16,10 +16,12 @@ function Goggle() {
   const [sign, setsign] = useState("signup")
   const navigate=useNavigate("")
   const dispatch=useDispatch("")
+  const baseUrls="http://localhost:8000"
+  const baseUrl="https://server.careerclassroom.in"
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://bronze-ladybug-tutu.cyclic.app/api/v1/user/signup", {
+      const response = await axios.post(`${baseUrl}/api/v1/user/signup`, {
         name: name,
         // lastname:lastname,
         email: email,
@@ -50,10 +52,11 @@ function Goggle() {
 
     }
   }
+
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://bronze-ladybug-tutu.cyclic.app/api/v1/user/login", {
+      const response = await axios.post(`${baseUrl}/api/v1/user/login`, {
 
         // lastname:lastname,
         email: email,
