@@ -10,7 +10,7 @@ function RefundPolicy() {
       </div>
       <div className='privacy-policy-container'>
         <div className='heading'>
-          <p>Refund Policy</p>
+          <h4 className='font-privacy'>Refund Policy</h4>
         </div>
 
         <div className='paragraph' ><p>Thanks for your interest in GrowthSchool. We ensure to provide an excellent experience and learning to all our users. As with any online

@@ -33,30 +33,31 @@ function Footer() {
           </div>
         </div>
         <div className="service">
-          <h4 className="foot-head">SERVICES</h4>
-          <Link className='foot-link' to="/statement-of-purpose" > <h5 className="foot-content">Home</h5></Link>
-          <Link className='foot-link' to="/university-shortlisting">  <h5 className="foot-content">About</h5></Link>
-          <Link className='foot-link' to="/profile-evaluation"> <h5 className="foot-content">Courses</h5></Link>
-          <Link className='foot-link' to="/resume">  <h5 className="foot-content">Dashboard</h5></Link>
-          <Link className='foot-link' to="/visa-services"> <h5 className="foot-content">Contact Us </h5></Link>
-          <Link className='foot-link' to="/scholarship-application">  <h5 className="foot-content">My Profile</h5></Link>
+          <h4 className="foot-head">Quick Links</h4>
+          <Link className='foot-link' to="/home" > <h5 className="foot-content">Home</h5></Link>
+          <Link className='foot-link' to="/about">  <h5 className="foot-content">About</h5></Link>
+          <Link className='foot-link' to="/home"> <h5 className="foot-content">Courses</h5></Link>
+          <Link className='foot-link' to="/home">  <h5 className="foot-content">Dashboard</h5></Link>
+          <Link className='foot-link' to="/contact-us"> <h5 className="foot-content">Contact Us </h5></Link>
+          <Link className='foot-link' to="/home">  <h5 className="foot-content">My Profile</h5></Link>
        
         </div>
      
   
         <div className="social">
-          <h4 className="foot-head">RESOURCES</h4>
-          <Link className='foot-link' to="">  <h5 className="foot-content">Terms & Condition</h5></Link>
-          <Link className='foot-link' to="/all-blogs"> <h5 className="foot-content">BLOG</h5></Link>
+          <h4 className="foot-head">Legal</h4>
+          <Link className='foot-link' to="/terms-condition">  <h5 className="foot-content">Terms & Condition</h5></Link>
+          <Link className='foot-link' to="/privacy"> <h5 className="foot-content">Privacy  Policy</h5></Link>
+          <Link className='foot-link' to="/refund-policy"> <h5 className="foot-content">Refund Policy</h5></Link>
 
 
         </div>
         <div className="crypto">
           <h4 className="foot-head"> Contact Us</h4>
-                   <Link  to="https://www.facebook.com/Kounselo" target="_blank"><img src={facebook}  style={{position:"relative",left:"2px"}}  alt=""></img></Link>
-          <Link to="https://twitter.com/kounseloindia?s=11&t=l_7ZXQszpxBTPvBPrtej9g" style={{position:"relative",left:"15px"}}  target="_blank"><img src={twiter}  alt=""></img></Link>
-          <Link  to="https://www.instagram.com/kounselo/" target="_blank"><img style={{position:"relative",left:"25px"}} src={insta} alt=""></img></Link>
-          <Link  to="https://www.linkedin.com/company/kounselo/people/?viewAsMember=true" target="_blank"><img style={{position:"relative",left:"35px"}} src={linked}  alt=""></img></Link>
+                   <Link  to="https://www.facebook.com/profile.php?id=100095350190454&mibextid=ZbWKwL" target="_blank"><img src={facebook}  style={{position:"relative",left:"2px"}}  alt=""></img></Link>
+          <Link to="https://twitter.com/CareerClassHQ" style={{position:"relative",left:"15px"}}  target="_blank"><img src={twiter}  alt=""></img></Link>
+          <Link  to="https://instagram.com/career_classroom?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank"><img style={{position:"relative",left:"25px"}} src={insta} alt=""></img></Link>
+          <Link  to="https://www.linkedin.com/company/careerclassroom/" target="_blank"><img style={{position:"relative",left:"35px"}} src={linked}  alt=""></img></Link>
          
 
         </div>
