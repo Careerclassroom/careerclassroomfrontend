@@ -16,10 +16,11 @@ function Enroll() {
     const id = useSelector((state) => state.get_seller_profile_id.user_id);
     const username = useSelector((state) => state.get_seller_profile_id.name);
     const userEmail = useSelector((state) => state.get_seller_profile_id.email);
+    const baseUrl="https://server.careerclassroom.in"
     const handleSignUp = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.patch(`http://127.0.0.1:8000/api/v1/user/update/${id}`, {
+            const response = await axios.patch(`${baseUrl}/api/v1/user/update/${id}`, {
 
                 lastname: lastname,
 
