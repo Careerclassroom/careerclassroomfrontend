@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios';
-const baseUrl = "https://server.careerclassroom.in"
+
+const baseUrl = "http://localhost:8000"
 function ContactUsForm() {
 
     const [name, setname] = useState("");
@@ -11,6 +12,7 @@ function ContactUsForm() {
 
     const handleSubmit= async (e) => {
         e.preventDefault();
+        alert("Form Submited")
         try {
             const response = await axios.post(`${baseUrl}/api/v1/mail/send`, {
                 name: name,
@@ -18,16 +20,21 @@ function ContactUsForm() {
                 contact:contact,
                 message:message,
                 subject:subject
+                
 
-
-
+                
+           
 
 
                 // isEmailVerified: isEmailVerified
-            });
+            }
+           
+            );
+            console.log(response)
             // dispatch(getUserIdFromAuth(response.data.data.user._id, response.data.data.user.name, response.data.data.user.email));
-            if (response.data.statusbar === "success") {
-                
+            if (response.data.status === "success") {
+               
+          
 
 
             
