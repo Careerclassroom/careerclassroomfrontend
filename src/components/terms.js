@@ -94,7 +94,7 @@ function Terms() {
                 You represent and warrant that if you are an individual, you are of legal age to form a binding contract. If you are not of legal age, you may
                 only access, use and register on this Website with the consent of and under the supervision of a parent or legal guardian. Please note that if
                 a User is younger than the legal age to form a binding contract, we assume that the parent or guardian of such minor has read and
-                understood these Terms and is supervising the minor’s usage of the Website and availment of Services. Growth School reserves the right to
+                understood these Terms and is supervising the minor’s usage of the Website and availment of Services. Career Classroom reserves the right to
                 terminate your registration and subscription if it is brought to our notice that you do not satisfy the legal age requirement and your usage of
                 our Website or availment of Services was not with the consent of a parent/guardian as stipulated herein.
                 You are solely responsible and liable for any activity that occurs on or through your account and you shall be responsible for maintaining
@@ -108,7 +108,7 @@ function Terms() {
                 these Terms. We reserve the right to delete or suspend your access to Services for incomplete payment of fees and applicable charges.
                 Please note that we use third party payment gateways or aggregators (“Third Party Payment Service Providers”) for the purpose of
                 collection of fees and applicable charges. Please note that such Third Party Payment Service Providers are independent service providers
-                and not an agent or employee of Growth School and are independent of and not connected to Growth School in any manner whatsoever. In
+                and not an agent or employee of Career Classroom and are independent of and not connected to Career Classroom in any manner whatsoever. In
                 the event that you are re-directed to any external website or application of such Third Party Payment Service Providers, we disclaim all
                 liability regarding (a) the privacy of your information shared on such websites or applications; (b) security and protection measures for the
                 information and data shared and technology employed on such websites or applications and (c) any and all interaction, correspondence,
@@ -121,7 +121,7 @@ function Terms() {
                 extending the duration of the Service, change in the commencement date of the Service, your failure to attend or participate in the Service,
                 modification of the structure or content of the Service.
                 If a refund is provided, you hereby agree and acknowledge that such amount to be refunded may either be paid in cash or credit (for
-                purchase of any other Services of Growth School of equivalent value) at the sole discretion of Growth School.
+                purchase of any other Services of Career Classroom of equivalent value) at the sole discretion of Career Classroom.
                 <h4  class="font-privacy">INTELLECTUAL PROPERTY RIGHTS</h4>
                 All content created and provided by us through the Website and our Services (“Content”) is protected by copyrights, trademarks, service
                 marks, patents, trade secrets or other proprietary rights and laws, as applicable.
@@ -129,7 +129,7 @@ function Terms() {
                 images, are our exclusive property, or licensed to us, except as otherwise expressly stated. All trademarks, service marks, trade names,
                 trade dress, and other forms of intellectual property used on the Website and in connection with the Services are either proprietary to us or
                 have been licensed to us. Nothing in these Terms shall be deemed to grant to the User, either directly or indirectly, any license or other right
-                under any copyright or other intellectual property owned by or licensed to Growth School.
+                under any copyright or other intellectual property owned by or licensed to Career Classroom.
                 <br></br>
                 <br></br>
                 You must:
@@ -154,10 +154,10 @@ function Terms() {
                 you resulting therefrom. If you submit content to the Website, you hereby grant us a non-exclusive, worldwide, royalty-free, sub-licensable,
                 transferable license to use, reproduce, distribute such content on our Website.
                 <h4  class="font-privacy">USER CONDUCT AND GUIDELINES</h4>
-                other platform on which Growth School may organize a group discussion;
+                other platform on which Career Classroom may organize a group discussion;
                 <ul>
                     <li>
-                        to ensure that any communication made by you on this Website or on any present or future platform of Growth School in connection
+                        to ensure that any communication made by you on this Website or on any present or future platform of Career Classroom in connection
                         with our Services shall not be harmful, harassing, blasphemous, defamatory, pornographic, libellous, invasive of another’s privacy,
                         hateful, disparaging, relating to or encouraging of money laundering or gambling, illegal, obscene, defamatory, injurious to third parties,
                         racially or ethnically objectionable, politically, religiously, or sexually objectionable;
@@ -192,7 +192,7 @@ function Terms() {
                     </li>
                     <li>
                         not to release any software virus or use any computer code, file, or program that is designed to interrupt, destroy, or limit the
-                        functionality of any computer resource of Growth School;
+                        functionality of any computer resource of Career Classroom;
 
                     </li>
                     <li>
@@ -232,12 +232,12 @@ function Terms() {
                     connection with the use of or reliance on any such content, goods or services available on or through any such website or application.
 
                     <h4  class="font-privacy">INDEMNITY</h4>
-                    You agree to defend, indemnify, and hold harmless Growth School, its affiliates, officers, directors, employees and agents for all losses,
+                    You agree to defend, indemnify, and hold harmless Career Classroom, its affiliates, officers, directors, employees and agents for all losses,
                     costs, actions, claims, damages, expenses (including legal costs) or liabilities, that arise from or relate to (a) your use or misuse of the
                     Website or Services or Content; (b) violation of any of the terms of these Terms; (c) your infringement of any of our intellectual property
                     rights or third party’s intellectual property; (d) the use of our Services and any connected interaction with Third Party Payment Service
-                    Providers. Growth School shall not be liable to you for any claims arising out of any act or omission on the part of Third Party Payment
-                    Service Providers in connection with the processing of fees and applicable charges. Growth School expressly disclaims any responsibility
+                    Providers. Career Classroom shall not be liable to you for any claims arising out of any act or omission on the part of Third Party Payment
+                    Service Providers in connection with the processing of fees and applicable charges. Career Classroom expressly disclaims any responsibility
                     and liability for any and all services provided by the Third Party Service Providers.
                     <br></br>
                     <br></br>
@@ -256,7 +256,7 @@ function Terms() {
                             Services respectively.</li>
 
                         Nothing contained herein shall be deemed to exclude or limit your liability in respect of any indemnity given by you under these Terms.
-                        Without prejudice to the foregoing, none of the directors, officers, employees, and agents of Growth School shall be personally liable for
+                        Without prejudice to the foregoing, none of the directors, officers, employees, and agents of Career Classroom shall be personally liable for
                         any action in connection with the Website or Services.
 
 
@@ -299,7 +299,7 @@ function Terms() {
 
                         </li>
                         <li>
-                            These Terms may be modified or amended, and any obligation waived at the sole discretion of Growth School.4
+                            These Terms may be modified or amended, and any obligation waived at the sole discretion of Career Classroom.4
                         </li>
                         <li>
                             Unless otherwise specified in these Terms, all notices under these Terms shall be in writing and will be deemed to have been duly given

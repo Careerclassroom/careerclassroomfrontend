@@ -27,6 +27,7 @@ function ContactUsForm() {
             });
             // dispatch(getUserIdFromAuth(response.data.data.user._id, response.data.data.user.name, response.data.data.user.email));
             if (response.data.statusbar === "success") {
+                
 
 
             
@@ -59,12 +60,12 @@ function ContactUsForm() {
                         </div>
                         <div className='formemail' >
                             <label className='required' >Email Address</label>
-                            <input type='email' name='email' value={email} onChange={(e)=>setemail(e.target.value)} required />
+                            <input type='email' name='email' placeholder='example@gmail.com' value={email} onChange={(e)=>setemail(e.target.value)} required />
                         </div>
                     </div>
                     <div className='formbox2' >
                         <label className='required'>Phone</label>
-                        <input type='number' name='contact' value={contact} onChange={(e)=>setcontact(e.target.value)} required />
+                        <input type='text' pattern="[0-9]{10}" title="Must Contain 10 Digits" name='contact' value={contact} onChange={(e)=>setcontact(e.target.value)} required />
                     </div>
                     <div className='formbox3' >
                         <label className='required'>Subject</label>
