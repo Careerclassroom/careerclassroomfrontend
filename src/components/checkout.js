@@ -109,8 +109,8 @@ function Checkout() {
                     </div>
                     <div style={{textAlign:"left",width:"50%",margin:"30px auto"}} >
                    <h2> Credit Card/Debit Card/NetBanking</h2>
-                   <h5>Pay securely by Credit or Debit card or Internet Banking through cash free</h5>
-                   Pay securely by Credit or Debit card or Internet Banking through Razorpay.
+                   <h5>Pay securely by Credit or Debit card or Internet Banking </h5>
+                   Pay securely by Credit or Debit card or Internet Banking 
                    <p style={{marginTop:"20px"}}>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
                    <button className='Proceed' style={{marginTop:"0px"}} type='submit'>Pay Now</button>
                     </div>
