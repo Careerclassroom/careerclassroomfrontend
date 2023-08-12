@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 
-const baseUrl = "http://localhost:8000"
+const baseUrl = "https://server.careerclassroom.in"
 function ContactUsForm() {
 
     const [name, setname] = useState("");
