@@ -1,5 +1,6 @@
 import React from "react"
 import Header from "./header"
+import Footer from "./footer"
 
 
 
@@ -113,10 +114,13 @@ function Checkout() {
                    <p style={{marginTop:"20px"}}>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
                    <button className='Proceed' style={{marginTop:"0px"}} type='submit'>Pay Now</button>
                     </div>
+                <Footer/>
+
 
                 </div>
 
             </div>
+           
 
         </>
     )
