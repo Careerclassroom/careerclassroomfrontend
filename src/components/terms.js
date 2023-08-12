@@ -299,7 +299,7 @@ function Terms() {
 
                         </li>
                         <li>
-                            These Terms may be modified or amended, and any obligation waived at the sole discretion of Career Classroom.4
+                            These Terms may be modified or amended, and any obligation waived at the sole discretion of Career Classroom.
                         </li>
                         <li>
                             Unless otherwise specified in these Terms, all notices under these Terms shall be in writing and will be deemed to have been duly given
