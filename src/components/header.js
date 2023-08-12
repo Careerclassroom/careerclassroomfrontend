@@ -20,7 +20,7 @@ function Header() {
                 </div>
 
             </div>
-    <nav style={{position:"fixed",top:"0px",width:"100%",color:"black",backgroundColor:"white",zIndex:"9999"}} class="navbar " aria-label="First navbar example">
+    <nav style={{position:"fixed",top:"0px",width:"100%",color:"black",backgroundColor:"white",zIndex:"9999"}} class="navbar nav-mobile" aria-label="First navbar example">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src={About2}></img></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
