@@ -27,9 +27,7 @@ function About() {
                     <div className='about-bi-flex2'>
                         <h1 style={{ marginTop: "100px" }} >Who We Are</h1>
                         <p style={{ color: "#737373", width: "80%", fontSize: "20px", margin: "auto", textAlign: "justify" }}>
-                            Power BI is a powerful business analytics tool that empowers
-                            you to turn raw data into actionable insights. Learn how
-                            to create interactive visualizations, dashboards, and reports that showcase your data like never before!
+                        At CareerClassroom, we believe that everyone deserves the opportunity to thrive in their careers and achieve their professional goals. Our mission is to empower individuals with the knowledge and skills they need to excel in today's competitive job market. Whether you're a recent graduate, seeking a career change, or looking to enhance your existing skills, we are here to guide you on your journey to success.
                         </p>
 
                     </div>
