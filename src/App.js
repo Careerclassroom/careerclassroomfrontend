@@ -17,6 +17,7 @@ import Terms from './components/terms';
 import Checkout from './components/checkout';
 
 import RefundPolicy from './pages/RefundPolicy';
+import ProfilePage from './pages/ProfilePage';
 
 
 function App() {
@@ -32,11 +33,10 @@ function App() {
         <Route path='/userProfile' element={<UserProfile/>}></Route>
         <Route path='/privacy' element={<Privacy/>}></Route>
         <Route path='/contact-us' element={<ContactUs/>}></Route>
-
         <Route path='/terms-condition' element={<Terms/>}></Route>
         <Route path='/checkout' element={<Checkout/>}></Route>
-
         <Route path='/refund-policy' element={<RefundPolicy/>}></Route>
+        <Route path='/profile' element={<ProfilePage/>}></Route>
 
       </Routes>
  
