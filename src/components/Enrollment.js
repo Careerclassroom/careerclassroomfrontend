@@ -109,9 +109,9 @@ function Enroll() {
                                     {userEmail}
 
                                     <h6 className="enroll-label">Number</h6>
-                                    <input className="form-enroll" value={number} onChange={(e) => setNumber(e.target.value)} type='tel' placeholder='country' ></input>
+                                    <input className="form-enroll" value={number} onChange={(e) => setNumber(e.target.value)} type='tel' placeholder='phone' ></input>
                                     <h6 className="enroll-label">Country </h6>
-                                    <input className="form-enroll" value={country} onChange={(e) => setcountry(e.target.value)} type='text' placeholder='lastname'></input><br></br>
+                                    <input className="form-enroll" value={country} onChange={(e) => setcountry(e.target.value)} type='text' placeholder='country'></input><br></br>
                                     <button className='Proceed' type='submit'>Proceed Now</button>
 
                                 </form>
