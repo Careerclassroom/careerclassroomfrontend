@@ -38,7 +38,7 @@ function Goggle() {
       });
       // dispatch(getUserIdFromAuth(response.data.data.user._id, response.data.data.user.name, response.data.data.user.email));
       if (response.data.statusbar === "success") {
-        dispatch(getUserIdFromAuth(response.data.data.user._id,response.data.data.user.lastname, response.data.data.user.name, response.data.data.user.email));
+        dispatch(getUserIdFromAuth(response.data.data.user._id, response.data.data.user.lastname, response.data.data.user.name, response.data.data.user.email));
 
 
         settoken(response.data.token);
@@ -69,8 +69,30 @@ function Goggle() {
         // isEmailVerified: isEmailVerified
       });
       if (response.data.statusbar === "success") {
-        dispatch(getUserIdFromAuth(response.data.data.user._id,response.data.data.user.lastname, response.data.data.user.name, response.data.data.user.email));
+        dispatch(getUserIdFromAuth(response.data.data.user._id, response.data.data.user.lastname, response.data.data.user.name, response.data.data.user.email));
         navigate("/home")
+      }
+    } catch (error) {
+      console.log(error)
+
+    }
+  }
+  const handleRegiter = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(`${baseUrl}/api/v1/user/forgot`, {
+
+        // lastname:lastname,
+        email: email,
+
+
+
+
+        // isEmailVerified: isEmailVerified
+      });
+      if (response.data.statusbar === "success") {
+
+
       }
     } catch (error) {
       console.log(error)
@@ -113,16 +135,30 @@ function Goggle() {
               <button className='sign-btn' type='submit'>Login </button>
 
             </form>
-            {/* <GoogleOAuthProvider clientId="521709143439-tff6587ssiemrjqren9ucijks8dpk1i2.apps.googleusercontent.com"> <GoogleLogin
-        onSuccess={credentialResponse => {
-          console.log(credentialResponse);
-        }}
-        onError={() => {
-          console.log('Login Failed');
-        }}
-      /></GoogleOAuthProvider> */}
+            <button onClick={() => setsign("forgot")} style={{background:"transparent",border:"none", color:"white",marginTop:"10px"}}>Forgot Password?</button>
+
           </div>
+
         }
+        {sign == "forgot" &&
+          <div>
+               <h4 style={{marginTop:"30px"}} className='sign-head'>Forgot Your Password?</h4>
+               <h6 className='sign-head'>Please Enter your email to get your reset password link </h6>
+            <form onSubmit={handleRegiter}>
+
+              {/* <input onChange={(e)=>setLastName(e.target.value)} type='text' placeholder='last Name' ></input> */}
+
+              <input required className='sign-form' value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='email' ></input>
+
+
+              <button className='sign-btn' type='submit'>Submit </button>
+
+            </form>
+
+          </div>
+
+        }
+
       </div>
     </div>
   )

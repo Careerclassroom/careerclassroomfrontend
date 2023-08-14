@@ -15,7 +15,7 @@ function Header() {
                         <li className="li-main"> <Link style={{textDecoration:"none",color:"#12037F"}} to="/about"> About</Link></li>
                         <li className="li-main"><Link style={{textDecoration:"none",color:"#12037F"}} to="/home">Courses</Link> </li>
                         <li className="li-main"><Link style={{textDecoration:"none",color:"#12037F"}} to="/contact-us">Contact Us</Link> </li>
-                        <li className="li-main"> <Link style={{textDecoration:"none",color:"#12037F"}} to="/Home">My Profile</Link></li>
+                        <li className="li-main"> <Link style={{textDecoration:"none",color:"#12037F"}} to="/home">My Profile</Link></li>
                     </ul>
                 </div>
 
