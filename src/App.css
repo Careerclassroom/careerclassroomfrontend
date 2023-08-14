@@ -169,7 +169,7 @@
 .about-main {
   width: 100%;
   height: 200px;
-  background-image:url("./images/enroll.png");
+  background-image: url("./images/enroll.png");
 }
 
 .about-child {
@@ -267,12 +267,13 @@
   background-color: #D9D9D9;
   flex-basis: 40%;
   border-radius: 10px;
-  padding:10px;
+  padding: 10px;
 }
-.enroll-name{
-  display:flex;
-  justify-content:space-between;
-  width:350px;
+
+.enroll-name {
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
 
 }
 
@@ -970,44 +971,50 @@
   font-weight: 400;
   line-height: normal;
 }
+
 @media (max-width:780px) {
-  .contactus-container1{
+  .contactus-container1 {
     flex-direction: column;
-   
+
     align-items: center;
     height: auto;
-  
+
   }
-  .contactus-form{
+
+  .contactus-form {
     width: 100%;
   }
-  .formparentbox{
+
+  .formparentbox {
     width: 100%;
   }
-  
-  .contactus-container2{
+
+  .contactus-container2 {
     display: block;
   }
-  
+
 }
+
 /* ----------------------Contact us css Ends----------------------- */
 
 
 /* checkout */
-.checkout{
+.checkout {
   width: 90%;
-  
+
 
   border: 2px solid snow;
-  margin:50px auto;
+  margin: 50px auto;
   padding: 10px;
   text-align: left;
 }
-.checkout-main{
+
+.checkout-main {
   width: 90%;
- margin: auto;
+  margin: auto;
 }
-.coupon-code{
+
+.coupon-code {
   background-color: #ECEBF5;
   border: none;
   padding: 10px 20px 10px 20px;
@@ -1015,11 +1022,13 @@
   border-radius: 10px;
 
 }
-.coupon{
+
+.coupon {
   width: 90%;
   text-align: center;
 }
-.apply-now{
+
+.apply-now {
   background-color: #11017E;
   border: none;
   padding: 10px 20px 10px 20px;
@@ -1027,7 +1036,8 @@
   border-radius: 10px;
   margin-left: 10px;
 }
-.Benefits{
+
+.Benefits {
   width: 90%;
   background-color: #ECEBF5;
   padding: 20px;
@@ -1036,7 +1046,8 @@
 
 
 }
-.Benefits-content{
+
+.Benefits-content {
   width: 80%;
   text-align: left;
   margin: auto;
@@ -1055,26 +1066,29 @@ line-height: normal;
 /* ----------------------Refund Policy css Start----------------------- */
 
 
-.font-privacy{
-  color: 
-  #11017E;
+.font-privacy {
+  color:
+    #11017E;
 }
 
 
-.privacy-policy-container{
+.privacy-policy-container {
   text-align: left;
- width: 90%;
+  width: 90%;
   margin: 7rem auto;
 }
-.heading>p{
-font-size: 55px;
-font-weight: 800;
-font-family: Nunito Sans;
-}
-.paragraph>p{
+
+.heading>p {
+  font-size: 55px;
+  font-weight: 800;
   font-family: Nunito Sans;
 }
-.paragraph>p>p{
+
+.paragraph>p {
+  font-family: Nunito Sans;
+}
+
+.paragraph>p>p {
   font-family: Nunito Sans;
   font-weight: 900;
 }
@@ -1084,23 +1098,182 @@ font-family: Nunito Sans;
 
 
 @media (max-width:780px) {
-  .course-main{
+  .course-main {
     flex-direction: column;
     width: 100%;
     height: auto;
-    
+
   }
-  .course-main-head{
+
+  .course-main-head {
     width: 100%;
   }
-  .enroll-name{
+
+  .enroll-name {
     width: 90%;
   }
-  .course-main1{
+
+  .course-main1 {
     width: 100%;
   }
-  .Proceed{
+
+  .Proceed {
     margin-top: 20px;
   }
-  
+
 }
+
+
+/* --------------Profile page CSS Start--------------------- */
+.profile_container {
+  margin-bottom: -25px;
+  display: flex;
+  justify-content: center;
+}
+
+.profile_card_area {
+  width: 50%;
+  margin-top: 3%;
+  padding: 4%;
+  border-radius: 10px;
+  background: #ECEBF5;
+}
+
+.profile_box_1 {
+  display: flex;
+  gap: 5%;
+}
+
+.profile_box_2 {
+  margin-top: 25px;
+  padding-left: 5%;
+}
+
+.profile_box_3 {
+  margin-top: 25px;
+  padding-left: 5%;
+}
+.profile_box_4 {
+  margin-top: 65px;
+}
+
+.profile_avatar {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+}
+
+.profile_avatar>img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50px;
+}
+
+.profile_avatar_content {
+  padding-top: 15px;
+}
+
+.pac_name {
+  display: flex;
+  gap: 10%;
+}
+
+.pac_name>div>p {
+  color: #000;
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.pb2c1 {
+  display: flex;
+  gap: 1%;
+}
+
+.pac_heading>p {
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.pacn_bio {
+  color: #000;
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.pb2c2 {
+  text-align: left;
+}
+
+.pb2c2>input {
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #D9D9D9;
+  background-color: #ECEBF5;
+  color: #ACACAC;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-image: url("./images/righticon.png");
+  background-repeat:no-repeat;
+  background-position: right;
+
+}
+
+.pb2c2>input:active {
+  background-color: #ECEBF5;
+  outline: none;
+}
+
+.pb2c2>input:focus {
+  background-color: #ECEBF5;
+  outline: none;
+}
+
+.pb4_button{
+  display: inline-flex;
+padding: 10px 34px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 6px;
+border: 1px solid #12037F;
+color: #12037F;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+background-color: #ECEBF5;
+}
+
+
+@media only screen and (max-width: 900px)  {
+  .profile_card_area {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 500px)  {
+  .profile_card_area {
+    width: 90%;
+  }
+}
+
+/* -----------------Profile page CSS ends------------------ */

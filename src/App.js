@@ -17,8 +17,12 @@ import Terms from './components/terms';
 import Checkout from './components/checkout';
 
 import RefundPolicy from './pages/RefundPolicy';
+
 import Verification from './components/verification';
 import PasswordReset from './components/reset';
+
+
+
 
 
 function App() {
@@ -34,12 +38,13 @@ function App() {
         <Route path='/userProfile' element={<UserProfile/>}></Route>
         <Route path='/privacy' element={<Privacy/>}></Route>
         <Route path='/contact-us' element={<ContactUs/>}></Route>
-
         <Route path='/terms-condition' element={<Terms/>}></Route>
         <Route path='/checkout' element={<Checkout/>}></Route>
+
         <Route path="verification"element={<Verification/>}></Route>
         <Route path='/refund-policy' element={<RefundPolicy/>}></Route>
         <Route path="/reset/:resetToken" element={<PasswordReset/>} />
+
 
       </Routes>
  
