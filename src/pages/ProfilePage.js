@@ -81,6 +81,7 @@ function ProfilePage() {
 
         intrest: selected,
         bio: bio
+        name:name
 
 
 
@@ -88,7 +89,7 @@ function ProfilePage() {
       });
       // dispatch(getUserIdFromAuth(response.data.data.user._id, response.data.data.user.name, response.data.data.user.email));
       if (response.data.status === "success") {
-        navigate("/checkout")
+      
         // dispatch(getUserIdFromAuth(response.data.data.user._id,  response.data.data.user.name, response.data.data.user.email));
         console.log(response.data.data.user._id)
 
@@ -180,7 +181,7 @@ function ProfilePage() {
                         <div className='pac_name'>
                           <div>
                             {show == "name" &&
-                              <p>{item.name}
+                              <p>{username}
                               </p>
 
 
