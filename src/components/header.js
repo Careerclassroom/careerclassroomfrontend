@@ -15,7 +15,7 @@ function Header() {
                         <li className="li-main"> <Link style={{textDecoration:"none",color:"#12037F"}} to="/about"> About</Link></li>
                         <li className="li-main"><Link style={{textDecoration:"none",color:"#12037F"}} to="/home">Courses</Link> </li>
                         <li className="li-main"><Link style={{textDecoration:"none",color:"#12037F"}} to="/contact-us">Contact Us</Link> </li>
-                        <li className="li-main"> <Link style={{textDecoration:"none",color:"#12037F"}} to="/home">My Profile</Link></li>
+                        <li className="li-main"> <Link style={{textDecoration:"none",color:"#12037F"}} to="/userProfile">My Profile</Link></li>
                     </ul>
                 </div>
 
@@ -42,7 +42,7 @@ function Header() {
             <a class="nav-link" href="#"><Link style={{textDecoration:"none",color:"black"}} to="/home">Courses</Link></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><Link style={{textDecoration:"none",color:"black"}} to="/home">My Profile</Link></a>
+            <a class="nav-link" href="#"><Link style={{textDecoration:"none",color:"black"}} to="/userProfile">My Profile</Link></a>
           </li>
           
           

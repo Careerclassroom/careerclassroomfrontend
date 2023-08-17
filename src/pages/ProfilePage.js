@@ -30,7 +30,7 @@ function ProfilePage() {
   const handleLogout = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.get("http://127.0.0.1:8000/api/v1/user/logout", {
+      const res = await axios.get(`${baseUrl}/api/v1/user/logout`, {
         withCredentials: true
       });
       if (res.data.status === "success") {
