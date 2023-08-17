@@ -180,7 +180,7 @@ function ProfilePage() {
                         <div className='pac_name'>
                           <div>
                             {show == "name" &&
-                              <p>{username}
+                              <p>{item.name}
                               </p>
 
 
