@@ -1236,6 +1236,69 @@ line-height: normal;
   background-position: right;
 
 }
+/* upload */
+.upload{
+  width: 100px;
+  position: relative;
+  margin: auto;
+}
+
+.upload img{
+  border-radius: 50%;
+  border: 6px solid #eaeaea;
+}
+
+.upload .round{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #00B4FF;
+  width: 32px;
+  height: 32px;
+  line-height: 33px;
+  text-align: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.upload-photo-button{
+  background: 
+  rgba(18, 3, 127, 1);;
+  border: none;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  position: relative;
+  top: -60px;
+}
+
+.upload .round input[type = "file"]{
+  position: absolute;
+  transform: scale(2);
+  opacity: 0;
+}
+
+input[type=file]::-webkit-file-upload-button{
+    cursor: pointer;
+}
+/* end */
+.name-input{
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  outline: none;
+  border-right: none;
+  border-bottom-color: #D9D9D9;
+  background-color: #ECEBF5;
+  color: #ACACAC;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-image: url("./images/righticon.png");
+  background-repeat:no-repeat;
+  background-position: right;
+}
 
 .pb2c2>input:active {
   background-color: #ECEBF5;

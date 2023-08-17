@@ -20,6 +20,7 @@ import RefundPolicy from './pages/RefundPolicy';
 
 import Verification from './components/verification';
 import PasswordReset from './components/reset';
+import ProfilePage from './pages/ProfilePage';
 
 
 
@@ -35,12 +36,12 @@ function App() {
         <Route path='/About' element={<About/>}></Route>
         <Route path='/enroll'element={<Enroll/>}></Route>
         <Route path='/' element={<Goggle/>}></Route>
-        <Route path='/userProfile' element={<UserProfile/>}></Route>
+       
         <Route path='/privacy' element={<Privacy/>}></Route>
         <Route path='/contact-us' element={<ContactUs/>}></Route>
         <Route path='/terms-condition' element={<Terms/>}></Route>
         <Route path='/checkout' element={<Checkout/>}></Route>
-
+        <Route path='/userProfile' element={<ProfilePage/>}></Route>
         <Route path="verification"element={<Verification/>}></Route>
         <Route path='/refund-policy' element={<RefundPolicy/>}></Route>
         <Route path="/reset/:resetToken" element={<PasswordReset/>} />
