@@ -29,6 +29,9 @@ function ProfilePage() {
   const navigate = useNavigate("")
   const handleLogout = async (e) => {
     e.preventDefault();
+    
+    
+    
     try {
       const res = await axios.get(`${baseUrl}/api/v1/user/logout`, {
         withCredentials: true
