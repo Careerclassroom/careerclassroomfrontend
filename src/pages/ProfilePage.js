@@ -80,7 +80,7 @@ function ProfilePage() {
 
 
         intrest: selected,
-        bio: bio
+        bio: bio,
         name:name
 
 
