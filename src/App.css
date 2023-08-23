@@ -1123,11 +1123,14 @@ line-height: normal;
     flex-direction: column;
     width: 90%;
     height: auto;
+    padding: 10px;
+    text-align: center;
 
   }
 
   .course-main-head {
     width: 100%;
+    text-align: center;
   }
 
   .enroll-name {
@@ -1137,11 +1140,22 @@ line-height: normal;
   .course-main1 {
     width: 100%;
   }
+  .course-main2 {
+    width: 100%;
+    text-align: center;
+  }
+
 
   .Proceed {
     margin-top: 20px;
   }
 
+}
+@media (max-width:330px) {
+  .course-pic2{
+    width: 230px;
+  }
+  
 }
 
 
