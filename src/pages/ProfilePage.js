@@ -14,8 +14,8 @@ import { getUserIdFromAuth } from '../Redux/actions/GetSellerIdFromAuthActionCre
 import finalPropsSelectorFactory from 'react-redux/es/connect/selectorFactory';
 
 function ProfilePage() {
-  const baseUrl = "https://server.careerclassroom.in"
-  const baseUrls = "http://localhost:8000"
+  const baseUrls = "https://server.careerclassroom.in"
+  const baseUrl = "http://localhost:8000"
   const dispatch = useDispatch("")
   const navigation = useNavigate("")
   const [name, setName] = useState("")

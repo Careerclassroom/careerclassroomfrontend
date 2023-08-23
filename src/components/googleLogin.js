@@ -1,6 +1,6 @@
 import { GoogleLogin } from '@react-oauth/google';
 import { GoogleOAuthProvider } from '@react-oauth/google';
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios"
@@ -52,6 +52,36 @@ function Goggle() {
 
     }
   }
+  const GoogleAuth = async () => {
+    // const dispatch = useDispatch();
+  
+    try {
+      const popup = window.open("http://localhost:8000/auth/google");
+  
+      // Check if the popup window was opened successfully
+      if (!popup) {
+        throw new Error("Popup window blocked by browser");
+      }
+  
+      // Listen for messages from the popup window
+      window.addEventListener('message', (event) => {
+        // Validate the origin and the data of the message
+        if (event.origin !== "http://localhost:8000" || !event.data || !event.data._id || !event.data.name) {
+          throw new Error("Invalid message received from popup window");
+        }
+    
+        // Dispatch the action
+        dispatch(getUserIdFromAuth(event.data._id, event.data.lastname, event.data.name, event.data.email));
+  
+        // Close the popup window after dispatching the data
+        popup.close();
+      });
+  
+    } catch (err) {
+      // Log the error to the console
+      console.error(err);
+    }
+}
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -76,6 +106,9 @@ function Goggle() {
       console.log(error)
 
     }
+
+
+    
   }
   const handleRegiter = async (e) => {
     e.preventDefault();
@@ -136,7 +169,7 @@ function Goggle() {
 
             </form>
             <button onClick={() => setsign("forgot")} style={{background:"transparent",border:"none", color:"white",marginTop:"10px"}}>Forgot Password?</button>
-
+           <button onClick={GoogleAuth}></button>
           </div>
 
         }
@@ -154,12 +187,13 @@ function Goggle() {
               <button className='sign-btn' type='submit'>Submit </button>
 
             </form>
-
+          
           </div>
 
         }
 
       </div>
+      
     </div>
   )
 }
