@@ -174,7 +174,7 @@
 
 .about-child {
   width: 60%;
-  background-image: url("./images/about-frame.png");
+ 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -207,20 +207,26 @@
 
 
 .card-tumbnil {
-  width: 130px;
-  height: 130px;
+  width: 90px;
+  height: auto;
   border-radius: 20px;
-  background-color: #D9D9D9;
+  background-color:
+  #11017E;
   margin: auto;
+  padding: 10px;
 }
-
+.font-learn{
+  font-size: 30px;
+  font-weight: 400;
+  text-decoration: underline;
+}
 /* course */
 .course-main {
+  border: 2px solid #d9d9d9a6;
 
-  border-radius: 30px;
-  height: 500px;
+  height: auto;
 
-  margin: auto;
+  margin:30px auto;
   display: flex;
   padding: 40px;
   box-sizing: border-box;
@@ -229,6 +235,7 @@
 
 .course-main2 {
   flex-basis: 60%;
+  text-align: justify;
 
 }
 
@@ -257,14 +264,15 @@
 
 .course-details {
   width: 90%;
-  height: 600px;
+  height: auto;
   background-color: #D9D9D9;
   margin: auto;
+  padding: 20px;
   border-radius: 20px;
 }
 
 .course-main1 {
-  background-color: #D9D9D9;
+
   flex-basis: 40%;
   border-radius: 10px;
   padding: 10px;
@@ -335,6 +343,8 @@
   background-repeat: no-repeat;
   background-position: center;
   height: 800px;
+  display: flex;
+  align-items: center;
 }
 
 .auth-main {
@@ -343,7 +353,18 @@
   height: 400px;
   text-align: center;
   padding: 20px;
-  margin: auto;
+margin: auto;
+ 
+
+}
+
+.auth-main2 {
+  background-color: rgba(18, 3, 127, 1);
+  width: 300px;
+  height: 400px;
+  text-align: center;
+  padding: 20px;
+
   position: relative;
   top: 200px;
 
@@ -1100,7 +1121,7 @@ line-height: normal;
 @media (max-width:780px) {
   .course-main {
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     height: auto;
 
   }
@@ -1153,6 +1174,7 @@ line-height: normal;
   margin-top: 25px;
   padding-left: 5%;
 }
+
 .profile_box_4 {
   margin-top: 65px;
 }
@@ -1232,23 +1254,24 @@ line-height: normal;
   font-weight: 400;
   line-height: normal;
   background-image: url("./images/righticon.png");
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-position: right;
 
 }
+
 /* upload */
-.upload{
+.upload {
   width: 100px;
   position: relative;
   margin: auto;
 }
 
-.upload img{
+.upload img {
   border-radius: 50%;
   border: 6px solid #eaeaea;
 }
 
-.upload .round{
+.upload .round {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -1260,9 +1283,11 @@ line-height: normal;
   border-radius: 50%;
   overflow: hidden;
 }
-.upload-photo-button{
-  background: 
-  rgba(18, 3, 127, 1);;
+
+.upload-photo-button {
+  background:
+    rgba(18, 3, 127, 1);
+  ;
   border: none;
   color: white;
   padding: 5px;
@@ -1271,17 +1296,18 @@ line-height: normal;
   top: -60px;
 }
 
-.upload .round input[type = "file"]{
+.upload .round input[type="file"] {
   position: absolute;
   transform: scale(2);
   opacity: 0;
 }
 
-input[type=file]::-webkit-file-upload-button{
-    cursor: pointer;
+input[type=file]::-webkit-file-upload-button {
+  cursor: pointer;
 }
+
 /* end */
-.name-input{
+.name-input {
   width: 100%;
   border-top: none;
   border-left: none;
@@ -1296,7 +1322,7 @@ input[type=file]::-webkit-file-upload-button{
   font-weight: 400;
   line-height: normal;
   background-image: url("./images/righticon.png");
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-position: right;
 }
 
@@ -1310,30 +1336,31 @@ input[type=file]::-webkit-file-upload-button{
   outline: none;
 }
 
-.pb4_button{
+.pb4_button {
   display: inline-flex;
-padding: 10px 34px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-border-radius: 6px;
-border: 1px solid #12037F;
-color: #12037F;
-font-family: Poppins;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-background-color: #ECEBF5;
+  padding: 10px 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  border: 1px solid #12037F;
+  color: #12037F;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: #ECEBF5;
 }
 
 
-@media only screen and (max-width: 900px)  {
+@media only screen and (max-width: 900px) {
   .profile_card_area {
     width: 80%;
   }
 }
-@media only screen and (max-width: 500px)  {
+
+@media only screen and (max-width: 500px) {
   .profile_card_area {
     width: 90%;
   }
