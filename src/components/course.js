@@ -71,7 +71,7 @@ function Course() {
                             <div className='course-main-head'>
                                 <div className='course-main'>
                                     <div className='course-main1'>
-                                        <img height="250px" src={`https://classroomdata.s3.ap-south-1.amazonaws.com/${item.CoursePhoto}`}></img>
+                                        <img height="250px" className='course-pic2' src={`https://classroomdata.s3.ap-south-1.amazonaws.com/${item.CoursePhoto}`}></img>
                                     </div>
                                     <div className='course-main2'>
                                         <h4 style={{ marginTop: "10px" }}>
