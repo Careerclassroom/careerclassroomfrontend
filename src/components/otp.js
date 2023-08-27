@@ -4,7 +4,9 @@ import axios from "axios"
 
 
 function OtpVerification(){
-    const baseUrl = "http://localhost:8000"
+
+    const baseUrls = "http://localhost:8000"
+    const baseUrl = "https://server.careerclassroom.in"
     const [OTP, setOTP] = useState("")
     const handleVerify = async (e) => {
         
@@ -34,13 +36,13 @@ function OtpVerification(){
         
       }
     return(
-        <div>
-        <h4 className='sign-head'>Login to your account</h4>
+        <div className="auth-main">
+        <h4 className='sign-head'>Verify </h4>
         <form onSubmit={handleVerify}>
 
           {/* <input onChange={(e)=>setLastName(e.target.value)} type='text' placeholder='last Name' ></input> */}
 
-          <input required className='' value={OTP} onChange={(e) => setOTP(e.target.value)} type='text' placeholder='otp' ></input>
+          <input required className='sign-form' value={OTP} onChange={(e) => setOTP(e.target.value)} type='text' placeholder='otp' ></input>
 
      
           <button className='sign-btn' type='submit'>Login </button>
