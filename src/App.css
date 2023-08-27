@@ -2,7 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600&family=Poppins&display=swap');
 
 
-
+body{
+  margin: 0px;
+  padding: 0px;
+}
 .home-head {
   background-color: #D9D9D9;
   height: 740px;
@@ -342,7 +345,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 800px;
+  height:100vh;
   display: flex;
   align-items: center;
 }
@@ -350,7 +353,7 @@
 .auth-main {
   background-color: rgba(18, 3, 127, 1);
   width: 300px;
-  height: 400px;
+  height: auto;
   text-align: center;
   padding: 20px;
 margin: auto;
