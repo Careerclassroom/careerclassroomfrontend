@@ -100,6 +100,10 @@ function Goggle() {
         // isEmailVerified: isEmailVerified
       });
       console.log("hi");
+      if(response.data.status==="false"){
+        setsign("OTP")
+
+      }
       if (response.data.statusbar === "success") {
         dispatch(getUserIdFromAuth(response.data.data.user._id, response.data.data.user.lastname, response.data.data.user.name, response.data.data.user.email));
         navigate("/home")
@@ -110,10 +114,10 @@ function Goggle() {
       // }
     } catch (error) {
       console.log(error)
-      if (error.message === "Request failed with status code 403") {
-        setsign("OTP")
+      // if (error.message === "Request failed with status code 403") {
+      //   setsign("OTP")
 
-      }
+      // }
 
 
     }
@@ -137,7 +141,7 @@ function Goggle() {
       if (response.data.statusbar === "true") {
         console.log("verified")
         window.alert("User Created ")
-        navigate("/home")
+        setsign("login")
       }
     } catch (error) {
       console.log(error)
