@@ -21,6 +21,7 @@ import RefundPolicy from './pages/RefundPolicy';
 import Verification from './components/verification';
 import PasswordReset from './components/reset';
 import ProfilePage from './pages/ProfilePage';
+import OtpVerification from './components/otp';
 
 
 
@@ -36,7 +37,7 @@ function App() {
         <Route path='/About' element={<About/>}></Route>
         <Route path='/enroll'element={<Enroll/>}></Route>
         <Route path='/' element={<Goggle/>}></Route>
-       
+        <Route path='/verify' element={<OtpVerification/>}></Route>
         <Route path='/privacy' element={<Privacy/>}></Route>
         <Route path='/contact-us' element={<ContactUs/>}></Route>
         <Route path='/terms-condition' element={<Terms/>}></Route>
