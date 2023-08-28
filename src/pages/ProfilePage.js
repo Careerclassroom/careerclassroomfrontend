@@ -74,6 +74,7 @@ function ProfilePage() {
     { label: "JAVA " },
     { label: "Python"},
     { label: "DSA" },
+    { label: "Data Science" },
 
   ];
 
@@ -191,7 +192,7 @@ function ProfilePage() {
                 {
                   item.intrest.map((items)=>{
                     return(
-                        <p style={{background:"rgba(18, 3, 127, 1)",textAlign:"center",color:"white",borderRadius:"20px",padding:"10px 30px 10px 30px",margin:"30px auto"}}>{items.value}</p>
+                        <p style={{background:"rgba(18, 3, 127, 1)",textAlign:"center",color:"white",borderRadius:"20px",padding:"10px 30px 10px 30px",margin:"30px auto"}}>{items.label}</p>
 
                     )
                   
