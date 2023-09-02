@@ -11,7 +11,7 @@ function About() {
             <Header />
             <div style={{ marginTop: "80px" }} className='about-main'>
                 <div className=''>
-                    <span className='about-text'>About</span>
+                    <span style={{ color:"#12037F"}} className='about-text'>About</span>
 
                 </div>
 
@@ -25,7 +25,7 @@ function About() {
                         <img width="100%" src={About2}></img>
                     </div>
                     <div className='about-bi-flex2'>
-                        <h1 style={{ marginTop: "100px" }} >Who We Are</h1>
+                        <h1 style={{ marginTop: "30px" }} >Who We Are</h1>
                         <p style={{ color: "#737373", width: "80%", fontSize: "20px", margin: "auto", textAlign: "justify" }}>
                         At CareerClassroom, we believe that everyone deserves the opportunity to thrive in their careers and achieve their professional goals. Our mission is to empower individuals with the knowledge and skills they need to excel in today's competitive job market. Whether you're a recent graduate, seeking a career change, or looking to enhance your existing skills, we are here to guide you on your journey to success.
                         </p>
@@ -110,7 +110,7 @@ function About() {
 
             <div className='About-bi' style={{ marginTop: "140PX" }}>
                 <div className='about-bi-flex1'>
-                    <h1 style={{ marginTop: "100px" }}>Our Vision</h1>
+                    <h1 style={{ marginTop: "30px" }}>Our Vision</h1>
                     <p style={{ color: "#737373", width: "80%", fontSize: "20px", margin: "auto", textAlign: "justify" }}>
                         We envision a world where individuals have the confidence and skills to pursue their dream careers and shape a brighter future for themselves. Through CareerClassroom, we aim to bridge the gap between education and industry needs, empowering learners to become top-notch professionals and contributing positively to their organizations and society at large.
                     </p>
@@ -122,10 +122,12 @@ function About() {
                 </div>
             </div>
             <div className='about-enroll-sec'>
-                <div style={{width:"90%",margin:"auto",position:"relative",top:"100px"}}><h3 >Join Us on Your Path to Success
-                </h3>
-                    <p style={{fontSize:"30px"}}>Whether you're just starting your career or seeking to take it to new heights, CareerClassroom is here to be your partner in success. Take the first step towards transforming your career and unlocking your true potential by enrolling in one of our trans formative courses.</p>
-                    <button style={{marginTop:"50px"}} className='head-btn'>Click to know  more <img width="20px" style={{ position: "relative" }} src={no_profile}></img> </button>
+                <div style={{width:"90%",margin:"auto",position:"relative"}}>
+                    <h2 >Join Us on Your Path to Success.</h2>
+                    <p style={{fontSize:"20px"}}>Whether you're just starting your career or seeking to take it to new heights, CareerClassroom is here to be your partner in success. Take the first step towards transforming your career and unlocking your true potential by enrolling in one of our trans formative courses.
+                   <br></br> <button style={{marginTop:"20px"}} className='head-btn'>Click to know  more <img width="20px" style={{ position: "relative" }} src={no_profile}></img> </button>
+                    </p>
+                    
 
                 </div>
             </div>

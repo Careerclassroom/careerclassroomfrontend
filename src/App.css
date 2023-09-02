@@ -2,10 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600&family=Poppins&display=swap');
 
 
-body{
+body {
   margin: 0px;
   padding: 0px;
+  font-family: 'Nunito Sans', sans-serif;
 }
+
 .home-head {
   background-color: #D9D9D9;
   height: 740px;
@@ -29,17 +31,22 @@ body{
 }
 
 .join {
-  width: 80%;
+  width: 100%;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 600;
-
-  padding: 5px;
+   height: auto;
+  padding: 20px;
   border-radius: 70px;
   background-color: white;
   font-size: 20px;
   margin: auto;
 }
+.gateway{
+  text-align:left;
+  width:50%;
+  margin:30px auto;
 
+}
 .head-btn {
   background-color: #11017E;
   padding: 10px 20px 10px 20px;
@@ -92,7 +99,8 @@ body{
 
 .about-enroll-sec {
   width: 95%;
-  height: 500px;
+  height: auto;
+  padding: 10px;
   background-color: #ECEBF5;
   margin: 50px auto;
   border-radius: 20px;
@@ -117,13 +125,13 @@ body{
 .course {
 
   border-radius: 30px;
-  height: 400px;
+  height: auto;
   background-color: #ECEBF5;
   margin: auto;
   display: flex;
   padding: 40px;
   box-sizing: border-box;
-  width: 98%;
+  width: 100%;
 }
 
 .course1 {
@@ -140,6 +148,7 @@ body{
 
 .para-font {
   font-size: 30px;
+  margin-top: 30px;
 }
 
 .para-font2 {
@@ -153,8 +162,7 @@ body{
   }
 
   .course {
-    display: block;
-    height: auto;
+    flex-direction: column;
   }
 
   .course2 {
@@ -177,7 +185,7 @@ body{
 
 .about-child {
   width: 60%;
- 
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -214,33 +222,46 @@ body{
   height: auto;
   border-radius: 20px;
   background-color:
-  #11017E;
+    #11017E;
   margin: auto;
   padding: 10px;
 }
-.font-learn{
+
+.font-learn {
   font-size: 30px;
   font-weight: 400;
   text-decoration: underline;
 }
+
 /* course */
 .course-main {
   border: 2px solid #d9d9d9a6;
 
   height: auto;
 
-  margin:30px auto;
+  margin: 30px auto;
   display: flex;
-  padding: 40px;
+  height: auto;
+  padding: 20px;
   box-sizing: border-box;
-  width: 90%;
+  width: 100%;
+}
+.course-main3 {
+  border: 2px solid #d9d9d9a6;
+
+  height: auto;
+
+  margin: 30px auto;
+  display: flex;
+  height: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
-.course-main2 {
-  flex-basis: 60%;
-  text-align: justify;
 
-}
+
+
 
 .upcoming-flex {
   display: flex;
@@ -274,18 +295,66 @@ body{
   border-radius: 20px;
 }
 
+.course-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
 .course-main1 {
 
-  flex-basis: 40%;
+  width: 35%;
   border-radius: 10px;
   padding: 10px;
+
+
+
+}
+
+.course-main2 {
+  text-align: left;
+  width: 60%;
+  border-radius: 10px;
+  padding: 10px;
+
+
+
+}
+.details-flex{
+  display: flex;
+justify-content: space-between;
+width:74%
+}
+.enroll-flex2{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.form-label{
+
+  color: #12037F;
+  margin-top: 4px;
+}
+.course-main2>label {
+  color: #12037F;
+
+
+
 }
 
 .enroll-name {
   display: flex;
   justify-content: space-between;
-  width: 350px;
+  width: 100%;
 
+}
+
+.form-enroll2 {
+  border: 1px solid rgba(236, 235, 245, 1);
+  outline: none;
+  padding: 5px 10px 5px 10px;
+
+  margin-top: 5px;
+  width: 100%;
 }
 
 .course-main-head {
@@ -345,7 +414,7 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height:100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -356,9 +425,9 @@ body{
   height: auto;
   text-align: center;
   padding: 20px;
-margin: auto;
-border-radius: 10px;
- 
+  margin: auto;
+  border-radius: 10px;
+
 
 }
 
@@ -458,7 +527,10 @@ border-radius: 10px;
   border: none;
   color: white;
   padding: 10px 20px 10px 20px;
-  margin: 100px auto;
+  margin: 100px ;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
@@ -466,7 +538,7 @@ border-radius: 10px;
   border: 1px solid rgba(236, 235, 245, 1);
   outline: none;
   padding: 5px 10px 5px 10px;
-  width: 65%;
+  width: 100%;
   margin-top: 5px;
 
 }
@@ -512,7 +584,7 @@ border-radius: 10px;
 }
 
 .foot-para {
-  font-family: 'Baloo Thambi 2', sans-serif;
+  /* font-family: 'Baloo Thambi 2', sans-serif; */
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
@@ -1121,29 +1193,53 @@ line-height: normal;
 
 /* ----------------------Refund Policy css Ends----------------------- */
 
-
-@media (max-width:780px) {
+.red{
+  color: red;
+}
+.course-main-head2{
+  width: 95%;
+  margin: auto;
+}
+@media (max-width:990px) {
   .course-main {
     flex-direction: column;
-    width: 90%;
+    width: 98%;
     height: auto;
     padding: 10px;
-    text-align: center;
+    text-align: left;
 
   }
-
+  .gateway{
+    width: 90%;
+    text-align: center;
+  }
+  .course-main3{
+    flex-direction: column;
+  }
+  .details-flex{
+    width: 100%;
+  }
+  
+.course-flex{
+  flex-direction: column;
+  text-align: left;
+}
+.enroll-flex2{
+  flex-direction: column;
+}
   .course-main-head {
     width: 100%;
     text-align: center;
   }
 
   .enroll-name {
-    width: 90%;
+    width: 100%;
   }
 
   .course-main1 {
     width: 100%;
   }
+
   .course-main2 {
     width: 100%;
     text-align: center;
@@ -1155,11 +1251,12 @@ line-height: normal;
   }
 
 }
+
 @media (max-width:330px) {
-  .course-pic2{
+  .course-pic2 {
     width: 230px;
   }
-  
+
 }
 
 
@@ -1384,4 +1481,301 @@ input[type=file]::-webkit-file-upload-button {
   }
 }
 
-/* -----------------Profile page CSS ends------------------ */
+
+/* Header.css */
+:root {
+  --primaryColor:
+    #12037F;
+  --navColor1: #12037F;
+  --navColor2:
+    #12037F;
+  --navColor3:
+    #12037F;
+  --navColor4:
+    #12037F;
+  --navColor5:
+    #12037F;
+}
+
+/* Header container styles */
+.menu-bars {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 20px;
+  position: relative;
+  z-index: 2000;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+.menu-bars .bar1,
+.menu-bars .bar2,
+.menu-bars .bar3 {
+  background-color: #12037F;
+  height: 4px;
+  width: 100%;
+  margin: 4px 0;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  z-index: 999;
+}
+
+/* Style for the 'change' class when menu is active */
+.menu-bars.change .bar1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+  background-color: white;
+}
+
+.menu-bars.change .bar2 {
+  opacity: 0;
+}
+
+.menu-bars.change .bar3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+  background-color: white;
+}
+
+/* .menu-bars.change .bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-bars.change .bar2 {
+  opacity: 0;
+}
+
+.menu-bars.change .bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+} */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  /* Start offscreen */
+  width: 100%;
+  height: 100vh;
+  /* Overlay background color */
+  transition: left 0.3s ease-in-out;
+  /* Apply transition to 'left' property */
+  z-index: 100;
+}
+
+.overlay.overlay-active {
+  left: 0;
+  /* Slide in from the left */
+}
+
+nav,
+nav ul {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  list-style: none;
+}
+
+nav ul li {
+  height: 17%;
+  overflow: hidden;
+}
+
+nav li a {
+  position: relative;
+  top: 45%;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+nav li a:hover {
+  transform: scale(1.2);
+}
+
+/* nav li a::before {
+  content: "";
+  width: 25vw;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  top: 47.5%;
+  left: 0;
+  opacity: 0;
+} */
+
+nav li a:hover::before {
+  opacity: 1;
+}
+
+nav li:nth-of-type(1) {
+  background-color: var(--navColor1);
+  border-bottom: 1px solid white;
+}
+
+nav li:nth-of-type(2) {
+  background-color: var(--navColor2);
+  border-bottom: 1px solid white;
+}
+
+nav li:nth-of-type(3) {
+  background-color: var(--navColor3);
+  border-bottom: 1px solid white;
+}
+
+nav li:nth-of-type(4) {
+  background-color: var(--navColor4);
+  border-bottom: 1px solid white;
+}
+
+nav li:nth-of-type(5) {
+  background-color: var(--navColor5);
+  border-bottom: 1px solid white;
+}
+
+nav li:nth-of-type(6) {
+  background-color: var(--navColor5);
+  border-bottom: 1px solid white;
+}
+
+
+/* Slide in animation with delay for each */
+
+
+/* Slide out animation with delay for each */
+.slide-out-1 {
+  animation: slide-out 0.3s linear 0.5s both;
+}
+
+.slide-out-2 {
+  animation: slide-out 0.3s linear 0.4s both;
+}
+
+.slide-out-3 {
+  animation: slide-out 0.3s linear 0.3s both;
+}
+
+.slide-out-4 {
+  animation: slide-out 0.3s linear 0.2s both;
+}
+
+.slide-out-5 {
+  animation: slide-out 0.3s linear 0.1s both;
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* --- Menu Bars ------------------------------------ */
+
+.menu-bars {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  z-index: 999;
+  display: inline;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 2px;
+  background-color: #fff;
+  margin: 8px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: rotate(-45deg) translate(-7px, 8px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+/* --- Sections ------------------------------------ */
+
+
+
+section#home {
+  background-image: url("https://images.unsplash.com/photo-1581453904507-626ddb717f14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80");
+  background-size: cover;
+  background-position: center center;
+}
+
+
+
+
+/* Media Query: Large Smartphone (Vertical) */
+@media (max-width: 600px) {
+  section#home a {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .menu-bars {
+    top: 0.5rem;
+    right: 1rem;
+  }
+}
+
+/* 
+ .slide-in-1 {
+  animation-name: slide-in;
+  animation-duration: 0.3s;
+  animation-fill-mode:forwards;
+  animation-iteration-count: 1;
+}
+
+.slide-in-2 {
+  animation: slide-in 0.4s linear 0.4s both;
+}
+
+.slide-in-3 {
+  animation: slide-in 0.4s linear 0.6s both;
+}
+
+.slide-in-4 {
+  animation: slide-in 0.4s linear 0.8s both;
+}
+
+.slide-in-5 {
+  animation: slide-in 0.4s linear 1s both;
+}
+.slide-in-6 {
+  animation: slide-in 0.4s linear 2s both;
+} */
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+} 

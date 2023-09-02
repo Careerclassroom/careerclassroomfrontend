@@ -55,7 +55,7 @@ function Course() {
 
                         }} className='about-main'>
                             <div className='about-child'>
-                                <span className='about-text'>Course</span>
+                                <span style={{ color:"#12037F"}} className='about-text'>Course</span>
 
 
 
@@ -68,8 +68,8 @@ function Course() {
 
 
                             </div>
-                            <div className='course-main-head'>
-                                <div className='course-main'>
+                            <div className='course-main-head2'>
+                                <div className='course-main3'>
                                     <div className='course-main1'>
                                         <img height="250px" className='course-pic2' src={`https://classroomdata.s3.ap-south-1.amazonaws.com/${item.CoursePhoto}`}></img>
                                     </div>
