@@ -13,10 +13,10 @@ function Checkout() {
 
                 <div  style={{position:"relative",top:"80px"}}className='about-main'>
                     <div className=''>
-                        <span className='about-text'>Checkout </span>
+                        <span style={{ color:"#12037F"}} className='about-text'>Checkout </span>
 
                     </div>
-                    <div style={{ width: "100%", backgroundColor: "rgba(18, 3, 127, 1)", height: "70px", color: "white", fontSize: "30px", padding: "10px", marginTop: "160px" }}>
+                    <div style={{ width: "100%", backgroundColor: "rgba(18, 3, 127, 1)", height: "auto", color: "white", fontSize: "30px", padding: "10px", marginTop: "160px" }}>
                         You are just one step away to start new journey
                     </div>
                     <div className="checkout">
@@ -41,14 +41,14 @@ function Checkout() {
                             </div>
                             <div style={{ display: "flex", justifyContent: "space-between" }}>
                                 <div >
-                                    <h6>Product</h6>
-                                    <h6>4 day boot camp on power BI</h6>
+                                    <h6 style={{ color:"#12037F",fontWeight:"bolder"}}>Product</h6>
+                                    <h6 style={{ color:"#737373",fontWeight:"bolder"}}>4 day boot camp on power BI</h6>
                                 </div>
                                 <div >
-                                    <h6>
+                                    <h6 style={{ color:"#12037F",fontWeight:"bolder"}}>
                                         Sub Total
                                     </h6>
-                                    <h6>
+                                    <h6 style={{ color:"#737373",fontWeight:"bolder",textAlign:"right"}}>
                                         499/
                                     </h6>
                                 </div>
@@ -56,14 +56,14 @@ function Checkout() {
                             <hr></hr>
                             <div style={{ display: "flex", justifyContent: "space-between" }}>
                                 <div>
-                                    <h6>Sub Total</h6>
-                                    <h6>GST</h6>
+                                    <h6 style={{ color:"#737373",fontWeight:"bolder"}}>Sub Total</h6>
+                                    <h6 style={{ color:"#737373",fontWeight:"bolder"}}>GST</h6>
                                 </div>
                                 <div>
-                                    <h6>
-                                        499/
-                                    </h6>
-                                    <h6>
+                                    <h6 style={{ color:"#737373",fontWeight:"bolder"}}> 499/</h6>
+                                       
+                          
+                                    <h6 style={{ color:"#737373",fontWeight:"bolder"}}>
                                         89/
                                     </h6>
                                 </div>
@@ -71,12 +71,12 @@ function Checkout() {
                             <hr></hr>
                             <div style={{ display: "flex", justifyContent: "space-between" }}>
                                 <div>
-                                    <h6>Total</h6>
+                                    <h6 style={{ color:"#12037F",fontWeight:"bolder"}}>Total</h6>
 
                                 </div>
                                 <div>
 
-                                    <h6>
+                                    <h6 style={{ color:"#12037F",fontWeight:"bolder"}}>
                                         588.00
                                     </h6>
                                 </div>
@@ -107,7 +107,7 @@ function Checkout() {
                         </div>
 
                     </div>
-                    <div style={{textAlign:"left",width:"50%",margin:"30px auto"}} >
+                    <div className="gateway" style={{}} >
                    <h2> Credit Card/Debit Card/NetBanking</h2>
                    <h5>Pay securely by Credit or Debit card or Internet Banking </h5>
                    Pay securely by Credit or Debit card or Internet Banking 

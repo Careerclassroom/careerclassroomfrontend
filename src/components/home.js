@@ -25,10 +25,15 @@ function Home() {
             <div style={{ marginTop: "100px" }} className='home-head'>
                 <div className='home-head-child'>
                     <h1 style={{
-                        marginBottom: "50px"
+                        marginBottom: "50px",
+                    
+                        color:"#12037F",
+                        fontWeight:"bolder"
                     }}>Exciting News !</h1>
                     <h1 style={{
-                        marginBottom: "40px"
+                        marginBottom: "40px",
+                        color:"#12037F",
+                        fontWeight:"bold"
                     }}>Unleash the Power of BI with Industry Experts</h1>
                     <div className='join'>
                         <h2 className='join-content'>Join us for an exclusive LIVE workshop on Power BI, starting on 10th August!</h2>
@@ -45,7 +50,7 @@ function Home() {
                         <img width="100%" src={About}></img>
                     </div>
                     <div className='about-bi-flex2'>
-                        <h1 >Welcome to Career Classroom?</h1>
+                        <h3 style={{marginTop:"50px"}} >Welcome to Career Classroom?</h3>
                         <p style={{ color: "#737373", width: "80%", fontSize: "20px", margin: "auto", textAlign: "justify" }}>
                             At CareerClassroom, we believe that everyone deserves the opportunity to thrive in their careers and achieve their professional goals. Our mission is to empower individuals with the knowledge and skills they need to excel in today's competitive job market. Whether you're a recent graduate, seeking a career change, or looking to enhance your existing skills, we are here to guide you on your journey to success.
                         </p>
@@ -57,15 +62,15 @@ function Home() {
                 <h2 style={{ color: "#12037F", marginBottom: "40px", marginTop: "30px", fontSize: "50px" }}><u>Course</u></h2>
                 <div className='course'>
                     <div className='course1'>
-                        <p className='para-font'>
+                        <p style={{}} className='para-font'>
                             4 Days Bootcamp on Power BI Expert &<br></br> Excel with Project. [ 1 hour per day ]
                         </p>
                         <button className='head-btn'><Link style={{textDecoration:"none",color:"white"}} to="/enroll">Enroll Now </Link> <img width="20px" style={{ position: "relative" }} src={no_profile}></img> </button>
 
-                        <p className='para-font2'>Charges for 4 Days Boot Camp are 499 / student</p>
+                        <p style={{marginTop:"20px"}} className='para-font2'>Charges for 4 Days Boot Camp are 499 / student</p>
                     </div>
                     <div className='course2'>
-                        <img width="100%" height="300px" src={powerBi}></img>
+                        <img width="100%" height="330px" src={powerBi}></img>
                     </div>
                 </div>
             </div>
