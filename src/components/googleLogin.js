@@ -17,8 +17,8 @@ function Goggle() {
   const [sign, setsign] = useState("signup")
   const navigate = useNavigate("")
   const dispatch = useDispatch("")
-  const baseUrls = "http://localhost:8000"
-  const baseUrl = "https://server.careerclassroom.in"
+  const baseUrl = "http://localhost:8000"
+  const baseUrls = "https://server.careerclassroom.in"
   
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -54,6 +54,18 @@ function Goggle() {
 
     }
   }
+  
+
+
+
+
+
+
+
+
+
+
+
   //   const GoogleAuth = async () => {
   //     // const dispatch = useDispatch();
 
@@ -83,7 +95,17 @@ function Goggle() {
   //       // Log the error to the console
   //       console.error(err);
   //     }
+  const handleAuthentication = async () => {
+    try {
+      const response = await axios.get(`${baseUrl}/auth/google`); // Make a GET request to your Express.js route
+      const user = await response
 
+      // Dispatch the loginUser action with the authenticated user data
+      dispatch((user.data.userCheck._id));
+    } catch (error) {
+      console.error(error);
+    }
+  };
   const handleLogin = async (e) => {
     e.preventDefault();
 
@@ -181,6 +203,7 @@ function Goggle() {
 
         {sign == "signup" &&
           <div>
+            <button onClick={handleAuthentication}></button>
             <h4 className='sign-head'>Create Your Account </h4>
             <form onSubmit={handleSignUp}>
               <input required className='sign-form' value={name} onChange={(e) => setName(e.target.value)} type='text' placeholder='first Name' ></input>
