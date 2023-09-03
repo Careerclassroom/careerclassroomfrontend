@@ -17,8 +17,8 @@ function Goggle() {
   const [sign, setsign] = useState("signup")
   const navigate = useNavigate("")
   const dispatch = useDispatch("")
-  const baseUrl = "http://localhost:8000"
-  const baseUrls = "https://server.careerclassroom.in"
+  const baseUrls = "http://localhost:8000"
+  const baseUrl = "https://server.careerclassroom.in"
   
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -203,7 +203,7 @@ function Goggle() {
 
         {sign == "signup" &&
           <div>
-            <button onClick={handleAuthentication}></button>
+          
             <h4 className='sign-head'>Create Your Account </h4>
             <form onSubmit={handleSignUp}>
               <input required className='sign-form' value={name} onChange={(e) => setName(e.target.value)} type='text' placeholder='first Name' ></input>
