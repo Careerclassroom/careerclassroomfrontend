@@ -32,57 +32,58 @@ function Header() {
   return (
     <div>
       <div className="header-flex nav-pc">
-                <div className="logo">
+        <div className="logo">
 
-                    <img src={About2}></img>
-                </div>
-                <div>
-                    <ul className="ul-head">
-                        <li className="li-main"><Link style={{textDecoration:"none",color:"#12037F"}} to="/home">Home</Link> </li>
-                        <li className="li-main"> <Link style={{textDecoration:"none",color:"#12037F"}} to="/about"> About</Link></li>
-                        <li className="li-main"><Link style={{textDecoration:"none",color:"#12037F"}} to="/course">Courses</Link> </li>
-                        <li className="li-main"><Link style={{textDecoration:"none",color:"#12037F"}} to="/contact-us">Contact Us</Link> </li>
-                        <li className="li-main"> <Link style={{textDecoration:"none",color:"#12037F"}} to="/userProfile">My Profile</Link></li>
-                    </ul>
-                </div>
-
-            </div>
-           
-      <div className="nav-mobile" style={{background:"white",width:"100%",height:"70px",position:"fixed",top:"0px",zIndex:"99"}}>
-      
-
-<img style={{position:"fixed",left:"0",top:"5px",zIndex:"99"}} src={About2}></img>
-
-      <div className={`menu-bars ${menuBarsActive ? 'change' : ''}`} onClick={toggleNav}>
-        {/* Your menu bars content */}
-        <div className="bar1"></div>
-        <div className="bar2"></div>
-        <div className="bar3"></div>
-      </div>
-      <div className={`overlay ${overlayActive ? 'overlay-active' : ''}`} onClick={closeNav}>
-     
-      
-     
-        <nav>
-        <ul>
-            <li className="slide-in-1" onClick={closeNav}><Link to="/home">Home</Link></li>
-            <li className="slide-in-2" onClick={closeNav}><Link to="/about">About</Link></li>
-            <li className="slide-in-3" onClick={closeNav}><Link  to="/contact-us">Contact us</Link></li>
-            <li className="slide-in-4" onClick={closeNav}><Link to="/course">Course</Link></li>
-            <li className="slide-in-5" onClick={closeNav}><Link to="/home">Dashboard</Link></li>
-            <li className="slide-in-6" onClick={closeNav}><Link to="/userProfile">My profile</Link></li>
-            
+         <Link to="/home"><img src={About2}></img></Link> 
+        </div>
+        <div>
+          <ul className="ul-head">
+            <li className="li-main"><Link style={{ textDecoration: "none", color: "#12037F" }} to="/home">Home</Link> </li>
+            <li className="li-main"> <Link style={{ textDecoration: "none", color: "#12037F" }} to="/about"> About</Link></li>
+            <li className="li-main"><Link style={{ textDecoration: "none", color: "#12037F" }} to="/course">Courses</Link> </li>
+            <li className="li-main"><Link style={{ textDecoration: "none", color: "#12037F" }} to="/contact-us">Contact Us</Link> </li>
+            <li className="li-main"> <Link style={{ textDecoration: "none", color: "#12037F" }} to="/userProfile">My Profile</Link></li>
           </ul>
-          <ul>
-            {/* {navItems.map((navItem, index) => (
+        </div>
+
+      </div>
+
+      <div className="nav-mobile" style={{ background: "white", width: "100%", height: "70px", position: "fixed", top: "0px", zIndex: "99" }}>
+
+
+      
+        <Link to="/home">  <img style={{ position: "fixed", left: "0", top: "5px", zIndex: "99" }} src={About2}></img></Link> 
+
+        <div className={`menu-bars ${menuBarsActive ? 'change' : ''}`} onClick={toggleNav}>
+          {/* Your menu bars content */}
+          <div className="bar1"></div>
+          <div className="bar2"></div>
+          <div className="bar3"></div>
+        </div>
+        <div className={`overlay ${overlayActive ? 'overlay-active' : ''}`} onClick={closeNav}>
+
+
+
+          <nav>
+            <ul>
+              <li className="slide-in-1" onClick={closeNav}><Link to="/home">Home</Link></li>
+              <li className="slide-in-2" onClick={closeNav}><Link to="/about">About</Link></li>
+              <li className="slide-in-3" onClick={closeNav}><Link to="/contact-us">Contact us</Link></li>
+              <li className="slide-in-4" onClick={closeNav}><Link to="/course">Course</Link></li>
+              <li className="slide-in-5" onClick={closeNav}><Link to="/home">Dashboard</Link></li>
+              <li className="slide-in-6" onClick={closeNav}><Link to="/userProfile">My profile</Link></li>
+
+            </ul>
+            <ul>
+              {/* {navItems.map((navItem, index) => (
               <li key={index} className={`slide-out-${index + 1}`} onClick={closeNav}>
                 <a href={navItem.link}>{navItem.title}</a>
               </li>
             ))} */}
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        </div>
       </div>
-    </div>
 
 
     </div>

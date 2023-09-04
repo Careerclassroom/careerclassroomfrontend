@@ -13,6 +13,7 @@ import Multiselect from 'multiselect-react-dropdown';
 import axios from "axios";
 import { getUserIdFromAuth } from '../Redux/actions/GetSellerIdFromAuthActionCreators';
 import finalPropsSelectorFactory from 'react-redux/es/connect/selectorFactory';
+import { toast } from 'react-toastify';
 
 function ProfilePage() {
   useEffect(() => {
@@ -44,8 +45,11 @@ function ProfilePage() {
       if (res.data.status === "success") {
         dispatch(getUserIdFromAuth({}));
 
-        window.alert('You logged Out Successfully');
-        navigation('/');
+        toast("Logout successfull")
+      
+          navigate("/")
+          
+       
       }
     } catch (err) {
       // console.log(err);
@@ -95,7 +99,8 @@ function ProfilePage() {
       });
       // dispatch(getUserIdFromAuth(response.data.data.user._id, response.data.data.user.name, response.data.data.user.email));
       if (response.data.status === "success") {
-
+        toast("Profile updated success")
+       
         // dispatch(getUserIdFromAuth(response.data.data.user._id,  response.data.data.user.name, response.data.data.user.email));
         console.log(response.data.data.user._id)
 
@@ -137,7 +142,7 @@ function ProfilePage() {
       console.log(response.data); // Handle the response from the server
       if (response.data.status === "success") {
         setUpload(false)
-        window.alert("photo uploaded")
+        toast("Profile Updated")
       }
       // setFile(response.data);
     } catch (error) {

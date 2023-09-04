@@ -2,9 +2,10 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-
+import {  toast } from 'react-toastify';
 import axios from "axios";
 import Header from "./header";
+
 import Footer from "./footer";
 const no_profile = new URL("../images/arrow.png", import.meta.url)
 const powerBi = new URL("../images/powerBi.png", import.meta.url)
@@ -49,9 +50,13 @@ function Enroll() {
             });
             // dispatch(getUserIdFromAuth(response.data.data.user._id, response.data.data.user.name, response.data.data.user.email));
             if (response.data.status === "success") {
-                navigate("/checkout")
+                toast("Go to checkout page")
+               
+
+             navigate("/checkout")
+               
                 // dispatch(getUserIdFromAuth(response.data.data.user._id,  response.data.data.user.name, response.data.data.user.email));
-                console.log(response.data.data.user._id)
+                // console.log(response.data.data.user._id)
 
                 // settoken(response.data.token);
                 // navigate("/home")
@@ -152,19 +157,24 @@ function Enroll() {
                                     <label className="form-label">Phone <span className="red">*</span></label><br></br>
                                     <input type="text" value={number} onChange={(e)=>setNumber(e.target.value)} className="form-enroll"></input>
                                     <button onClick={handleSignUp} className="Proceed"> Proceed Now</button>
+                         
                                 </form>
+
+                              
 
                             </div>
                             
 
 
                         </div>
-
+                       
                     </div>
+                 
 
                 </div>
-
+             
                 <Footer />
+            
             </div>
 
         </div>

@@ -1,16 +1,19 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Header from "./header"
 import Footer from "./footer"
 
-
+import toast, { Toaster } from 'react-hot-toast';
 
 
 function Checkout() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <>
     <Header/>
             <div>
-
+            <Toaster/>
                 <div  style={{position:"relative",top:"80px"}}className='about-main'>
                     <div className=''>
                         <span style={{ color:"#12037F"}} className='about-text'>Checkout </span>
@@ -21,7 +24,7 @@ function Checkout() {
                     </div>
                     <div className="checkout">
                         <div className="checkout-main">
-                            <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "30px" }}>
+                            <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "30px",width:"100%" }}>
                                 <div >
                                     <h3>
                                         Payment
@@ -30,7 +33,7 @@ function Checkout() {
                                         of your program
                                     </h6>
                                 </div>
-                                <div>
+                                <div style={{textAlign:"right"}}>
                                     <h3>
                                         Your Detail
                                     </h3>
@@ -49,26 +52,26 @@ function Checkout() {
                                         Sub Total
                                     </h6>
                                     <h6 style={{ color:"#737373",fontWeight:"bolder",textAlign:"right"}}>
-                                        499/
+                                       INR 499/
                                     </h6>
                                 </div>
                             </div>
-                            <hr></hr>
+                            <hr style={{border:"2px dashed black"}}></hr>
                             <div style={{ display: "flex", justifyContent: "space-between" }}>
                                 <div>
                                     <h6 style={{ color:"#737373",fontWeight:"bolder"}}>Sub Total</h6>
                                     <h6 style={{ color:"#737373",fontWeight:"bolder"}}>GST</h6>
                                 </div>
                                 <div>
-                                    <h6 style={{ color:"#737373",fontWeight:"bolder"}}> 499/</h6>
+                                    <h6 style={{ color:"#737373",fontWeight:"bolder"}}>INR 499/</h6>
                                        
                           
                                     <h6 style={{ color:"#737373",fontWeight:"bolder"}}>
-                                        89/
+                                       INR 89/
                                     </h6>
                                 </div>
                             </div>
-                            <hr></hr>
+                            <hr style={{border:"2px dashed black"}}></hr>
                             <div style={{ display: "flex", justifyContent: "space-between" }}>
                                 <div>
                                     <h6 style={{ color:"#12037F",fontWeight:"bolder"}}>Total</h6>
@@ -77,7 +80,7 @@ function Checkout() {
                                 <div>
 
                                     <h6 style={{ color:"#12037F",fontWeight:"bolder"}}>
-                                        588.00
+                                       INR 588.00
                                     </h6>
                                 </div>
                             </div>

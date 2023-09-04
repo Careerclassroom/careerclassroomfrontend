@@ -1107,7 +1107,7 @@ width:74%
 }
 
 .checkout-main {
-  width: 90%;
+  width: 80%;
   margin: auto;
 }
 
@@ -1199,6 +1199,7 @@ line-height: normal;
 .course-main-head2{
   width: 95%;
   margin: auto;
+
 }
 @media (max-width:990px) {
   .course-main {
@@ -1208,6 +1209,12 @@ line-height: normal;
     padding: 10px;
     text-align: left;
 
+  }
+  .checkout-main{
+    width: 100%;
+  }
+  .checkout{
+    width: 98%;
   }
   .gateway{
     width: 90%;
