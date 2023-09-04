@@ -1,9 +1,12 @@
 import { GoogleLogin } from '@react-oauth/google';
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios"
+
 import { getUserIdFromAuth } from '../Redux/actions/GetSellerIdFromAuthActionCreators';
 
 function Goggle() {
@@ -41,7 +44,7 @@ function Goggle() {
       // dispatch(getUserIdFromAuth(response.data.data.user._id, response.data.data.user.name, response.data.data.user.email));
       if (response.data.statusbar === "success") {
         dispatch(getUserIdFromAuth(response.data.data.user._id, response.data.data.user.lastname, response.data.data.user.name, response.data.data.user.email));
-
+        toast("Otp Sent to mail")
         setsign("OTP")
         settoken(response.data.token);
 
@@ -108,6 +111,7 @@ function Goggle() {
   };
   const handleLogin = async (e) => {
     e.preventDefault();
+   
 
     try {
       const response = await axios.post(`${baseUrl}/api/v1/user/login`, {
@@ -124,12 +128,21 @@ function Goggle() {
       });
       console.log("hi");
       if(response.data.status==="false"){
+        toast(" Please verify your mail ")
         setsign("OTP")
 
       }
       if (response.data.statusbar === "success") {
+      
         dispatch(getUserIdFromAuth(response.data.data.user._id, response.data.data.user.lastname, response.data.data.user.name, response.data.data.user.email));
-        navigate("/home")
+        toast("Login successfull")
+      
+       
+          navigate("/home")
+          
+       
+       
+        
       }
       // if (response.data.statusbar === "success") {
       //   dispatch(getUserIdFromAuth(response.data.data.user._id, response.data.data.user.lastname, response.data.data.user.name, response.data.data.user.email));
@@ -176,9 +189,10 @@ function Goggle() {
   }
   const handleRegiter = async (e) => {
     e.preventDefault();
+    toast("Reset password email sent to your email")
     try {
       const response = await axios.post(`${baseUrl}/api/v1/user/forgot`, {
-
+ 
         // lastname:lastname,
         email: email,
 
@@ -240,6 +254,7 @@ function Goggle() {
             <h5 style={{ marginTop: "30px", color: "white" }}>Or</h5>
 
             <button className="sign-switch" onClick={() => setsign("signup")}> Create your account </button>
+            
           </div>
 
         }
@@ -286,7 +301,7 @@ function Goggle() {
         }
 
       </div>
-
+    
     </div>
   )
 }

@@ -5,6 +5,8 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios"
 import { getUserIdFromAuth } from '../Redux/actions/GetSellerIdFromAuthActionCreators';
+import { toast } from 'react-toastify';
+
 
 function Verification() {
   const [name, setName] = useState("")
@@ -36,6 +38,7 @@ function Verification() {
         // isEmailVerified: isEmailVerified
       });
       if (response.data.status === "success") {
+        toast("Verified")
         
         setsign("login")
       }

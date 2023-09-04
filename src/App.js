@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './components/home';
@@ -22,6 +23,7 @@ import Verification from './components/verification';
 import PasswordReset from './components/reset';
 import ProfilePage from './pages/ProfilePage';
 import OtpVerification from './components/otp';
+import { ToastContainer } from 'react-toastify';
 
 
 
@@ -49,7 +51,7 @@ function App() {
 
 
       </Routes>
- 
+ <ToastContainer/>
     </div>
   );
 }
