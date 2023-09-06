@@ -2,6 +2,7 @@ import React from 'react'
 import Talk from 'talkjs';
 import Header from './header'
 import Footer from './footer'
+import { useState } from 'react';
 import { Link } from 'react-router-dom'
 const no_profile = new URL("../images/arrow.png", import.meta.url)
 const About = new URL("../images/about.png", import.meta.url)
@@ -18,6 +19,7 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 
 function Home() {
+    const[arrow,setArrow]=useState(true)
     
     return (
         <>
@@ -38,7 +40,12 @@ function Home() {
                     <div className='join'>
                         <h2 className='join-content'>Join us for an exclusive LIVE workshop on Power BI, starting on 10th August!</h2>
                     </div>
-                    <button style={{ marginTop: "50px" }} className='head-btn'><Link style={{textDecoration:"none",color:"white"}} to="/enroll">Enroll Now </Link><img width="20px"  src={no_profile}></img> </button>
+                    <button onMouseOver={()=>setArrow(false)} onMouseLeave={()=>setArrow(true)} style={{ marginTop: "50px" }} className='head-btn'>
+                        
+                       <Link style={{textDecoration:"none",color:"white"}} to="/enroll">Enroll Now     { arrow ? <div></div> : <img width="20px"  src={no_profile}></img> 
+                } </Link>
+                   
+                        </button>
 
                 </div>
             </div>

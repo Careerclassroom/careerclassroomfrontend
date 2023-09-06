@@ -218,40 +218,40 @@ function Goggle() {
         {sign == "signup" &&
           <div>
           
-            <h4 className='sign-head'>Create Your Account </h4>
+            <h4 className='sign-head'>Sign Up </h4>
             <form onSubmit={handleSignUp}>
-              <input required className='sign-form' value={name} onChange={(e) => setName(e.target.value)} type='text' placeholder='first Name' ></input>
-              <input required className='sign-form' onChange={(e) => setLastName(e.target.value)} type='text' placeholder='last Name' ></input>
+              <input required className='sign-form' value={name} onChange={(e) => setName(e.target.value)} type='text' placeholder='First name' ></input>
+              <input required className='sign-form' onChange={(e) => setLastName(e.target.value)} type='text' placeholder='Last name' ></input>
 
-              <input required className='sign-form' value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='email' ></input>
+              <input required className='sign-form' value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='Email address' ></input>
 
-              <input required className='sign-form' value={password} onChange={(e) => setpasswod(e.target.value)} type='password' placeholder='******' ></input>
+              <input required className='sign-form' value={password} onChange={(e) => setpasswod(e.target.value)} type='password' placeholder='Password' ></input>
 
-              <input required className='sign-form' value={confirm_password} onChange={(e) => setconfirm_passwod(e.target.value)} type='password' placeholder='*****'></input><br></br>
+              <input required className='sign-form' value={confirm_password} onChange={(e) => setconfirm_passwod(e.target.value)} type='password' placeholder='Confirm password'></input><br></br>
               <button className='sign-btn' type='submit'>Sign Up</button>
 
             </form>
-            <h5 style={{ marginTop: "30px", color: "white" }}>Or</h5>
-            <button className="sign-switch" onClick={() => setsign("login")}>have an account?</button>
+            <h5 style={{ marginTop: "20px", color: "white" }}>Or</h5>
+            <button className="sign-switch" onClick={() => setsign("login")}>Have an account ?</button>
           </div>
         }
 
         {sign == "login" &&
           <div>
-            <h4 className='sign-head'>Login to your account</h4>
+            <h4 className='sign-head'>Login </h4>
             <form onSubmit={handleLogin}>
 
               {/* <input onChange={(e)=>setLastName(e.target.value)} type='text' placeholder='last Name' ></input> */}
 
-              <input required className='sign-form' value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='email' ></input>
+              <input required className='sign-form' value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='Email address' ></input>
 
-              <input required className='sign-form' value={password} onChange={(e) => setpasswod(e.target.value)} type='password' placeholder='******' ></input>
+              <input required className='sign-form' value={password} onChange={(e) => setpasswod(e.target.value)} type='password' placeholder='Password' ></input>
 
               <button className='sign-btn' type='submit'>Login </button>
 
             </form>
             <button onClick={() => setsign("forgot")} style={{ background: "transparent", border: "none", color: "white", marginTop: "10px" }}>Forgot Password?</button><br></br>
-            <h5 style={{ marginTop: "30px", color: "white" }}>Or</h5>
+            <h5 style={{ marginTop: "10px", color: "white" }}>Or</h5>
 
             <button className="sign-switch" onClick={() => setsign("signup")}> Create your account </button>
             
@@ -272,7 +272,7 @@ function Goggle() {
 
 
             </form>
-            <h5 style={{color:"white" ,marginTop:"30px"}}>Or</h5>
+            <h5 style={{color:"white" ,marginTop:"20px"}}>Or</h5>
             <button className="sign-switch" onClick={() => setsign("login")}>Back to login</button>
 
 
@@ -283,18 +283,20 @@ function Goggle() {
 
         {sign == "forgot" &&
           <div>
-            <h4 style={{ marginTop: "30px" }} className='sign-head'>Forgot Your Password?</h4>
+            <h5 style={{  }} className='sign-head'>Forgot  Password?</h5>
             <h6 className='sign-head'>Please Enter your email to get your reset password link </h6>
             <form onSubmit={handleRegiter}>
 
               {/* <input onChange={(e)=>setLastName(e.target.value)} type='text' placeholder='last Name' ></input> */}
 
-              <input required className='sign-form' value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='email' ></input>
+              <input required className='sign-form' value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='Email address' ></input>
 
 
               <button className='sign-btn' type='submit'>Submit </button>
 
             </form>
+            
+            <button className="sign-switch" style={{marginTop:"20px"}} onClick={() => setsign("signup")}> Back to login </button>
 
           </div>
 
