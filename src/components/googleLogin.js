@@ -228,7 +228,7 @@ function Goggle() {
               <input required className='sign-form' value={password} onChange={(e) => setpasswod(e.target.value)} type='password' placeholder='Password' ></input>
 
               <input required className='sign-form' value={confirm_password} onChange={(e) => setconfirm_passwod(e.target.value)} type='password' placeholder='Confirm password'></input><br></br>
-              <button className='sign-btn' type='submit'>Sign Up</button>
+              <button className='sign-btn' type='submit'>Sign up</button>
 
             </form>
             <h5 style={{ marginTop: "20px", color: "white" }}>Or</h5>
