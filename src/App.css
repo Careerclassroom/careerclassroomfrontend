@@ -6,6 +6,7 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
 }
 
 .home-head {
@@ -34,19 +35,21 @@ body {
   width: 100%;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 600;
-   height: auto;
+  height: auto;
   padding: 20px;
   border-radius: 70px;
   background-color: white;
   font-size: 20px;
   margin: auto;
 }
-.gateway{
-  text-align:left;
-  width:50%;
-  margin:30px auto;
+
+.gateway {
+  text-align: left;
+  width: 59%;
+  margin: 50px auto 0px auto;
 
 }
+
 .head-btn {
   background-color: #11017E;
   padding: 10px 20px 10px 20px;
@@ -246,6 +249,7 @@ body {
   box-sizing: border-box;
   width: 100%;
 }
+
 .course-main3 {
   border: 2px solid #d9d9d9a6;
 
@@ -319,21 +323,25 @@ body {
 
 
 }
-.details-flex{
+
+.details-flex {
   display: flex;
-justify-content: space-between;
-width:74%
+  justify-content: space-between;
+  width: 74%
 }
-.enroll-flex2{
+
+.enroll-flex2 {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
-.form-label{
+
+.form-label {
 
   color: #12037F;
   margin-top: 4px;
 }
+
 .course-main2>label {
   color: #12037F;
 
@@ -423,12 +431,12 @@ width:74%
   background-color: rgba(18, 3, 127, 1);
   width: 300px;
   height: auto;
+
   text-align: center;
   padding: 20px;
   margin: auto;
-  border-radius: 10px;
-
-
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 2px 7px 29px 0px;
 }
 
 .auth-main2 {
@@ -440,6 +448,7 @@ width:74%
 
   position: relative;
   top: 200px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 
 }
 
@@ -452,18 +461,39 @@ width:74%
   width: 80%;
   border-left: none;
   border-top: none;
-  border-bottom: 1px solid rgba(182, 182, 182, 1);
+  border-bottom: 1px solid white;
   margin-top: 10px;
+
 }
 
 .sign-btn {
   width: 80%;
   background-color: rgba(255, 255, 255, 1);
   padding: 5px 10px 5px 10px;
-  border-radius: 20px;
+  border-radius: 5px;
   border: none;
   color: rgba(18, 3, 127, 1);
+  font-weight: bold;
   margin-top: 10px;
+  border: 1px solid white;
+  transition: all 0.10s;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+}
+
+
+
+
+.sign-btn:hover,
+.sign-btn:focus {
+  background-color: rgba(18, 3, 127, 1);
+  color: white;
+
+
+}
+
+@k .sign-btn::after {
+  background-color: white;
 }
 
 .sign-switch {
@@ -474,6 +504,7 @@ width:74%
 
 .sign-head {
   color: white;
+  font-weight: bolder;
 }
 
 /* headers */
@@ -527,10 +558,12 @@ width:74%
   border: none;
   color: white;
   padding: 10px 20px 10px 20px;
-  margin: 100px ;
-  width: 200px;
+
+  width: 150px;
   margin-left: auto;
   margin-right: auto;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
 
 }
 
@@ -1100,14 +1133,14 @@ width:74%
   width: 90%;
 
 
-  border: 2px solid snow;
+  border: 2px solid #ECEBF5;
   margin: 50px auto;
-  padding: 10px;
+  padding: 50px;
   text-align: left;
 }
 
 .checkout-main {
-  width: 80%;
+  width: 70%;
   margin: auto;
 }
 
@@ -1145,7 +1178,8 @@ width:74%
 }
 
 .Benefits-content {
-  width: 80%;
+  width: 74%;
+  padding: 40px;
   text-align: left;
   margin: auto;
 }
@@ -1193,14 +1227,16 @@ line-height: normal;
 
 /* ----------------------Refund Policy css Ends----------------------- */
 
-.red{
+.red {
   color: red;
 }
-.course-main-head2{
+
+.course-main-head2 {
   width: 95%;
   margin: auto;
 
 }
+
 @media (max-width:990px) {
   .course-main {
     flex-direction: column;
@@ -1210,30 +1246,44 @@ line-height: normal;
     text-align: left;
 
   }
-  .checkout-main{
-    width: 100%;
+
+  .checkout-main {
+    width: 90%;
+  
   }
-  .checkout{
+  .Benefits{
     width: 98%;
   }
-  .gateway{
+  .Benefits-content{
+    width: 90%;
+  }
+
+  .checkout {
+    width: 98%;
+  }
+
+  .gateway {
     width: 90%;
     text-align: center;
   }
-  .course-main3{
+
+  .course-main3 {
     flex-direction: column;
   }
-  .details-flex{
+
+  .details-flex {
     width: 100%;
   }
-  
-.course-flex{
-  flex-direction: column;
-  text-align: left;
-}
-.enroll-flex2{
-  flex-direction: column;
-}
+
+  .course-flex {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .enroll-flex2 {
+    flex-direction: column;
+  }
+
   .course-main-head {
     width: 100%;
     text-align: center;
@@ -1259,9 +1309,22 @@ line-height: normal;
 
 }
 
-@media (max-width:330px) {
+@media (max-width:390px) {
   .course-pic2 {
     width: 230px;
+  }
+  .Benefits-content{
+    width: 100%;
+  }
+  .Benefits{
+    padding: 10px;
+  }
+  .checkout-main{
+    width: 100%;
+
+  }
+  .checkout{
+    padding: 30px;
   }
 
 }
@@ -1785,4 +1848,4 @@ section#home {
   to {
     transform: translateX(0);
   }
-} 
+}
