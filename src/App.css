@@ -992,6 +992,9 @@
   .contactus-container2 {
     display: block;
   }
+  .contactus-map {
+    width: 100%;
+  }
 
 }
 
