@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Header from './header'
 import Footer from './footer'
+import { Link } from 'react-router-dom'
 const no_profile = new URL("../images/arrow.png", import.meta.url)
 const about = new URL("../images/about.png", import.meta.url)
 const About2 = new URL("../images/about.png", import.meta.url)
@@ -93,7 +94,7 @@ function Course() {
                                             fontSize: "15px",
                                             marginTop: "10px"
                                         }}>Charges for 4 Days Boot Camp are 499 / student</h4>
-                                        <button  className='head-btn'>Enroll Now <img width="20px" src={no_profile}></img> </button>
+                                    <Link to="enroll"><button  className='head-btn'>Enroll Now <img width="20px" src={no_profile}></img> </button></Link>    
 
                                     </div>
 
