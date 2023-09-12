@@ -94,7 +94,7 @@ function Course() {
                                             fontSize: "15px",
                                             marginTop: "10px"
                                         }}>Charges for 4 Days Boot Camp are 499 / student</h4>
-                                    <Link to="enroll"><button  className='head-btn'>Enroll Now <img width="20px" src={no_profile}></img> </button></Link>    
+                                    <Link to="/enroll"><button  className='head-btn'>Enroll Now <img width="20px" src={no_profile}></img> </button></Link>    
 
                                     </div>
 
@@ -120,7 +120,7 @@ function Course() {
                                 </div>
                             </div>
                             <div className='course-details'>
-                                <h3>Course Content</h3>
+                                <h3 style={{marginTop:"20px"}}>Course Content</h3>
                                 <br></br>
 
                                 {item.modules.map((item2) => {
@@ -138,7 +138,7 @@ function Course() {
 
                                 }
                             </div>
-                            <h2 style={{ color: "#12037F", marginTop: "20px" }}>Upcoming Courses </h2>
+                            <h2 style={{ color: "#12037F", marginTop: "40px" }}>Upcoming Courses </h2>
                             {
                                 data2.length != 0 ?
                                     data2.map((item3) => {

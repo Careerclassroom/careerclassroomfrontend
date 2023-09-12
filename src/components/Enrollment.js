@@ -112,7 +112,7 @@ function Enroll() {
                     <div className="course-main">
                         <div className="course-flex">
                             <div className="course-main1">
-                                4 Days Bootcamp on Power BI Expert & Excel with Project. [ 1 hour per day ]<br></br><br></br>
+                               <p style={{textAlign:"center"}}>4 Days Bootcamp on Power BI Expert & Excel with Project. [ 1 hour per day ]</p> 
                                 <img width="100%" src={powerBi}></img>
 
                             </div>
@@ -156,7 +156,7 @@ function Enroll() {
                                     <input type="text" value={country} onChange={(e)=>setcountry(e.target.value)} className="form-enroll"></input><br></br>
                                     <label className="form-label">Phone <span className="red">*</span></label><br></br>
                                     <input type="text" value={number} onChange={(e)=>setNumber(e.target.value)} className="form-enroll"></input>
-                                    <button onClick={handleSignUp} className="Proceed"> Proceed Now</button>
+                                    <button style={{marginTop:"50px"}} onClick={handleSignUp} className="Proceed"> Proceed Now</button>
                          
                                 </form>
 
