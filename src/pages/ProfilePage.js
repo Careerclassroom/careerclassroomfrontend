@@ -44,8 +44,8 @@ console.log(extractedObjectId,"hi")
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const baseUrls = "https://server.careerclassroom.in"
-  const baseUrl = "http://localhost:8000"
+  const baseUrl = "https://server.careerclassroom.in"
+  const baseUrls = "http://localhost:8000"
   const dispatch = useDispatch("")
   const navigation = useNavigate("")
   const [name, setName] = useState("")
