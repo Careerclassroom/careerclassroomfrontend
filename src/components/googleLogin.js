@@ -57,7 +57,10 @@ function Goggle() {
 
     }
   }
-  
+  const google=async()=>{
+    const popup = window.open("https://server.careerclassroom.in/auth/google");
+    
+  }
 
 
 
@@ -219,6 +222,7 @@ function Goggle() {
           <div>
           
             <h4 className='sign-head'>Sign Up </h4>
+            <button onClick={google}>google</button>
             <form onSubmit={handleSignUp}>
               <input required className='sign-form' value={name} onChange={(e) => setName(e.target.value)} type='text' placeholder='First name' ></input>
               <input required className='sign-form' onChange={(e) => setLastName(e.target.value)} type='text' placeholder='Last name' ></input>
