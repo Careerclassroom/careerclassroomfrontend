@@ -17,7 +17,9 @@ s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
-
+// const id2=document.cookie
+//   console.log("id",decodeURIComponent(id2))
+ 
 function Home() {
     const[arrow,setArrow]=useState(true)
     

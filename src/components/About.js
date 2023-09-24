@@ -11,7 +11,7 @@ function About() {
             <Header />
             <div style={{ marginTop: "80px" }} className='about-main'>
                 <div className=''>
-                    <span style={{ color:"#12037F"}} className='about-text'>About</span>
+                    <span style={{ color: "#12037F" }} className='about-text'>About</span>
 
                 </div>
 
@@ -27,7 +27,7 @@ function About() {
                     <div className='about-bi-flex2'>
                         <h1 style={{ marginTop: "30px" }} >Who We Are</h1>
                         <p style={{ color: "#737373", width: "80%", fontSize: "20px", margin: "auto", textAlign: "justify" }}>
-                        At CareerClassroom, we believe that everyone deserves the opportunity to thrive in their careers and achieve their professional goals. Our mission is to empower individuals with the knowledge and skills they need to excel in today's competitive job market. Whether you're a recent graduate, seeking a career change, or looking to enhance your existing skills, we are here to guide you on your journey to success.
+                            At CareerClassroom, we believe that everyone deserves the opportunity to thrive in their careers and achieve their professional goals. Our mission is to empower individuals with the knowledge and skills they need to excel in today's competitive job market. Whether you're a recent graduate, seeking a career change, or looking to enhance your existing skills, we are here to guide you on your journey to success.
                         </p>
 
                     </div>
@@ -122,12 +122,12 @@ function About() {
                 </div>
             </div>
             <div className='about-enroll-sec'>
-                <div style={{width:"90%",margin:"auto",position:"relative"}}>
+                <div style={{ width: "90%", margin: "auto", position: "relative" }}>
                     <h2 >Join Us on Your Path to Success.</h2>
-                    <p style={{fontSize:"20px"}}>Whether you're just starting your career or seeking to take it to new heights, CareerClassroom is here to be your partner in success. Take the first step towards transforming your career and unlocking your true potential by enrolling in one of our trans formative courses.
-                   <br></br> <button style={{marginTop:"20px"}} className='head-btn'>Click to know  more <img width="20px" style={{ position: "relative" }} src={no_profile}></img> </button>
+                    <p style={{ fontSize: "20px" }}>Whether you're just starting your career or seeking to take it to new heights, CareerClassroom is here to be your partner in success. Take the first step towards transforming your career and unlocking your true potential by enrolling in one of our trans formative courses.
+                        <br></br> <button style={{ marginTop: "20px" }} className='head-btn'>Click to know  more <img width="20px" style={{ position: "relative" }} src={no_profile}></img> </button>
                     </p>
-                    
+
 
                 </div>
             </div>

@@ -15,12 +15,37 @@ import { getUserIdFromAuth } from '../Redux/actions/GetSellerIdFromAuthActionCre
 import finalPropsSelectorFactory from 'react-redux/es/connect/selectorFactory';
 import { toast } from 'react-toastify';
 
+// console.log(id2)
 function ProfilePage() {
+  function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+  }
+
+  const userCookie = getCookie('user');
+  const decodedUserId = decodeURIComponent(userCookie);
+ 
+
+  const idString = decodedUserId
+  const regex = /"([^"]+)"/; // Regular expression to extract text within double quotes
+  
+  const match = idString.match(regex);
+ const extractedObjectId=match[1]
+  
+  if (match && match[1]) {
+    const extractedObjectId = match[1];
+    console.log(extractedObjectId); // This will print "64eb9276ebdb91fb1339b632"
+  } else {
+    console.log('Object ID not found or in an unexpected format.');
+  }
+console.log(extractedObjectId,"hi")
+ 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const baseUrl = "https://server.careerclassroom.in"
-  const baseUrls = "http://localhost:8000"
+  const baseUrls = "https://server.careerclassroom.in"
+  const baseUrl = "http://localhost:8000"
   const dispatch = useDispatch("")
   const navigation = useNavigate("")
   const [name, setName] = useState("")
@@ -32,6 +57,9 @@ function ProfilePage() {
   const [profile, setProfile] = useState("profile")
   const id = useSelector((state) => state.get_seller_profile_id.user_id);
   const username = useSelector((state) => state.get_seller_profile_id.name);
+  
+  
+
   const navigate = useNavigate("")
   const handleLogout = async (e) => {
     e.preventDefault();
@@ -62,9 +90,9 @@ function ProfilePage() {
   const handleGetOneUser = async () => {
 
     try {
-      const res = await axios.get(`${baseUrl}/api/v1/user/getOneuser/${id}`);
+      const res = await axios.get(`${baseUrl}/api/v1/user/getOneuser/${extractedObjectId}`);
       setData([res.data.data.user])
-      console.log(res.data.data.user)
+      console.log(res)
 
     } catch (err) {
       console.log(err);
@@ -136,7 +164,7 @@ function ProfilePage() {
     const formData = new FormData();
     formData.append('photo', file);
     try {
-      const response = await axios.patch(`${baseUrl}/api/v1/user/updatePhoto/${id}`, formData, {
+      const response = await axios.patch(`${baseUrl}/api/v1/user/updatePhoto/${extractedObjectId}`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       console.log(response.data); // Handle the response from the server
@@ -168,7 +196,7 @@ function ProfilePage() {
                 <div className='profile_box_1' >
                   <div className='profile_avatar'>
                   
-                      <img src={`https://classroomdata.s3.ap-south-1.amazonaws.com/${item.photo}`} width="100" height="100" alt="" />
+                      <img src={item.photo !== undefined ? `https://classroomdata.s3.ap-south-1.amazonaws.com/${item.photo}` : item.googlePhoto} width="100" height="100" alt="" />
                       <div class="round">
 
                         <div>
@@ -182,7 +210,7 @@ function ProfilePage() {
                       <button className='upload-photo-button' onClick={handleSubmitphoto} >upload</button>
                     }
                   </div>
-                  <h2 style={{marginTop:"30px",color:"rgba(18, 3, 127, 1)"}}>{username}</h2>
+                  <h2 style={{marginTop:"30px",color:"rgba(18, 3, 127, 1)"}}>{item.name}</h2>
 
 
                 </div>
