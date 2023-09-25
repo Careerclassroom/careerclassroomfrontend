@@ -32,13 +32,19 @@ function ProfilePage() {
 
   const match = idString.match(regex);
   let extractedObjectId;
- try {
-  extractedObjectId=match[1]
-  
- } catch (error) {
-  console.log(error)
-  
- }
+ 
+
+  try {
+    if (match && match[1]) {
+      extractedObjectId = match[1];
+      console.log(extractedObjectId);
+    } else {
+      console.log('Object ID not found or in an unexpected format.');
+      // Handle the error gracefully, e.g., by providing a default value or showing an error message.
+    }
+  } catch (error) {
+    console.log(error);
+  }
   
   console.log(extractedObjectId, "hi")
 
