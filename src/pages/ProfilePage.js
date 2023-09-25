@@ -24,6 +24,7 @@ function ProfilePage() {
   }
 
   const userCookie = getCookie('user');
+  console.log(userCookie)
   const decodedUserId = decodeURIComponent(userCookie);
   console.log(decodedUserId)
 
