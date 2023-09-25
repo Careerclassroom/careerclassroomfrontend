@@ -58,7 +58,7 @@ function Goggle() {
     }
   }
   const google=async()=>{
-    const popup = window.open("https://server.careerclassroom.in/auth/google");
+    const popup = window.open("http://localhost:8000/auth/google");
     
   }
 
