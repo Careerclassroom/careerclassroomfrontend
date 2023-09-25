@@ -25,7 +25,7 @@ function ProfilePage() {
 
   const userCookie = getCookie('user');
   const decodedUserId = decodeURIComponent(userCookie);
-
+  console.log(decodedUserId)
 
   const idString = decodedUserId
   const regex = /"([^"]+)"/; // Regular expression to extract text within double quotes
