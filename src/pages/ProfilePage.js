@@ -31,7 +31,7 @@ function ProfilePage() {
   const regex = /"([^"]+)"/; // Regular expression to extract text within double quotes
 
   const match = idString.match(regex);
-  const extractedObjectId = match
+  const extractedObjectId = match[1]
 
   if (match && match[1]) {
     const extractedObjectId = match[1];
@@ -44,8 +44,8 @@ function ProfilePage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const baseUrl = "https://server.careerclassroom.in"
-  const baseUrls = "http://localhost:8000"
+  const baseUrls = "https://server.careerclassroom.in"
+  const baseUrl = "http://localhost:8000"
   const dispatch = useDispatch("")
   const navigation = useNavigate("")
   const [name, setName] = useState("")
