@@ -39,12 +39,7 @@ function ProfilePage() {
   console.log(error)
   
  }
-  if (match && match[1]) {
-    const extractedObjectId = match[1];
-    console.log(extractedObjectId); // This will print "64eb9276ebdb91fb1339b632"
-  } else {
-    console.log('Object ID not found or in an unexpected format.');
-  }
+  
   console.log(extractedObjectId, "hi")
 
   useEffect(() => {
