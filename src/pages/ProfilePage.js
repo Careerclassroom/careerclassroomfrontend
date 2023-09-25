@@ -36,7 +36,7 @@ function ProfilePage() {
   extractedObjectId=match[1]
   
  } catch (error) {
-  console.log(err)
+  console.log(error)
   
  }
   if (match && match[1]) {
