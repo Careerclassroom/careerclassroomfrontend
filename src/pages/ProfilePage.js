@@ -31,8 +31,14 @@ function ProfilePage() {
   const regex = /"([^"]+)"/; // Regular expression to extract text within double quotes
 
   const match = idString.match(regex);
-  const extractedObjectId = match[1]
-
+  let extractedObjectId;
+ try {
+  extractedObjectId=match[1]
+  
+ } catch (error) {
+  console.log(err)
+  
+ }
   if (match && match[1]) {
     const extractedObjectId = match[1];
     console.log(extractedObjectId); // This will print "64eb9276ebdb91fb1339b632"
