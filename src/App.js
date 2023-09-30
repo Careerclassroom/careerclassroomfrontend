@@ -24,6 +24,7 @@ import PasswordReset from './components/reset';
 import ProfilePage from './pages/ProfilePage';
 import OtpVerification from './components/otp';
 import { ToastContainer } from 'react-toastify';
+import Dashboards from './components/dashboard';
 
 
 
@@ -49,7 +50,7 @@ function App() {
         <Route path='/refund-policy' element={<RefundPolicy/>}></Route>
         <Route path="/reset/:resetToken" element={<PasswordReset/>} />
 
-
+        <Route path="/dashboard" element={<Dashboards/>} />
       </Routes>
  <ToastContainer/>
     </div>
