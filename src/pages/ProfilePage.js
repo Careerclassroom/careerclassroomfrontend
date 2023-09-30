@@ -22,7 +22,7 @@ function ProfilePage() {
     const parts = value.split(`; ${name}=`);
     if (parts.length === 2) return parts.pop().split(';').shift();
   }
-
+  
   const userCookie = getCookie('user');
   console.log(userCookie)
   const decodedUserId = decodeURIComponent(userCookie);
@@ -35,18 +35,21 @@ function ProfilePage() {
   let extractedObjectId;
  
 
-  try {
-    if (match && match[1]) {
-      extractedObjectId = match[1];
-      console.log(extractedObjectId);
-    } else {
-      console.log('Object ID not found or in an unexpected format.');
-      // Handle the error gracefully, e.g., by providing a default value or showing an error message.
+ 
+    try {
+      if (match && match[1]) {
+        extractedObjectId = match[1];
+        console.log(extractedObjectId,"hello");
+      } else {
+        console.log('Object ID not found or in an unexpected format.');
+        // Handle the error gracefully, e.g., by providing a default value or showing an error message.
+      }
+    } catch (error) {
+      console.log(error);
     }
-  } catch (error) {
-    console.log(error);
-  }
-  
+    
+
+
   console.log(extractedObjectId, "hi")
 
   useEffect(() => {
@@ -93,6 +96,7 @@ function ProfilePage() {
     }
   }
   useEffect(() => {
+    
     handleGetOneUser()
   }, []);
   const handleGetOneUser = async () => {
