@@ -20,16 +20,16 @@ function Footer() {
           <Link to="/" className='footer-brand'> <img src={logo2} width="200px" alt="loading..."></img></Link>
           <p className='foot-para' style={{
 
-          }}>Learn In-Demand Skill To Start your Career Like a Boss ! Climb to the Top 1%: Learn from Industry Titans. Make each day count with upskilling through Career Classroom </p>
+          }}>Learn In-Demand Skill To Start your Career Like a Boss ! Climb to the Top 1%: Learn from Industry Titans. Make each day count with upskilling through Career classroom </p>
 
 
 
           <div className="footer-link-main">
-            {/* <Link classname="footlink" to="https://www.facebook.com/Kounselo" target="_blank"><img src={facebook} className="social-media" alt=""></img></Link>
-          <Link classname="footlink" to="https://twitter.com/kounseloindia?s=11&t=l_7ZXQszpxBTPvBPrtej9g" target="_blank"><img src={twitter} className="social-media" alt=""></img></Link>
-          <Link classname="footlink" to="https://www.instagram.com/kounselo/" target="_blank"><img src={insta} className="social-media" alt=""></img></Link>
-          <Link classname="footlink" to="https://www.linkedin.com/company/kounselo/people/?viewAsMember=true" target="_blank"><img src={linkedIN} className="social-media" alt=""></img></Link>
-          <Link classname="footlink" to="https://in.pinterest.com/Kounselo/" target="_blank"><img src={Printerest} className="social-media" alt=""></img></Link> */}
+            {/* <Link className="footlink" to="https://www.facebook.com/Kounselo" target="_blank"><img src={facebook} className="social-media" alt=""></img></Link>
+          <Link className="footlink" to="https://twitter.com/kounseloindia?s=11&t=l_7ZXQszpxBTPvBPrtej9g" target="_blank"><img src={twitter} className="social-media" alt=""></img></Link>
+          <Link className="footlink" to="https://www.instagram.com/kounselo/" target="_blank"><img src={insta} className="social-media" alt=""></img></Link>
+          <Link className="footlink" to="https://www.linkedin.com/company/kounselo/people/?viewAsMember=true" target="_blank"><img src={linkedIN} className="social-media" alt=""></img></Link>
+          <Link className="footlink" to="https://in.pinterest.com/Kounselo/" target="_blank"><img src={Printerest} className="social-media" alt=""></img></Link> */}
           </div>
         </div>
         <div className="service">
@@ -57,7 +57,7 @@ function Footer() {
           <Link to="https://www.linkedin.com/company/careerclassroom/" target="_blank"><img style={{ position: "relative", left: "-10px" }} src={linked} alt=""></img></Link>
           <Link to="https://instagram.com/career_classroom?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank"><img style={{ position: "relative", left: "-7px" }} src={insta} alt=""></img></Link>
           <Link to="https://www.facebook.com/profile.php?id=100095350190454&mibextid=ZbWKwL" target="_blank"><img src={facebook} style={{ position: "relative", left: "-1px" }} alt=""></img></Link>
-          <Link to="https://twitter.com/CareerClassHQ" style={{ position: "relative", left: "2px" }} target="_blank"><img src={twiter} alt=""></img></Link>
+          <Link to="https://twitter.com/CareerclassHQ" style={{ position: "relative", left: "2px" }} target="_blank"><img src={twiter} alt=""></img></Link>
 
         </div>
 

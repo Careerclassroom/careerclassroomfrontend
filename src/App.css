@@ -1609,7 +1609,7 @@ input[type=file]::-webkit-file-upload-button {
   z-index: 999;
 }
 
-/* Style for the 'change' class when menu is active */
+/* Style for the 'change' className when menu is active */
 .menu-bars.change .bar1 {
   transform: rotate(-45deg) translate(-5px, 5px);
   background-color: white;

@@ -27,7 +27,7 @@ function Dashboards() {
 
         }
     }
-    const[arrow,setArrow]=useState(true)
+    const [arrow, setArrow] = useState(true)
     useEffect(() => {
         handleAllUc()
     }, []);
@@ -48,69 +48,69 @@ function Dashboards() {
     return (
         <>
             <Header />
-            
-                
+
+
+            <div style={{
+                position: "relative",
+                top: "80px"
+
+            }} className='about-main'>
+                <div className='about-child'>
+                    <span style={{ color: "#12037F" }} className='about-text'>Course</span>
+
+
+
+
+
+
+                </div>
+
+                <div>
+
+
+                </div>
+                <div className='dashboard'>
+                    <div className='dashboard-flex'>
+                        <div className='dashboardText'>
+                            <h3 style={{ marginTop: "30px" }}>heading</h3>
+                            <p>lsjdcndkjfnewlkc.mc,e.ce,.</p>
+
+                        </div>
+                        <div className='dashboardImg'>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div className='dashboardCardsmain'>
+                    <div className='dashboardCards'>
+                        <div className='cardVideo'></div>
                         <div style={{
-                            position: "relative",
-                            top: "80px"
-
-                        }} className='about-main'>
-                            <div className='about-child'>
-                                <span style={{ color: "#12037F" }} className='about-text'>Course</span>
-
-
-
-
-
-
-                            </div>
-
-                            <div>
-
-
-                            </div>
-                            <div className='dashboard'>
-                                <div className='dashboard-flex'>
-                                <div className='dashboardText'>
-                                 <h3 style={{marginTop:"30px"}}>heading</h3>
-                                 <p>lsjdcndkjfnewlkc.mc,e.ce,.</p>
-
-                                </div>
-                                <div className='dashboardImg'>
-
-                                </div>
-                                </div>
-
-                            </div>
-                            <div className='dashboardCardsmain'>
-                            <div className='dashboardCards'>
-                                <div className='cardVideo'></div>
-                                <div style={{
-                                    width:"230px",margin:"20px auto 0px  auto"
-                                }}>
-                                   <h5>heading</h5> 
-                                </div>
-                                <p style={{
-                                    width:"230px",margin:" auto",fontSize:"12px"
-                                }}>The module consists of the initial class which  will take you through the curriculum of a 4-day workshop and introduce you to the world of PowerBI.<br>
-                                
-                                </br>
-                                <button onMouseOver={()=>setArrow(false)} onMouseLeave={()=>setArrow(true)} style={{marginTop:"5px"}} className='countinue'>
-                        
-                        <Link style={{textDecoration:"none",color:"white"}} to="">continue     { arrow ? <div></div> : <img width="20px"  src={no_profile}></img> 
-                 } </Link>
-                    
-                         </button>
-                                </p>
-
-
-                            </div>
+                            width: "230px", margin: "20px auto 0px  auto"
+                        }}>
+                            <h5>heading</h5>
                         </div>
-                        </div>
+                        <p style={{
+                            width: "230px", margin: " auto", fontSize: "12px"
+                        }}>The module consists of the initial className which  will take you through the curriculum of a 4-day workshop and introduce you to the world of PowerBI.<br>
+
+                            </br>
+                            <button onMouseOver={() => setArrow(false)} onMouseLeave={() => setArrow(true)} style={{ marginTop: "5px" }} className='countinue'>
+
+                                <Link style={{ textDecoration: "none", color: "white" }} to="">continue     {arrow ? <div></div> : <img width="20px" src={no_profile}></img>
+                                } </Link>
+
+                            </button>
+                        </p>
 
 
-                    
-             
+                    </div>
+                </div>
+            </div>
+
+
+
+
 
         </>
 

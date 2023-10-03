@@ -59,9 +59,9 @@ function Home() {
                         <img width="100%" src={About}></img>
                     </div>
                     <div className='about-bi-flex2'>
-                        <h3 style={{marginTop:"50px"}} >Welcome to Career Classroom?</h3>
+                        <h3 style={{marginTop:"50px"}} >Welcome to Career classroom?</h3>
                         <p style={{ color: "#737373", width: "80%", fontSize: "20px", margin: "auto", textAlign: "justify" }}>
-                            At CareerClassroom, we believe that everyone deserves the opportunity to thrive in their careers and achieve their professional goals. Our mission is to empower individuals with the knowledge and skills they need to excel in today's competitive job market. Whether you're a recent graduate, seeking a career change, or looking to enhance your existing skills, we are here to guide you on your journey to success.
+                            At Careerclassroom, we believe that everyone deserves the opportunity to thrive in their careers and achieve their professional goals. Our mission is to empower individuals with the knowledge and skills they need to excel in today's competitive job market. Whether you're a recent graduate, seeking a career change, or looking to enhance your existing skills, we are here to guide you on your journey to success.
                         </p>
 
                     </div>
