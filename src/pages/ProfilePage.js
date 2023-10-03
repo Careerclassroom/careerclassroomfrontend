@@ -31,21 +31,24 @@ function ProfilePage() {
 
   // const idString = decodedUserId
   const idString =Cookies.get('user');
-  const regex = /"([^"]+)"/; // Regular expression to extract text within double quotes
+  // const regex = /"([^"]+)"/; // Regular expression to extract text within double quotes
 
-  const match = idString.match(regex);
+  // const match = idString.match(regex);
   let extractedObjectId;
  
 
  
     try {
-      if (match && match[1]) {
-        extractedObjectId = match[1];
-        // console.log(extractedObjectId,"hello");
-      } else {
-        console.log('Object ID not found or in an unexpected format.');
+      // if (match && match[1]) {
+      //   extractedObjectId = match[1];
+      //   console.log(extractedObjectId,"hello");
+        extractedObjectId = idString.split(`"`)[1];
+        console.log(extractedObjectId)
+        // console.log("gdaskjgds")
+      // } else {
+      //   console.log('Object ID not found or in an unexpected format.');
         // Handle the error gracefully, e.g., by providing a default value or showing an error message.
-      }
+      // }
     } catch (error) {
       console.log(error);
     }
