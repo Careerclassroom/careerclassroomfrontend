@@ -23,14 +23,14 @@ function ProfilePage() {
     const parts = value.split(`; ${name}=`);
     if (parts.length === 2) return parts.pop().split(';').shift();
   }
-  console.log(Cookies.get('user'), "<--------- Cookie")
+  console.log(Cookies.get('user', { domain: 'https://server.careerclassroom.in' }), "<--------- Cookie")
   // const userCookie = getCookie('user') || "id not found";
   // console.log(userCookie, "<---------userCookie")
   // const decodedUserId = decodeURIComponent(userCookie);
   // console.log(decodedUserId ,"<---------decodedUserId")
 
   // const idString = decodedUserId
-  const idString =Cookies.get('user');
+  const idString =Cookies.get('user', { domain: 'https://server.careerclassroom.in' });
   // const regex = /"([^"]+)"/; // Regular expression to extract text within double quotes
 
   // const match = idString.match(regex);
