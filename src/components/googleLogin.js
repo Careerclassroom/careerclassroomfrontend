@@ -5,7 +5,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom';
-import axios from "axios"
+import axios from "axios";
+
 
 import { getUserIdFromAuth } from '../Redux/actions/GetSellerIdFromAuthActionCreators';
 

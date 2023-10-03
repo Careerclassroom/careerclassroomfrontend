@@ -14,6 +14,7 @@ import axios from "axios";
 import { getUserIdFromAuth } from '../Redux/actions/GetSellerIdFromAuthActionCreators';
 import finalPropsSelectorFactory from 'react-redux/es/connect/selectorFactory';
 import { toast } from 'react-toastify';
+import Cookies from 'js-cookie';
 
 // console.log(id2)
 function ProfilePage() {
@@ -22,13 +23,14 @@ function ProfilePage() {
     const parts = value.split(`; ${name}=`);
     if (parts.length === 2) return parts.pop().split(';').shift();
   }
-  
-  const userCookie = getCookie('user') || "id not found";
-  console.log(userCookie, "<---------userCookie")
-  const decodedUserId = decodeURIComponent(userCookie);
-  console.log(decodedUserId ,"<---------decodedUserId")
+  console.log(Cookies.get('user'), "<--------- Cookie")
+  // const userCookie = getCookie('user') || "id not found";
+  // console.log(userCookie, "<---------userCookie")
+  // const decodedUserId = decodeURIComponent(userCookie);
+  // console.log(decodedUserId ,"<---------decodedUserId")
 
-  const idString = decodedUserId
+  // const idString = decodedUserId
+  const idString =Cookies.get('user');
   const regex = /"([^"]+)"/; // Regular expression to extract text within double quotes
 
   const match = idString.match(regex);
@@ -39,7 +41,7 @@ function ProfilePage() {
     try {
       if (match && match[1]) {
         extractedObjectId = match[1];
-        console.log(extractedObjectId,"hello");
+        // console.log(extractedObjectId,"hello");
       } else {
         console.log('Object ID not found or in an unexpected format.');
         // Handle the error gracefully, e.g., by providing a default value or showing an error message.
@@ -50,14 +52,14 @@ function ProfilePage() {
     
 
 
-  console.log(extractedObjectId, "hi")
+  // console.log(extractedObjectId, "hi")
 
 
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const baseUrl = "https://server.careerclassroom.in"
+  const baseUrl= "https://server.careerclassroom.in"
   const baseUrls = "http://localhost:8000"
   const dispatch = useDispatch("")
   const navigation = useNavigate("")
@@ -97,21 +99,28 @@ function ProfilePage() {
       window.alert('There may be some internal server error');
     }
   }
+
+  
+
+ 
   useEffect(() => {
     
     handleGetOneUser()
-  }, []);
-  const handleGetOneUser = async () => {
 
+  }, []);
+
+  const handleGetOneUser = async () => {
+    setTimeout(async()=>{
     try {
       const res = await axios.get(`${baseUrl}/api/v1/user/getOneuser/${extractedObjectId}`);
-      setData([res.data.data.user])
-      console.log(res)
+      setData([res.data.data?.user])
+      console.log(data, "<----api data");
 
     } catch (err) {
-      console.log(err);
+      console.log(err, "<--- err in api fetching");
 
     }
+  },4000)
   }
 
 
