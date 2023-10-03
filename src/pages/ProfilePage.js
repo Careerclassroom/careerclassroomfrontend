@@ -18,26 +18,29 @@ import Cookies from 'js-cookie';
 
 // console.log(id2)
 function ProfilePage() {
-  function getCookie(name) {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
-  }
-  console.log(Cookies.get('user', { domain: 'https://server.careerclassroom.in' }), "<--------- Cookie")
+  // function getCookie(name) {
+  //   const value = `; ${document.cookie}`;
+  //   const parts = value.split(`; ${name}=`);
+  //   if (parts.length === 2) return parts.pop().split(';').shift();
+  // }
+  
   // const userCookie = getCookie('user') || "id not found";
   // console.log(userCookie, "<---------userCookie")
   // const decodedUserId = decodeURIComponent(userCookie);
   // console.log(decodedUserId ,"<---------decodedUserId")
 
   // const idString = decodedUserId
-  const idString =Cookies.get('user', { domain: 'https://server.careerclassroom.in' });
+  
   // const regex = /"([^"]+)"/; // Regular expression to extract text within double quotes
 
   // const match = idString.match(regex);
-  let extractedObjectId;
- 
+  let extractedObjectId, idString;
 
- 
+
+  useEffect(()=>{
+    setTimeout(async()=>{
+    console.log(Cookies.get('user'), "<--------- Cookie")
+    idString =Cookies.get('user');
     try {
       // if (match && match[1]) {
       //   extractedObjectId = match[1];
@@ -52,6 +55,12 @@ function ProfilePage() {
     } catch (error) {
       console.log(error);
     }
+  },4000)
+  },[])
+ 
+
+ 
+    
     
 
 
@@ -62,8 +71,8 @@ function ProfilePage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const baseUrl= "https://server.careerclassroom.in"
-  const baseUrls = "http://localhost:8000"
+  const baseUrls= "https://server.careerclassroom.in"
+  const baseUrl = "http://localhost:8000"
   const dispatch = useDispatch("")
   const navigation = useNavigate("")
   const [name, setName] = useState("")
@@ -116,7 +125,7 @@ function ProfilePage() {
     setTimeout(async()=>{
     try {
       const res = await axios.get(`${baseUrl}/api/v1/user/getOneuser/${extractedObjectId}`);
-      setData([res.data.data?.user])
+      setData([res.data.data.user])
       console.log(data, "<----api data");
 
     } catch (err) {
@@ -124,6 +133,7 @@ function ProfilePage() {
 
     }
   },4000)
+  
   }
 
 
