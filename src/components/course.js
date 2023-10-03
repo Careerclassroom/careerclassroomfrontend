@@ -9,7 +9,7 @@ const about = new URL("../images/about.png", import.meta.url)
 const About2 = new URL("../images/about.png", import.meta.url)
 function Course() {
     const baseUrls = "http://localhost:8000"
-    const baseUrl = "https://server.careerclassroom.in"
+    const baseUrl = "https://server.careerclassNameroom.in"
     const [data, setData] = useState([])
     const [data2, setData2] = useState([])
     useEffect(() => {
@@ -72,7 +72,7 @@ function Course() {
                             <div className='course-main-head2'>
                                 <div className='course-main3'>
                                     <div className='course-main1'>
-                                        <img height="250px" className='course-pic2' src={`https://classroomdata.s3.ap-south-1.amazonaws.com/${item.CoursePhoto}`}></img>
+                                        <img height="250px" className='course-pic2' src={`https://classNameroomdata.s3.ap-south-1.amazonaws.com/${item.CoursePhoto}`}></img>
                                     </div>
                                     <div className='course-main2'>
                                         <h4 style={{ marginTop: "10px" }}>
@@ -110,7 +110,7 @@ function Course() {
                                     <div className='card'>
                                         <div className='card-tumbnil'>
 
-                                            <img src={`https://classroomdata.s3.ap-south-1.amazonaws.com/${item.learn[0].photo2}`}></img>
+                                            <img src={`https://classNameroomdata.s3.ap-south-1.amazonaws.com/${item.learn[0].photo2}`}></img>
                                         </div>
                                         <h3>{item.learn[0].WhatLearnHead}</h3>
                                         <p style={{ textAlign: "justify" }}>{item.learn[0].WhatLearnDes} </p>
@@ -148,7 +148,7 @@ function Course() {
 
                                                     <div className='upcoming'>
                                                         <div className='course-pic'>
-                                                            <img width="100%" src={`https://classroomdata.s3.ap-south-1.amazonaws.com/${item3.photo}`}></img>
+                                                            <img width="100%" src={`https://classNameroomdata.s3.ap-south-1.amazonaws.com/${item3.photo}`}></img>
 
                                                         </div>
                                                         <div style={{ marginTop: "30px" }} className='course-content'>

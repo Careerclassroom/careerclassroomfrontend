@@ -20,7 +20,7 @@ function Verification() {
   const navigate = useNavigate("")
   const dispatch = useDispatch("")
   const baseUrl = "http://localhost:8000"
-  const baseUrls = "https://server.careerclassroom.in"
+  const baseUrls = "https://server.careerclassNameroom.in"
 
 
 

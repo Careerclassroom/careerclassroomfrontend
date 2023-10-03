@@ -9,7 +9,7 @@ function PasswordReset() {
   const [message, setMessage] = useState('');
   console.log(resetToken)
   const baseUrl = "http://localhost:8000"
-  const baseUrls = "https://server.careerclassroom.in"
+  const baseUrls = "https://server.careerclassNameroom.in"
  
   const handleResetPassword = async () => {
     try {

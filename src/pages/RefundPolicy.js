@@ -13,8 +13,8 @@ function RefundPolicy() {
           <h4 className='font-privacy'>Refund Policy</h4>
         </div>
 
-        <div className='paragraph' ><p>Thanks for your interest in Career Classroom. We ensure to provide an excellent experience and learning to all our users. As with any online
-          purchase experience, some terms and conditions govern the Refund Policy. When you purchase a program on Career Classroom, you agree to <p> our
+        <div className='paragraph' ><p>Thanks for your interest in Career classNameroom. We ensure to provide an excellent experience and learning to all our users. As with any online
+          purchase experience, some terms and conditions govern the Refund Policy. When you purchase a program on Career classNameroom, you agree to <p> our
             Terms & Conditions and refund policy.</p></p></div>
 
         <div className='paragraph' ><p>Our refund policy is as follows:</p></div>
@@ -25,7 +25,7 @@ function RefundPolicy() {
 
 
         <div className='paragraph' ><p>If arefund is provided, you hereby agree and acknowledge that such amount to be refunded may either be paid in cash or credit (for purchase
-          of any other Services of Career Classroom of equivalent value) at the sole discretion of Career Classroom.</p></div>
+          of any other Services of Career classNameroom of equivalent value) at the sole discretion of Career classNameroom.</p></div>
       </div>
 
 
