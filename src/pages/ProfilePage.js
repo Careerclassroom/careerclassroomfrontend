@@ -130,7 +130,7 @@ function ProfilePage() {
 
     } catch (err) {
       console.log(err, "<--- err in api fetching");
-0
+
     }
   },4000)
   
