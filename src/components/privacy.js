@@ -9,7 +9,7 @@ function Privacy() {
             <div style={{ color:"#737373",textAlign: "left", position: "relative", top: "100px", width: "90%", margin: "auto" }}>
                 <h3  className="font-privacy">Privacy Policy</h3>
 
-                The website “www.careerclassNameroom.in” ( “Website”) is owned and operated by 
+                The website “www.careerclassroom.in” ( “Website”) is owned and operated by 
 Anish Priye (“Individual”). [The Brand is engaged in the business of 
 disseminating educational content to users through different media including 
 but not limited to audio, visual, textual, or physical means, whether live or prerecorded, specific details of which are more fully described in the sales 
@@ -104,7 +104,7 @@ on our Website (“Courses”).]
                 <h5  className="font-privacy">‍RIGHT TO CORRECTION</h5>
                 The Website allows users access to their Personal Information and allows them to correct, amend or delete inaccurate information. You are responsible for maintaining the accuracy of the Personal Information you submit to us, such as your contact information provided as part of account registration. We rely on you to disclose all relevant and accurate information and to inform the Company of any changes. If you wish to make a request to correct or update your Personal Information, you may submit your request by sending an email to [insert relevant email address]. We shall not be liable for the accuracy or competency of any information that you have shared with us.
                 <h5  className="font-privacy">OPT OUT PROCEDURES</h5>
-                You may opt-out of receiving marketing and certain other kinds of non-account related communications from the Company by clicking on the “unsubscribe” button or by sending an email to info@careerclassNameroom.in.
+                You may opt-out of receiving marketing and certain other kinds of non-account related communications from the Company by clicking on the “unsubscribe” button or by sending an email to info@careerclassroom.in.
                 <h5  className="font-privacy">NOTIFICATION OF CHANGES</h5>
                 From time to time, we may update this Privacy Policy to reflect changes to our information practices with due notice to you via the Website or by email. You acknowledge that it is your responsibility to check this Privacy Policy for updates periodically. Your continued use of the Website and Services following the posting of any changes to this Privacy Policy will be deemed to constitute an acceptance of those changes.
                 <h5  className="font-privacy">GRIEVANCE REDRESSAL AND GRIEVANCE OFFICER</h5>
@@ -114,7 +114,7 @@ on our Website (“Courses”).]
 
                 Designation: Founder<br></br>
 
-                Email ID: info@careerclassNameroom.in<br></br>
+                Email ID: info@careerclassroom.in<br></br>
 
             </div>
 

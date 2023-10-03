@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
-const baseUrl = "https://server.careerclassNameroom.in"
+const baseUrl = "https://server.careerclassroom.in"
 function ContactUsForm() {
 
     const [name, setname] = useState("");

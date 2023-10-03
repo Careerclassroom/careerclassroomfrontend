@@ -10,10 +10,10 @@ function Terms() {
                 <h3  className="font-privacy">Terms & Condition</h3>
                 <h4  className="font-privacy">Introduction</h4>
                 This is a legal agreement between you, i.e., the person accessing, viewing, or using
-                the web application available at <a href="https://www.CareerclassNameroom.in">www.CareerclassNameroom.in</a> (“Website”) (referred, in
+                the web application available at <a href="https://www.Careerclassroom.in">www.Careerclassroom.in</a> (“Website”) (referred, in
                 this document, to as “you”, “your” or “User” as the case may be) and Anish Priye is
                 the Individual residing at C/0 Sanjeev Nayan Gupta, Lohiya Nagar, Near Williams
-                filed, Ward no. 09, Supaul, Bihar, 852131 (“Career classNameroom” ,
+                filed, Ward no. 09, Supaul, Bihar, 852131 (“Career classroom” ,
                 “us”, “our” or “we”)
                 <br></br>
                 <br></br>
@@ -38,13 +38,13 @@ function Terms() {
                 which are incorporated into these Terms by reference.
 
                 <h5 className="font-privacy" style={{ marginTop: "20px" }}>SUBSCRIPTION OF SERVICES</h5>
-                Career classNameroom is a platform that enables dissemination of educational content
+                Career classroom is a platform that enables dissemination of educational content
                 to Users through different media including but not limited to audio, visual, textual,
                 or physical means, whether live or pre-recorded, specific details of which are more
                 fully described in the sales brochures made available to you under the web page for
                 each specific course on our Website (“Services”). Services shall also include any
-                incidental or ancillary Services provided by Career classNameroom through this Website,
-                or through any online or offline platform that may be opted by Career classNameroom in
+                incidental or ancillary Services provided by Career classroom through this Website,
+                or through any online or offline platform that may be opted by Career classroom in
                 its sole discretion for transmission of its Services in the future, including but not
                 limited to mobile applications or electronic devices. These Services are provided to
                 you subject to these Terms and may be utilized by you, solely for your own use, and
@@ -52,7 +52,7 @@ function Terms() {
                 <br></br>
                 <br></br>
 
-                Carrer classNameroom offers an array of Services for our Users to choose from. Services
+                Carrer classroom offers an array of Services for our Users to choose from. Services
                 may be of the following types:
                 <br></br>
                 <ul>
@@ -78,7 +78,7 @@ function Terms() {
 
                 <h4  className="font-privacy">  REGISTRATION OF USER</h4>
                 To access and use the Services, you are required to register for free with Career
-                classNameroom through our Website by providing your name, email address, phone
+                classroom through our Website by providing your name, email address, phone
                 number, password and such other details that may be required to be furnished by
                 you from time to time. You hereby represent, warrant and covenant that the
                 information provided by you is true, accurate, complete, and not misleading.
@@ -94,7 +94,7 @@ function Terms() {
                 You represent and warrant that if you are an individual, you are of legal age to form a binding contract. If you are not of legal age, you may
                 only access, use and register on this Website with the consent of and under the supervision of a parent or legal guardian. Please note that if
                 a User is younger than the legal age to form a binding contract, we assume that the parent or guardian of such minor has read and
-                understood these Terms and is supervising the minor’s usage of the Website and availment of Services. Career classNameroom reserves the right to
+                understood these Terms and is supervising the minor’s usage of the Website and availment of Services. Career classroom reserves the right to
                 terminate your registration and subscription if it is brought to our notice that you do not satisfy the legal age requirement and your usage of
                 our Website or availment of Services was not with the consent of a parent/guardian as stipulated herein.
                 You are solely responsible and liable for any activity that occurs on or through your account and you shall be responsible for maintaining
@@ -108,7 +108,7 @@ function Terms() {
                 these Terms. We reserve the right to delete or suspend your access to Services for incomplete payment of fees and applicable charges.
                 Please note that we use third party payment gateways or aggregators (“Third Party Payment Service Providers”) for the purpose of
                 collection of fees and applicable charges. Please note that such Third Party Payment Service Providers are independent service providers
-                and not an agent or employee of Career classNameroom and are independent of and not connected to Career classNameroom in any manner whatsoever. In
+                and not an agent or employee of Career classroom and are independent of and not connected to Career classroom in any manner whatsoever. In
                 the event that you are re-directed to any external website or application of such Third Party Payment Service Providers, we disclaim all
                 liability regarding (a) the privacy of your information shared on such websites or applications; (b) security and protection measures for the
                 information and data shared and technology employed on such websites or applications and (c) any and all interaction, correspondence,
@@ -121,7 +121,7 @@ function Terms() {
                 extending the duration of the Service, change in the commencement date of the Service, your failure to attend or participate in the Service,
                 modification of the structure or content of the Service.
                 If a refund is provided, you hereby agree and acknowledge that such amount to be refunded may either be paid in cash or credit (for
-                purchase of any other Services of Career classNameroom of equivalent value) at the sole discretion of Career classNameroom.
+                purchase of any other Services of Career classroom of equivalent value) at the sole discretion of Career classroom.
                 <h4  className="font-privacy">INTELLECTUAL PROPERTY RIGHTS</h4>
                 All content created and provided by us through the Website and our Services (“Content”) is protected by copyrights, trademarks, service
                 marks, patents, trade secrets or other proprietary rights and laws, as applicable.
@@ -129,7 +129,7 @@ function Terms() {
                 images, are our exclusive property, or licensed to us, except as otherwise expressly stated. All trademarks, service marks, trade names,
                 trade dress, and other forms of intellectual property used on the Website and in connection with the Services are either proprietary to us or
                 have been licensed to us. Nothing in these Terms shall be deemed to grant to the User, either directly or indirectly, any license or other right
-                under any copyright or other intellectual property owned by or licensed to Career classNameroom.
+                under any copyright or other intellectual property owned by or licensed to Career classroom.
                 <br></br>
                 <br></br>
                 You must:
@@ -154,10 +154,10 @@ function Terms() {
                 you resulting therefrom. If you submit content to the Website, you hereby grant us a non-exclusive, worldwide, royalty-free, sub-licensable,
                 transferable license to use, reproduce, distribute such content on our Website.
                 <h4  className="font-privacy">USER CONDUCT AND GUIDELINES</h4>
-                other platform on which Career classNameroom may organize a group discussion;
+                other platform on which Career classroom may organize a group discussion;
                 <ul>
                     <li>
-                        to ensure that any communication made by you on this Website or on any present or future platform of Career classNameroom in connection
+                        to ensure that any communication made by you on this Website or on any present or future platform of Career classroom in connection
                         with our Services shall not be harmful, harassing, blasphemous, defamatory, pornographic, libellous, invasive of another’s privacy,
                         hateful, disparaging, relating to or encouraging of money laundering or gambling, illegal, obscene, defamatory, injurious to third parties,
                         racially or ethnically objectionable, politically, religiously, or sexually objectionable;
@@ -192,7 +192,7 @@ function Terms() {
                     </li>
                     <li>
                         not to release any software virus or use any computer code, file, or program that is designed to interrupt, destroy, or limit the
-                        functionality of any computer resource of Career classNameroom;
+                        functionality of any computer resource of Career classroom;
 
                     </li>
                     <li>
@@ -232,12 +232,12 @@ function Terms() {
                     connection with the use of or reliance on any such content, goods or services available on or through any such website or application.
 
                     <h4  className="font-privacy">INDEMNITY</h4>
-                    You agree to defend, indemnify, and hold harmless Career classNameroom, its affiliates, officers, directors, employees and agents for all losses,
+                    You agree to defend, indemnify, and hold harmless Career classroom, its affiliates, officers, directors, employees and agents for all losses,
                     costs, actions, claims, damages, expenses (including legal costs) or liabilities, that arise from or relate to (a) your use or misuse of the
                     Website or Services or Content; (b) violation of any of the terms of these Terms; (c) your infringement of any of our intellectual property
                     rights or third party’s intellectual property; (d) the use of our Services and any connected interaction with Third Party Payment Service
-                    Providers. Career classNameroom shall not be liable to you for any claims arising out of any act or omission on the part of Third Party Payment
-                    Service Providers in connection with the processing of fees and applicable charges. Career classNameroom expressly disclaims any responsibility
+                    Providers. Career classroom shall not be liable to you for any claims arising out of any act or omission on the part of Third Party Payment
+                    Service Providers in connection with the processing of fees and applicable charges. Career classroom expressly disclaims any responsibility
                     and liability for any and all services provided by the Third Party Service Providers.
                     <br></br>
                     <br></br>
@@ -256,7 +256,7 @@ function Terms() {
                             Services respectively.</li>
 
                         Nothing contained herein shall be deemed to exclude or limit your liability in respect of any indemnity given by you under these Terms.
-                        Without prejudice to the foregoing, none of the directors, officers, employees, and agents of Career classNameroom shall be personally liable for
+                        Without prejudice to the foregoing, none of the directors, officers, employees, and agents of Career classroom shall be personally liable for
                         any action in connection with the Website or Services.
 
 
@@ -299,7 +299,7 @@ function Terms() {
 
                         </li>
                         <li>
-                            These Terms may be modified or amended, and any obligation waived at the sole discretion of Career classNameroom.
+                            These Terms may be modified or amended, and any obligation waived at the sole discretion of Career classroom.
                         </li>
                         <li>
                             Unless otherwise specified in these Terms, all notices under these Terms shall be in writing and will be deemed to have been duly given
@@ -328,7 +328,7 @@ function Terms() {
                     </h3>
                     Name: Anish Priye<br></br>
                     Designation: Founder<br></br>
-                    Email ID: info@CareerclassNameroom.in
+                    Email ID: info@Careerclassroom.in
 
 
 

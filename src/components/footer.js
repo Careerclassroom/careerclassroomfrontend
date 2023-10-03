@@ -20,7 +20,7 @@ function Footer() {
           <Link to="/" className='footer-brand'> <img src={logo2} width="200px" alt="loading..."></img></Link>
           <p className='foot-para' style={{
 
-          }}>Learn In-Demand Skill To Start your Career Like a Boss ! Climb to the Top 1%: Learn from Industry Titans. Make each day count with upskilling through Career classNameroom </p>
+          }}>Learn In-Demand Skill To Start your Career Like a Boss ! Climb to the Top 1%: Learn from Industry Titans. Make each day count with upskilling through Career classroom </p>
 
 
 
@@ -54,10 +54,10 @@ function Footer() {
         </div>
         <div className="crypto">
           <h4 className="foot-head"> Contact Us</h4>
-          <Link to="https://www.linkedin.com/company/careerclassNameroom/" target="_blank"><img style={{ position: "relative", left: "-10px" }} src={linked} alt=""></img></Link>
-          <Link to="https://instagram.com/career_classNameroom?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank"><img style={{ position: "relative", left: "-7px" }} src={insta} alt=""></img></Link>
+          <Link to="https://www.linkedin.com/company/careerclassroom/" target="_blank"><img style={{ position: "relative", left: "-10px" }} src={linked} alt=""></img></Link>
+          <Link to="https://instagram.com/career_classroom?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank"><img style={{ position: "relative", left: "-7px" }} src={insta} alt=""></img></Link>
           <Link to="https://www.facebook.com/profile.php?id=100095350190454&mibextid=ZbWKwL" target="_blank"><img src={facebook} style={{ position: "relative", left: "-1px" }} alt=""></img></Link>
-          <Link to="https://twitter.com/CareerclassNameHQ" style={{ position: "relative", left: "2px" }} target="_blank"><img src={twiter} alt=""></img></Link>
+          <Link to="https://twitter.com/CareerclassHQ" style={{ position: "relative", left: "2px" }} target="_blank"><img src={twiter} alt=""></img></Link>
 
         </div>
 

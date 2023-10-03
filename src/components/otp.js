@@ -6,7 +6,7 @@ import axios from "axios"
 function OtpVerification(){
 
     const baseUrls = "http://localhost:8000"
-    const baseUrl = "https://server.careerclassNameroom.in"
+    const baseUrl = "https://server.careerclassroom.in"
     const [OTP, setOTP] = useState("")
     const handleVerify = async (e) => {
         

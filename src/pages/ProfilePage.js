@@ -55,7 +55,7 @@ function ProfilePage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const baseUrl = "https://server.careerclassNameroom.in"
+  const baseUrl = "https://server.careerclassroom.in"
   const baseUrls = "http://localhost:8000"
   const dispatch = useDispatch("")
   const navigation = useNavigate("")
@@ -208,7 +208,7 @@ function ProfilePage() {
                   <div className='profile_box_1' >
                     <div className='profile_avatar'>
 
-                      <img src={item.photo !== undefined ? `https://classNameroomdata.s3.ap-south-1.amazonaws.com/${item.photo}` : item.googlePhoto} width="100" height="100" alt="" />
+                      <img src={item.photo !== undefined ? `https://classroomdata.s3.ap-south-1.amazonaws.com/${item.photo}` : item.googlePhoto} width="100" height="100" alt="" />
                       <div className="round">
 
                         <div>
@@ -256,7 +256,7 @@ function ProfilePage() {
                   <div className='profile_box_1' >
                     <div className='profile_avatar'>
                       <div className="upload">
-                        <img src={`https://classNameroomdata.s3.ap-south-1.amazonaws.com/${item.photo}`} width="100" height="100" alt="" />
+                        <img src={`https://classroomdata.s3.ap-south-1.amazonaws.com/${item.photo}`} width="100" height="100" alt="" />
                         <div className="round">
 
                           <div>

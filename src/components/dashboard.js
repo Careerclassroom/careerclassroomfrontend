@@ -9,7 +9,7 @@ const about = new URL("../images/about.png", import.meta.url)
 const About2 = new URL("../images/about.png", import.meta.url)
 function Dashboards() {
     const baseUrls = "http://localhost:8000"
-    const baseUrl = "https://server.careerclassNameroom.in"
+    const baseUrl = "https://server.careerclassroom.in"
     const [data, setData] = useState([])
     const [data2, setData2] = useState([])
     useEffect(() => {

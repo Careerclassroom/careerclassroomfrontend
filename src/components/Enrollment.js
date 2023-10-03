@@ -24,7 +24,7 @@ function Enroll() {
     const username = useSelector((state) => state.get_seller_profile_id.name);
     const userEmail = useSelector((state) => state.get_seller_profile_id.email);
     const userLastname = useSelector((state) => state.get_seller_profile_id.lastname);
-    const baseUrl = "https://server.careerclassNameroom.in"
+    const baseUrl = "https://server.careerclassroom.in"
     const baseUrls = "http://localhost:8000"
     const navigate = useNavigate("")
 
