@@ -52,6 +52,8 @@ function ProfilePage() {
 
   console.log(extractedObjectId, "hi")
 
+
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
