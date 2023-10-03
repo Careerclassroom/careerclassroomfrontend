@@ -20,8 +20,8 @@ function Goggle() {
   const [sign, setsign] = useState("signup")
   const navigate = useNavigate("")
   const dispatch = useDispatch("")
-  const baseUrl = "http://localhost:8000"
-  const baseUrls = "https://server.careerclassroom.in"
+  const baseUrls = "http://localhost:8000"
+  const baseUrl = "https://server.careerclassroom.in"
   
   const handleSignUp = async (e) => {
     e.preventDefault();
