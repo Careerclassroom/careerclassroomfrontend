@@ -40,7 +40,18 @@ function ProfilePage() {
   // const match = idString.match(regex);
   let extractedObjectId, idString;
 
+  function getCookie(name) {
+    let cookie = {};
+    document.cookie.split(';').forEach(function(el) {
+      let [k,v] = el.split('=');
+      cookie[k.trim()] = v;
+    })
+    return cookie[name];
+  }
 
+  useEffect(()=>{
+  console.log(getCookie("user"))
+  },[])
   useEffect(()=>{
     setTimeout(async()=>{
       console.log("document check",document.cookie)
