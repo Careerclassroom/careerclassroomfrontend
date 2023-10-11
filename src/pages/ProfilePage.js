@@ -43,6 +43,7 @@ function ProfilePage() {
 
   useEffect(()=>{
     setTimeout(async()=>{
+      console.log("document check",document.cookie)
     console.log(Cookies.get('user'), "<--------- Cookie")
     idString =Cookies.get('user');
     try {
