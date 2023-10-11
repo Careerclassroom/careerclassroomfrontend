@@ -75,11 +75,7 @@ function Header() {
 
             </ul>
             <ul>
-              {/* {navItems.map((navItem, index) => (
-              <li key={index} className={`slide-out-${index + 1}`} onClick={closeNav}>
-                <a href={navItem.link}>{navItem.title}</a>
-              </li>
-            ))} */}
+          
             </ul>
           </nav>
         </div>

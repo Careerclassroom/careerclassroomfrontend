@@ -12,8 +12,8 @@ function Privacy() {
                 The website “www.careerclassroom.in” ( “Website”) is owned and operated by 
 Anish Priye (“Individual”). [The Brand is engaged in the business of 
 disseminating educational content to users through different media including 
-but not limited to audio, visual, textual, or physical means, whether live or prerecorded, specific details of which are more fully described in the sales 
-brochures made available to you under the web page for each specific course 
+but not limited to audio, visual, textual, brochures made available to you under the web page for each specific course 
+or physical means, whether live or prerecorded, specific details of which are more fully described in the sales 
 on our Website (“Courses”).]
 
                 <br></br>
