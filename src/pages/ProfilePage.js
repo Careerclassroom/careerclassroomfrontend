@@ -18,6 +18,10 @@ import Cookies from 'js-cookie';
 
 // console.log(id2)
 function ProfilePage() {
+
+  const [token,setToken]=useState(Cookies.get('user'))
+
+  console.log("token",token)
   // function getCookie(name) {
   //   const value = `; ${document.cookie}`;
   //   const parts = value.split(`; ${name}=`);
