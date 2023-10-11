@@ -57,6 +57,7 @@ function ProfilePage() {
     }
   },4000)
   },[])
+  console.log(extractedObjectId)
  
 
  
