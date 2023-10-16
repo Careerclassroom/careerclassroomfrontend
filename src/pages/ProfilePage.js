@@ -50,10 +50,10 @@ function ProfilePage() {
     return false
   }
 
-  while (token === undefined) 
-{    setToken (Cookies.get("user"))
-    console.log(token)
-}
+//   while (token === undefined) 
+// {    setToken (Cookies.get("user"))
+//     console.log(token)
+// }
   useEffect(()=>{
   console.log(getCookie("user"))
   },[])
