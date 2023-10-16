@@ -42,7 +42,7 @@ function ProfilePage() {
 
   function getCookie(name) {
     var pattern = RegExp(name + "=.[^;]*")
-    var matched = document.cookie.match(pattern)
+    var matched = document.cookie.match(pattern);
     if(matched){
         var cookie = matched[0].split('=')
         return cookie[1]
@@ -50,6 +50,10 @@ function ProfilePage() {
     return false
   }
 
+  while (token === undefined) 
+{    setToken (Cookies.get("user"))
+    console.log(token)
+}
   useEffect(()=>{
   console.log(getCookie("user"))
   },[])
