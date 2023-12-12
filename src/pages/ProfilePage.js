@@ -19,66 +19,66 @@ import Cookies from 'js-cookie';
 // console.log(id2)
 function ProfilePage() {
 
-  const [token,setToken]=useState(Cookies.get('user'))
+//   const [token,setToken]=useState(Cookies.get('user'))
 
-  console.log("token",token)
-  // function getCookie(name) {
-  //   const value = `; ${document.cookie}`;
-  //   const parts = value.split(`; ${name}=`);
-  //   if (parts.length === 2) return parts.pop().split(';').shift();
-  // }
+//   console.log("token",token)
+//   // function getCookie(name) {
+//   //   const value = `; ${document.cookie}`;
+//   //   const parts = value.split(`; ${name}=`);
+//   //   if (parts.length === 2) return parts.pop().split(';').shift();
+//   // }
   
-  // const userCookie = getCookie('user') || "id not found";
-  // console.log(userCookie, "<---------userCookie")
-  // const decodedUserId = decodeURIComponent(userCookie);
-  // console.log(decodedUserId ,"<---------decodedUserId")
+//   // const userCookie = getCookie('user') || "id not found";
+//   // console.log(userCookie, "<---------userCookie")
+//   // const decodedUserId = decodeURIComponent(userCookie);
+//   // console.log(decodedUserId ,"<---------decodedUserId")
 
-  // const idString = decodedUserId
+//   // const idString = decodedUserId
   
-  // const regex = /"([^"]+)"/; // Regular expression to extract text within double quotes
+//   // const regex = /"([^"]+)"/; // Regular expression to extract text within double quotes
 
-  // const match = idString.match(regex);
-  let extractedObjectId, idString;
+//   // const match = idString.match(regex);
+//   let extractedObjectId, idString;
 
-  function getCookie(name) {
-    var pattern = RegExp(name + "=.[^;]*")
-    var matched = document.cookie.match(pattern);
-    if(matched){
-        var cookie = matched[0].split('=')
-        return cookie[1]
-    }
-    return false
-  }
+//   function getCookie(name) {
+//     var pattern = RegExp(name + "=.[^;]*")
+//     var matched = document.cookie.match(pattern);
+//     if(matched){
+//         var cookie = matched[0].split('=')
+//         return cookie[1]
+//     }
+//     return false
+//   }
 
-//   while (token === undefined) 
-// {    setToken (Cookies.get("user"))
-//     console.log(token)
-// }
-  useEffect(()=>{
-  console.log(getCookie("user"))
-  },[])
-  useEffect(()=>{
-    setTimeout(async()=>{
-      console.log("document check",document.cookie)
-    console.log(Cookies.get('user'), "<--------- Cookie")
-    idString =Cookies.get('user');
-    try {
-      // if (match && match[1]) {
-      //   extractedObjectId = match[1];
-      //   console.log(extractedObjectId,"hello");
-        extractedObjectId = idString.split(`"`)[1];
-        console.log(extractedObjectId)
-        // console.log("gdaskjgds")
-      // } else {
-      //   console.log('Object ID not found or in an unexpected format.');
-        // Handle the error gracefully, e.g., by providing a default value or showing an error message.
-      // }
-    } catch (error) {
-      console.log(error);
-    }
-  },4000)
-  },[])
-  console.log(extractedObjectId)
+// //   while (token === undefined) 
+// // {    setToken (Cookies.get("user"))
+// //     console.log(token)
+// // }
+//   useEffect(()=>{
+//   console.log(getCookie("user"))
+//   },[])
+//   useEffect(()=>{
+//     setTimeout(async()=>{
+//       console.log("document check",document.cookie)
+//     console.log(Cookies.get('user'), "<--------- Cookie")
+//     idString =Cookies.get('user');
+//     try {
+//       // if (match && match[1]) {
+//       //   extractedObjectId = match[1];
+//       //   console.log(extractedObjectId,"hello");
+//         extractedObjectId = idString.split(`"`)[1];
+//         console.log(extractedObjectId)
+//         // console.log("gdaskjgds")
+//       // } else {
+//       //   console.log('Object ID not found or in an unexpected format.');
+//         // Handle the error gracefully, e.g., by providing a default value or showing an error message.
+//       // }
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   },4000)
+//   },[])
+//   console.log(extractedObjectId)
  
 
  
@@ -86,7 +86,7 @@ function ProfilePage() {
     
 
 
-  // console.log(extractedObjectId, "hi")
+//   // console.log(extractedObjectId, "hi")
 
 
 

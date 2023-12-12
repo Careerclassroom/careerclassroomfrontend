@@ -11,13 +11,12 @@ function Terms() {
                 <h4  className="font-privacy">Introduction</h4>
                 This is a legal agreement between you, i.e., the person accessing, viewing, or using
                 the web application available at <a href="https://www.Careerclassroom.in">www.Careerclassroom.in</a> (“Website”) (referred, in
-                this document, to as “you”, “your” or “User” as the case may be) and Anish Priye is
-                the Individual residing at C/0 Sanjeev Nayan Gupta, Lohiya Nagar, Near Williams
-                filed, Ward no. 09, Supaul, Bihar, 852131 (“Career classroom” ,
+                this document, to as “you”, “your” or “User” as the case may be) and by careerclassroom ("Proprietor") residing at
+                Supaul, Bihar, (“Career classroom” ,
                 “us”, “our” or “we”)
                 <br></br>
                 <br></br>
-                This document (“Terms”) sets forth the legally binding terms and conditions for
+                This document (“Ter by careerclassroom ("Proprietor")ms”) sets forth the legally binding terms and conditions for
                 your use of the Website and any other platforms that may be made available to you
                 in the future including, but not limited to, mobile applications and electronic devices
                 in connection with our Services (defined below). These Terms shall govern the use
