@@ -77,14 +77,16 @@ function Enroll() {
        
         const response = await axios.post('https://server.careerclassroom.in/api/v1/order/create-order/payment', {
             MobileNumber: number,
-            amount: 588,
+            amount: 1,
             redirectUrl: "http://localhost:3000"
         });
         console.log('hiii')
 
 
 
-       console.log(response)
+        console.log('Response from backend:', response.data.Data.payment_response.data.instrumentResponse.redirectInfo.url);
+        dispatch(getPay(response.data.Data.payment_response.data.instrumentResponse.redirectInfo.url))
+
         navigate('/checkout')
     } catch (error) {
         console.error('Error initiating payment', error);
