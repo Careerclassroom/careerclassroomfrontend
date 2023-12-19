@@ -27,7 +27,10 @@ export const getUserId = {
     REMOVE_USER_ID: 'REMOVE_USER_ID'
 }
 
-
+export const getPayId={
+    GET_PAY_ID:'GET_PAY_ID',
+    REMOVE_PAY_ID:'REMOVE_PAY_ID'
+}
 export const Getblogs = {
     GET_ALL_BLOGS: 'GET_ALL_BLOGS',
     REMOVE_ALL_BLOGS: 'REMOVE_ALL_BLOGS',

@@ -8,15 +8,15 @@ const no_profile = new URL("../images/arrow.png", import.meta.url)
 const About = new URL("../images/about.png", import.meta.url)
 const powerBi = new URL("../images/powerBi.png", import.meta.url)
 
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/64df2a17cc26a871b02ff850/1h83ros18';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+// var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+// (function(){
+// var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+// s1.async=true;
+// s1.src='https://embed.tawk.to/64df2a17cc26a871b02ff850/1h83ros18';
+// s1.charset='UTF-8';
+// s1.setAttribute('crossorigin','*');
+// s0.parentNode.insertBefore(s1,s0);
+// })();
 // const id2=document.cookie
 //   console.log("id",decodeURIComponent(id2))
  
