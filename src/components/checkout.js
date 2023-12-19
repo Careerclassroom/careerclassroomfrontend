@@ -1,14 +1,38 @@
-import React, { useEffect } from "react"
+import React, { useEffect,useState } from "react"
 import Header from "./header"
 import Footer from "./footer"
-
+import axios from "axios";
 import toast, { Toaster } from 'react-hot-toast';
-
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 function Checkout() {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+    const [number,setNumber]=useState('')
+    const [ammount,setAmount]=useState('')
+    const id = useSelector((state) => state.get_pay_id.pay_id);
+    console.log(id,"jkj")
+    const handlePaynow = async () => {
+      
+        try {
+           
+            const response = await axios.post('http://localhost:8000/api/v1/order/create-order/payment', {
+                MobileNumber: 916395188310,
+                amount: 1,
+                redirectUrl: "http://localhost:3000"
+            });
+            console.log('hiii')
+    
+            console.log('Response from backend:', response);
+    
+        
+        } catch (error) {
+            console.error('Error initiating payment', error);
+            toast.error('Error initiating payment');
+        }
+    };
     return (
         <>
             <Header />
@@ -116,7 +140,9 @@ function Checkout() {
                         Pay securely by Credit or Debit card or Internet Banking
                         <p style={{ marginTop: "20px" }}>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
 
-                        <div style={{ width: "100%", textAlign: "center" }} ><button className='Proceed' style={{ marginTop: "0px" }} type='submit'>Pay Now</button></div>
+                        <div style={{ width: "100%", textAlign: "center" }} >
+                            <Link to={id}>
+                        paynow</Link></div>
 
                     </div>
                     <Footer />
