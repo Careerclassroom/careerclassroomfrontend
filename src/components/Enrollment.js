@@ -78,7 +78,7 @@ function Enroll() {
         const response = await axios.post('https://server.careerclassroom.in/api/v1/order/create-order/payment', {
             MobileNumber: number,
             amount: 1,
-            redirectUrl: "http://localhost:3000"
+            redirectUrl: "https://careerclassroom.in"
         });
         console.log('hiii')
 
