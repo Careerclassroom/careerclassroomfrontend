@@ -83,9 +83,7 @@ function Enroll() {
         console.log('hiii')
 
 
-
-        console.log('Response from backend:', response.data.Data.payment_response.data.instrumentResponse.redirectInfo.url);
-      
+        console.log(response)
         navigate('/checkout')
     } catch (error) {
         console.error('Error initiating payment', error);
