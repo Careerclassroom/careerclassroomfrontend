@@ -88,7 +88,7 @@ function Enroll() {
 
 
 
-        console.log('Response from backend:', response.data.Data.payment_response.data.instrumentResponse.redirectInfo.url);
+        console.log('Response from backend:', response.data);
         dispatch(getPay(response.data.Data.payment_response.data.instrumentResponse.redirectInfo.url))
 
         navigate('/checkout')
