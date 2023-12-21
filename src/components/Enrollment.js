@@ -79,8 +79,7 @@ function Enroll() {
             MobileNumber: number,
             amount: 1,
             redirectUrl: "https://careerclassroom.in/home",
-            userId:"64eb22ad3330b861fc6b1e20",
-            courseId:"64ce0e120dbd2932947c4778"
+         
         });
         console.log('hiii')
 
