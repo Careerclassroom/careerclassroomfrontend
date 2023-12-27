@@ -4,17 +4,32 @@ import axios from 'axios'
 import Header from './header'
 import Footer from './footer'
 import { Link } from 'react-router-dom'
+import { useSelector } from "react-redux";
 const no_profile = new URL("../images/arrow.png", import.meta.url)
 const about = new URL("../images/about.png", import.meta.url)
 const About2 = new URL("../images/about.png", import.meta.url)
 function Dashboards() {
-    const baseUrls = "http://localhost:8000"
-    const baseUrl = "https://server.careerclassroom.in"
+    const id = useSelector((state) => state.get_seller_profile_id.user_id);
+    const baseUrl = "http://localhost:8000"
+    const baseUrls = "https://server.careerclassroom.in"
     const [data, setData] = useState([])
     const [data2, setData2] = useState([])
+    const [userData,setUserData]=useState([])
     useEffect(() => {
         handleGetOneUser()
+        handleGetUser()
     }, []);
+    const handleGetUser=async()=>{
+        try {
+            const res =await axios.get(`${baseUrl}/api/v1/user/getOneuser/64eb22ad3330b861fc6b1e20`)
+            console.log(res,"hhoi")
+            setUserData(res.data)
+            
+        } catch (error) {
+            console.log(error,"fjdksfndsklfmdsklfkmdsklfdsl")
+            
+        }
+    }
     const handleGetOneUser = async () => {
 
         try {

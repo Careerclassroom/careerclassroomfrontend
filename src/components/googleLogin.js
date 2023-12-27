@@ -9,7 +9,7 @@ import axios from "axios";
 
 
 import { getUserIdFromAuth } from '../Redux/actions/GetSellerIdFromAuthActionCreators';
-
+const About2 = new URL("../images/logo.png", import.meta.url)
 function Goggle() {
   const [name, setName] = useState("")
   const [lastname, setLastName] = useState("")
@@ -145,7 +145,7 @@ function Goggle() {
           navigate("/home")
           
        
-       
+          // mohak233334@gmail.com
         
       }
       // if (response.data.statusbar === "success") {
@@ -216,14 +216,18 @@ function Goggle() {
   }
   return (
     <div className='sign-main'>
+      <div className='auth-logo'>
+        <img style={{position:"relative",top:"40%"}} width="500px" src={About2}></img>
+
+      </div>
 
       <div className='auth-main'>
 
         {sign == "signup" &&
           <div>
           
-            <h4 className='sign-head'>Sign Up </h4>
-            <button onClick={google}>google</button>
+            <div  className='sign-head'>Sign Up </div>
+            {/* <button onClick={google}>google</button> */}
             <form onSubmit={handleSignUp}>
               <input required className='sign-form' value={name} onChange={(e) => setName(e.target.value)} type='text' placeholder='First name' ></input>
               <input required className='sign-form' onChange={(e) => setLastName(e.target.value)} type='text' placeholder='Last name' ></input>
