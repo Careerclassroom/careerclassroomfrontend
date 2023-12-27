@@ -1062,7 +1062,12 @@ body {
   .contactus-container2 {
     display: block;
   }
-}
+
+  .contactus-map {
+    width: 100%;
+  }
+
+
 
 /* ----------------------Contact us css Ends----------------------- */
 
