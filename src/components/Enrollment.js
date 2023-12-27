@@ -75,13 +75,13 @@ function Enroll() {
       
     try {
        
-        const response = await axios.post('https://server.careerclassroom.in/api/v1/order/payment/64eb9b95ebdb91fb1339b645', {
+        const response = await axios.post(`${baseUrl}/api/v1/order/payment/${id}`, {
             MobileNumber: number,
             amount: 1,
             redirectUrl: "https://careerclassroom.in/home",
-            courseId:"23232143242",
-            courseDescription:"ncxjkzcbasc",
-            courseName:"mncscsjcdsjfd"
+            courseId:"64ce0e120dbd2932947c4778",
+            courseDescription:"Post work timing What is data analytics and how to make use of it? What is power bi and how it is useful? Learn Power BI hands-on!! Build a project in 4 days- Learn data cleaning, Data visualization, data modeling, dax, power Query etc Road ahead to learn advance features and projects Day 4",
+            courseName:"4 Days Bootcamp on Power BI Expert & Excel with Project. [ 1 hour per day ]"
          
         });
         console.log('hiii')
@@ -117,6 +117,8 @@ function Enroll() {
     setcountry(data[0].country !== null ? data[0].country : "");
     setNumber(data[0].number !== null ? data[0].number : "");
   }, [data]);
+
+
   return (
     <div>
       <Header />
@@ -150,11 +152,8 @@ function Enroll() {
                 <img width="100%" src={powerBi}></img>
               </div>
               <div className="course-main2">
-                <form onSubmit={handlePaynow}>
-                    <input type="number" value={number} onChange={(e)=>setNumber(e.target.value)}></input>
-                    <button type="submit">pay now</button>
-                </form>
-                {/* <form>
+             
+             
                   <div className="details-flex" style={{}}>
                     <div>
                       <h3>Your Details </h3>
@@ -215,21 +214,20 @@ function Enroll() {
                     Phone <span className="red">*</span>
                   </label>
                   <br></br>
-                  <input
-                    type="text"
-                    value={number}
-                    onChange={(e) => setNumber(e.target.value)}
-                    className="form-enroll"
-                  ></input>
-                  <button
+                  <form onSubmit={handlePaynow}>
+                    <input className="form-enroll"  type="number" value={number} onChange={(e)=>setNumber(e.target.value)}></input>
+                    <button
                     style={{ marginTop: "50px" }}
-                    onClick={handleSignUp}
+                    type="submit"
                     className="Proceed"
                   >
                     {" "}
                     Proceed Now
                   </button>
-                </form> */}
+                </form>
+                  
+               
+              
               </div>
             </div>
           </div>
