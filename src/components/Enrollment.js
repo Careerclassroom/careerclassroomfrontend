@@ -81,8 +81,8 @@ function Enroll() {
             redirectUrl: "https://careerclassroom.in/home",
             courseId:"64ce0e120dbd2932947c4778",
             courseDescription:"Post work timing What is data analytics and how to make use of it? What is power bi and how it is useful? Learn Power BI hands-on!! Build a project in 4 days- Learn data cleaning, Data visualization, data modeling, dax, power Query etc Road ahead to learn advance features and projects Day 4",
-            courseName:"4 Days Bootcamp on Power BI Expert & Excel with Project. [ 1 hour per day ]"
-         
+            courseName:"4 Days Bootcamp on Power BI Expert & Excel with Project. [ 1 hour per day ]",
+            email:email
         });
         console.log('hiii')
 
@@ -215,6 +215,12 @@ function Enroll() {
                   </label>
                   <br></br>
                   <form onSubmit={handlePaynow}>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="form-enroll"
+                  ></input>
                     <input className="form-enroll"  type="number" value={number} onChange={(e)=>setNumber(e.target.value)}></input>
                     <button
                     style={{ marginTop: "50px" }}
