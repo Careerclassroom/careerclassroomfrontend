@@ -1,102 +1,91 @@
-
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import Header from './header'
-import Footer from './footer'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import Header from "./header";
+import Footer from "./footer";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-const no_profile = new URL("../images/arrow.png", import.meta.url)
-const about = new URL("../images/about.png", import.meta.url)
-const About2 = new URL("../images/about.png", import.meta.url)
+const no_profile = new URL("../images/arrow.png", import.meta.url);
+const about = new URL("../images/about.png", import.meta.url);
+const About2 = new URL("../images/about.png", import.meta.url);
+const powerBi = new URL("../images/powerBi.png", import.meta.url);
 function Dashboards() {
-    const id = useSelector((state) => state.get_seller_profile_id.user_id);
-    const baseUrl = "http://localhost:8000"
-    const baseUrls = "https://server.careerclassroom.in"
-    const [data, setData] = useState([])
-    const [data2, setData2] = useState([])
-    const [userData,setUserData]=useState([])
-    useEffect(() => {
-        handleGetOneUser()
-        handleGetUser()
-    }, []);
-    const handleGetUser=async()=>{
-        try {
-            const res =await axios.get(`${baseUrl}/api/v1/user/getOneuser/64eb22ad3330b861fc6b1e20`)
-            console.log(res,"hhoi")
-            setUserData(res.data)
-            
-        } catch (error) {
-            console.log(error,"fjdksfndsklfmdsklfkmdsklfdsl")
-            
-        }
+  const id = useSelector((state) => state.get_seller_profile_id.user_id);
+  const baseUrl = "http://localhost:8000";
+  const baseUrls = "https://server.careerclassroom.in";
+  const [data, setData] = useState([]);
+  const [data2, setData2] = useState([]);
+  const [userData, setUserData] = useState([]);
+  useEffect(() => {
+    handleGetOneUser();
+    handleGetUser();
+  }, []);
+  const handleGetUser = async () => {
+    try {
+      const res = await axios.get(`${baseUrl}/api/v1/user/getOneuser/${id}`);
+      console.log(res.data.data.user.userData, "hhoi");
+      setUserData([res.data.data.user.userData[0]]);
+    } catch (error) {
+      console.log(error, "fjdksfndsklfmdsklfkmdsklfdsl");
     }
-    const handleGetOneUser = async () => {
-
-        try {
-            const res = await axios.get(`${baseUrl}/api/v1/admin/getAllCourses`);
-            setData(res.data.data.AllCourse)
-
-
-        } catch (err) {
-            console.log(err);
-
-        }
+  };
+  const handleGetOneUser = async () => {
+    try {
+      const res = await axios.get(`${baseUrl}/api/v1/admin/getAllCourses`);
+      setData(res.data.data.AllCourse);
+    } catch (err) {
+      console.log(err);
     }
-    const [arrow, setArrow] = useState(true)
-    useEffect(() => {
-        handleAllUc()
-    }, []);
-    const handleAllUc = async () => {
-
-        try {
-            const res = await axios.get(`${baseUrl}/api/v1/upcoming/getAllUpcoming`);
-            setData2(res.data.data.upcoming)
-            console.log(res.data.data.upcoming
-            )
-
-        } catch (err) {
-            console.log(err);
-
-        }
+  };
+  const [arrow, setArrow] = useState(true);
+  useEffect(() => {
+    handleAllUc();
+  }, []);
+  const handleAllUc = async () => {
+    try {
+      const res = await axios.get(`${baseUrl}/api/v1/upcoming/getAllUpcoming`);
+      setData2(res.data.data.upcoming);
+      console.log(res.data.data.upcoming);
+    } catch (err) {
+      console.log(err);
     }
+  };
 
-    return (
-        <>
-            <Header />
+  return (
+    <>
+      <Header />
 
+      <div
+        style={{
+          position: "relative",
+          top: "80px",
+        }}
+        className="about-main"
+      >
+        <div className="about-child">
+          <span style={{ color: "#12037F" }} className="about-text">
+            Course
+          </span>
+        </div>
 
-            <div style={{
-                position: "relative",
-                top: "80px"
-
-            }} className='about-main'>
-                <div className='about-child'>
-                    <span style={{ color: "#12037F" }} className='about-text'>Course</span>
-
-
-
-
-
-
+        <div></div>
+        {userData.map((item) => {
+          return (
+            <div className="dashboard">
+              <div className="dashboard-flex">
+                <div className="dashboardText">
+                  <h3 style={{ marginTop: "30px" }}>{item.courseName}</h3>
+                  <p>{item.courseDescription}</p>
                 </div>
-
-                <div>
-
-
+                <div className="dashboardImg">
+                  <img src={powerBi} width="100%" height="230px"></img>
                 </div>
-                <div className='dashboard'>
-                    <div className='dashboard-flex'>
-                        <div className='dashboardText'>
-                            <h3 style={{ marginTop: "30px" }}>heading</h3>
-                            <p>lsjdcndkjfnewlkc.mc,e.ce,.</p>
+              </div>
+            </div>
+          );
+        })}
+        <Footer />
 
-                        </div>
-                        <div className='dashboardImg'>
-
-                        </div>
-                    </div>
-
-                </div>
+        {/*                 
                 <div className='dashboardCardsmain'>
                     <div className='dashboardCards'>
                         <div className='cardVideo'></div>
@@ -120,15 +109,9 @@ function Dashboards() {
 
 
                     </div>
-                </div>
-            </div>
-
-
-
-
-
-        </>
-
-    )
+                </div> */}
+      </div>
+    </>
+  );
 }
-export default Dashboards
+export default Dashboards;
