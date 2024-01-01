@@ -37,7 +37,7 @@ function Footer() {
           <Link className='foot-link' to="/home" > <h5 className="foot-content">Home</h5></Link>
           <Link className='foot-link' to="/about">  <h5 className="foot-content">About</h5></Link>
           <Link className='foot-link' to="/course"> <h5 className="foot-content">Courses</h5></Link>
-          <Link className='foot-link' to="/home">  <h5 className="foot-content">Dashboard</h5></Link>
+          <Link className='foot-link' to="/dashboard">  <h5 className="foot-content">Dashboard</h5></Link>
           <Link className='foot-link' to="/contact-us"> <h5 className="foot-content">Contact Us </h5></Link>
           <Link className='foot-link' to="/userProfile">  <h5 className="foot-content">My Profile</h5></Link>
 
