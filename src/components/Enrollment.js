@@ -12,6 +12,9 @@ import Footer from "./footer";
 const no_profile = new URL("../images/arrow.png", import.meta.url);
 const powerBi = new URL("../images/powerBi.png", import.meta.url);
 function Enroll() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
     const dispatch=useDispatch('')
   const [name, setName] = useState("");
   const [lastname, setLastName] = useState("");
@@ -32,7 +35,20 @@ function Enroll() {
   const baseUrl = "https://server.careerclassroom.in";
   const baseUrls = "http://localhost:8000";
   const navigate = useNavigate("");
-
+  useEffect(() => {
+    if (!id) {
+      navigate("/login-signup", {
+        replace: true,
+        state: {
+          signIn: true,
+        },
+      });
+    } else {
+    
+      navigate("/enroll");
+      // Assuming fetchData is a function you want to call when 'id' is truthy
+    }
+  }, [navigate, id]);
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
@@ -188,16 +204,9 @@ function Enroll() {
                       ></input>
                     </div>
                   </div>
-                  <label className="form-label">
-                    Email <span className="red">*</span>
-                  </label>
-                  <br></br>
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="form-enroll"
-                  ></input>
+             
+                 
+              
                   <br></br>
                   <label className="form-label">
                     Counry <span className="red">*</span>
@@ -210,17 +219,23 @@ function Enroll() {
                     className="form-enroll"
                   ></input>
                   <br></br>
-                  <label className="form-label">
-                    Phone <span className="red">*</span>
-                  </label>
+                
                   <br></br>
                   <form onSubmit={handlePaynow}>
+                  <label className="form-label">
+                    Email <span className="red">*</span>
+                  </label>
+                  <br></br>
+                 
                   <input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="form-enroll"
                   ></input>
+                   <label className="form-label">
+                    Phone <span className="red">*</span>
+                  </label>
                     <input className="form-enroll"  type="number" value={number} onChange={(e)=>setNumber(e.target.value)}></input>
                     <button
                     style={{ marginTop: "50px" }}

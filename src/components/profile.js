@@ -1,12 +1,16 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios"
 import { getUserIdFromAuth } from '../Redux/actions/GetSellerIdFromAuthActionCreators';
-function UserProfile(){
+function Home2(){
+  useEffect(()=>{
+    navigation('/home')
+  },[])
     const dispatch=useDispatch("")
     const navigation=useNavigate("")
+
     const handleLogout = async (e) => {
         e.preventDefault();
         try {
@@ -26,9 +30,9 @@ function UserProfile(){
       }
     return(
         <div>
-            <button onClick={handleLogout}>Logout</button>
+            jkhkjk
 
         </div>
     )
 }
-export default UserProfile
+export default Home2

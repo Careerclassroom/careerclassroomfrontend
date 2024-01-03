@@ -10,7 +10,7 @@ import Timer from "../images/timer.svg"
 import Mail from "../images/mail.svg"
 import Call from "../images/phone.svg"
 import Footer from '../components/footer'
-
+import { useEffect } from 'react'
 
 
 
@@ -44,7 +44,9 @@ const cardData=[
 
 function ContactUs() {
 
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Header />

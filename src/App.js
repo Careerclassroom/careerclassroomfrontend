@@ -25,6 +25,7 @@ import ProfilePage from './pages/ProfilePage';
 import OtpVerification from './components/otp';
 import { ToastContainer } from 'react-toastify';
 import Dashboards from './components/dashboard';
+import Home2 from './components/profile';
 
 
 
@@ -39,7 +40,7 @@ function App() {
         <Route path='/course' element={<Course/>}></Route>
         <Route path='/About' element={<About/>}></Route>
         <Route path='/enroll'element={<Enroll/>}></Route>
-        <Route path='/' element={<Goggle/>}></Route>
+        <Route path='/login-signup' element={<Goggle/>}></Route>
         <Route path='/verify' element={<OtpVerification/>}></Route>
         <Route path='/privacy' element={<Privacy/>}></Route>
         <Route path='/contact-us' element={<ContactUs/>}></Route>
@@ -49,7 +50,8 @@ function App() {
         <Route path="verification"element={<Verification/>}></Route>
         <Route path='/refund-policy' element={<RefundPolicy/>}></Route>
         <Route path="/reset/:resetToken" element={<PasswordReset/>} />
-
+         
+        <Route path="/" element={<Home2/>} />
         <Route path="/dashboard" element={<Dashboards/>} />
       </Routes>
  <ToastContainer/>

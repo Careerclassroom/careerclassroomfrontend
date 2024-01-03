@@ -2,7 +2,11 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import Header from "./header";
 import Footer from "./footer";
+import { useEffect } from "react";
 function Privacy() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Header />

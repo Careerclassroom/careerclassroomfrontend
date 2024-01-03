@@ -5,14 +5,31 @@ import axios from "axios";
 import toast, { Toaster } from 'react-hot-toast';
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Checkout() {
+    const navigate=useNavigate('')
+  
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
     const [number,setNumber]=useState('')
     const [ammount,setAmount]=useState('')
     const id = useSelector((state) => state.get_pay_id.pay_id);
+    useEffect(() => {
+        if (!id) {
+          navigate("/login-signup", {
+            replace: true,
+            state: {
+              signIn: true,
+            },
+          });
+        } else {
+          toast.error("You are not allowed to open this URL");
+          navigate("/checkout");
+          // Assuming fetchData is a function you want to call when 'id' is truthy
+        }
+      }, [navigate, id]);
     console.log(id,"jkj")
     const handlePaynow = async () => {
       
