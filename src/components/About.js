@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './header'
 import Footer from './footer'
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 const no_profile = new URL("../images/arrow.png", import.meta.url)
 const about = new URL("../images/about.png", import.meta.url)
 const About2 = new URL("../images/about.png", import.meta.url)
@@ -130,7 +131,7 @@ function About() {
                 <div style={{ width: "90%", margin: "auto", position: "relative" }}>
                     <h2 >Join Us on Your Path to Success.</h2>
                     <p style={{ fontSize: "20px" }}>Whether you're just starting your career or seeking to take it to new heights, Careerclassroom is here to be your partner in success. Take the first step towards transforming your career and unlocking your true potential by enrolling in one of our trans formative courses.
-                        <br></br> <button style={{ marginTop: "20px" }} className='head-btn'>Click to know  more <img width="20px" style={{ position: "relative" }} src={no_profile}></img> </button>
+                        <br></br> <Link to="/course"> <button style={{ marginTop: "20px" }} className='head-btn'>Click to know  more <img width="20px" style={{ position: "relative" }} src={no_profile}></img> </button></Link>
                     </p>
 
 
