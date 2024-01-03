@@ -1,11 +1,16 @@
 import React from 'react'
 import Header from './header'
 import Footer from './footer'
+import { useEffect } from 'react'
 const no_profile = new URL("../images/arrow.png", import.meta.url)
 const about = new URL("../images/about.png", import.meta.url)
 const About2 = new URL("../images/about.png", import.meta.url)
 const About3 = new URL("../images/About-pic.png", import.meta.url)
+
 function About() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <>
             <Header />

@@ -4,9 +4,11 @@ import Header from './header'
 import Footer from './footer'
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react';
 const no_profile = new URL("../images/arrow.png", import.meta.url)
 const About = new URL("../images/about.png", import.meta.url)
 const powerBi = new URL("../images/powerBi.png", import.meta.url)
+
 
 // var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 // (function(){
@@ -22,6 +24,9 @@ const powerBi = new URL("../images/powerBi.png", import.meta.url)
  
 function Home() {
     const[arrow,setArrow]=useState(true)
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     
     return (
         <>

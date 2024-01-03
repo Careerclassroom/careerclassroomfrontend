@@ -4,10 +4,33 @@ import axios from 'axios'
 import Header from './header'
 import Footer from './footer'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import toast from 'react-hot-toast'
+import { useSelector } from 'react-redux'
 const no_profile = new URL("../images/arrow.png", import.meta.url)
 const about = new URL("../images/about.png", import.meta.url)
 const About2 = new URL("../images/about.png", import.meta.url)
+
 function Course() {
+    const id = useSelector((state) => state.get_seller_profile_id.user_id);
+    const navigate=useNavigate('')
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+      useEffect(() => {
+        if (!id) {
+          navigate("/login-signup", {
+            replace: true,
+            state: {
+              signIn: true,
+            },
+          });
+        } else {
+          toast.error("You are not allowed to open this URL");
+          navigate("/course");
+          // Assuming fetchData is a function you want to call when 'id' is truthy
+        }
+      }, [navigate, id]);
     const baseUrls = "http://localhost:8000"
     const baseUrl = "https://server.careerclassroom.in"
     const [data, setData] = useState([])

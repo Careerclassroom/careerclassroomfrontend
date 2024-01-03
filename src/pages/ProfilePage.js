@@ -106,10 +106,24 @@ function ProfilePage() {
   const [profile, setProfile] = useState("profile")
   const id = useSelector((state) => state.get_seller_profile_id.user_id);
   const username = useSelector((state) => state.get_seller_profile_id.name);
-
+  
 
 
   const navigate = useNavigate("")
+  useEffect(() => {
+    if (!id) {
+      navigate("/login-signup", {
+        replace: true,
+        state: {
+          signIn: true,
+        },
+      });
+    } else {
+      
+      navigate("/userProfile");
+      // Assuming fetchData is a function you want to call when 'id' is truthy
+    }
+  }, [navigate, id]);
   const handleLogout = async (e) => {
     e.preventDefault();
 
@@ -117,7 +131,7 @@ function ProfilePage() {
 
     try {
       
-        dispatch(getUserIdFromAuth({}));
+        dispatch(getUserIdFromAuth(""));
 
         toast("Logout successfull")
 

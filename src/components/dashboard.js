@@ -4,11 +4,17 @@ import Header from "./header";
 import Footer from "./footer";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 const no_profile = new URL("../images/arrow.png", import.meta.url);
 const about = new URL("../images/about.png", import.meta.url);
 const About2 = new URL("../images/about.png", import.meta.url);
 const powerBi = new URL("../images/powerBi.png", import.meta.url);
 function Dashboards() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const navigate =useNavigate('')
   const id = useSelector((state) => state.get_seller_profile_id.user_id);
   const baseUrls = "http://localhost:8000";
   const baseUrl= "https://server.careerclassroom.in";
@@ -19,6 +25,20 @@ function Dashboards() {
     handleGetOneUser();
     handleGetUser();
   }, []);
+  useEffect(() => {
+    if (!id) {
+      navigate("/login-signup", {
+        replace: true,
+        state: {
+          signIn: true,
+        },
+      });
+    } else {
+      toast.error("You are not allowed to open this URL");
+      navigate("/dashboard");
+      // Assuming fetchData is a function you want to call when 'id' is truthy
+    }
+  }, [navigate, id]);
   const handleGetUser = async () => {
     try {
       const res = await axios.get(`${baseUrl}/api/v1/user/getOneuser/${id}`);
