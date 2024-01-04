@@ -23,9 +23,12 @@ function Checkout() {
             state: {
               signIn: true,
             },
-          });
+          
+        }
+        
+        );
         } else {
-          toast.error("You are not allowed to open this URL");
+         
           navigate("/checkout");
           // Assuming fetchData is a function you want to call when 'id' is truthy
         }

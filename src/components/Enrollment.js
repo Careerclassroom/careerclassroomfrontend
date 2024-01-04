@@ -35,6 +35,20 @@ function Enroll() {
   const baseUrl = "https://server.careerclassroom.in";
   const baseUrls = "http://localhost:8000";
   const navigate = useNavigate("");
+  const isEmailValid = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const isNameValid = (name) => {
+    const nameRegex = /^[a-zA-Z]+$/;
+    return nameRegex.test(name);
+  };
+
+  const isNumberValid = (number) => {
+    const numberRegex = /^[0-9]+$/;
+    return numberRegex.test(number);
+  };
   useEffect(() => {
     if (!id) {
       navigate("/login-signup", {
@@ -51,6 +65,26 @@ function Enroll() {
   }, [navigate, id]);
   const handleSignUp = async (e) => {
     e.preventDefault();
+    if (!isEmailValid(email)) {
+      toast.error("Invalid email address");
+      return;
+    }
+    if (!isNameValid(name)) {
+      toast.error("Invalid name");
+      return;
+    }
+    if (!isNameValid(lastname)) {
+      toast.error("Invalid last name");
+      return;
+    }
+    if (!isNumberValid(number)) {
+      toast.error("Invalid number");
+      return;
+    }
+    if(!isEmailValid(country)){
+      toast.error('In valid country')
+    }
+
     try {
       const response = await axios.patch(
         `${baseUrl}/api/v1/user/update/${id}`,
