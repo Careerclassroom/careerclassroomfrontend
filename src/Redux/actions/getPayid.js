@@ -1,11 +1,11 @@
 import { getPayId} from "./actionTypes";
 
-export const getPay = (pay_id) => {
+export const getPay = (pay_id,trans_id) => {
     return {
         type: getPayId.GET_PAY_ID,
         payload: {
             pay_id,
-           
+            trans_id
       
         }
         
