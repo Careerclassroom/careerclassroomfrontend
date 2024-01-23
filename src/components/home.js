@@ -66,8 +66,10 @@ function Home() {
             marchantTransactionId: id2,
           }
         );
+        console.log("anbcvjvsjklccsknd")
 
         if (response.data.success === true) {
+         console.log("hi")
           alert("hii");
         }
       } catch (error) {
@@ -76,6 +78,7 @@ function Home() {
     }
     else{
         alert("nonnoijoji")
+        console.log("djnsbjkmvs")
     }
   };
   useEffect(()=>{
