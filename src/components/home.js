@@ -31,31 +31,55 @@ function Home() {
   const baseUrl = "https://server.careerclassroom.in";
   const baseUrls = "http://localhost:8000";
   const id = useSelector((state) => state.get_seller_profile_id.user_id);
+  const id2 = useSelector((state) => state.get_pay_id.trans_id);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const handleUpdate = async (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post(`${baseUrl}/api/v1/user/login`, {
-       
-       
-        courseId: "64ce0e120dbd2932947c4778",
-        courseDescription:"Post work timing What is data analytics and how to make use of it? What is power bi and how it is useful? Learn Power BI hands-on!! Build a project in 4 days- Learn data cleaning, Data visualization, data modeling, dax, power Query etc Road ahead to learn advance features and projects Day 4",
-        courseName:"4 Days Bootcamp on Power BI Expert & Excel with Project. [ 1 hour per day ]",
-     
-      });
+    if (id2) {
+      try {
+        const response = await axios.post(`${baseUrl}/api/v1/user/login`, {
+          courseId: "64ce0e120dbd2932947c4778",
+          courseDescription:
+            "Post work timing What is data analytics and how to make use of it? What is power bi and how it is useful? Learn Power BI hands-on!! Build a project in 4 days- Learn data cleaning, Data visualization, data modeling, dax, power Query etc Road ahead to learn advance features and projects Day 4",
+          courseName:
+            "4 Days Bootcamp on Power BI Expert & Excel with Project. [ 1 hour per day ]",
+        });
 
-      if (response.data.statusbar === "success") {
-        alert("hii")
-     
+        if (response.data.statusbar === "success") {
+          alert("hii");
+        }
+      } catch (error) {
+        console.log(error);
       }
-     
-    } catch (error) {
-      console.log(error);
     }
   };
+  const handleUpdate2 = async (e) => {
+    e.preventDefault();
+    if (id2) {
+      try {
+        const response = await axios.post(
+          `${baseUrl}/api/v1/order/payment/check-status`,
+          {
+            marchantTransactionId: id2,
+          }
+        );
+
+        if (response.data.success === true) {
+          alert("hii");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    else{
+        alert("nonnoijoji")
+    }
+  };
+  handleUpdate2()
+
   return (
     <>
       <Header />
