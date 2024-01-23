@@ -16,6 +16,7 @@ function Checkout() {
     const [number,setNumber]=useState('')
     const [ammount,setAmount]=useState('')
     const id = useSelector((state) => state.get_pay_id.pay_id);
+    const id2 = useSelector((state) => state.get_pay_id.trans_id);
     useEffect(() => {
         if (!id) {
           navigate("/login-signup", {
