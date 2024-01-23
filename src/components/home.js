@@ -63,10 +63,11 @@ function Home() {
           const response = await axios.post(
             `${baseUrl}/api/v1/order/payment/check-status`,
             {
-              marchantTransactionId: id2,
+              merchantTransactionId: id2,
+
             }
           );
-          console.log("anbcvjvsjklccsknd");
+          console.log("anbcvjvsjklccsknd",response.data);
 
           if (response.data.success === true) {
             console.log("hi");
