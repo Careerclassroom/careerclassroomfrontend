@@ -78,7 +78,10 @@ function Home() {
         alert("nonnoijoji")
     }
   };
-  handleUpdate2()
+  useEffect(()=>{
+    handleUpdate2()
+  },[])
+
 
   return (
     <>
