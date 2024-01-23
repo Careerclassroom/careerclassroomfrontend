@@ -40,7 +40,7 @@ function Home() {
     e.preventDefault();
     if (id2) {
       try {
-        const response = await axios.post(`${baseUrl}/api/v1/user/login`, {
+        const response = await axios.patch(`${baseUrl}/api/v1/user/updateData/${id}`, {
           courseId: "64ce0e120dbd2932947c4778",
           courseDescription:
             "Post work timing What is data analytics and how to make use of it? What is power bi and how it is useful? Learn Power BI hands-on!! Build a project in 4 days- Learn data cleaning, Data visualization, data modeling, dax, power Query etc Road ahead to learn advance features and projects Day 4",
@@ -49,7 +49,7 @@ function Home() {
         });
 
         if (response.data.statusbar === "success") {
-          alert("hii");
+          alert("goood");
         }
       } catch (error) {
         console.log(error);
@@ -72,6 +72,7 @@ function Home() {
           if (response.data.success === true) {
             console.log("hi");
             alert("hii");
+            handleUpdate()
           }
         } else {
           alert("nonnoijoji");
