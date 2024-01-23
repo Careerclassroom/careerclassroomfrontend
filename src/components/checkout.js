@@ -35,6 +35,7 @@ function Checkout() {
         }
       }, [navigate, id]);
     console.log(id,"jkj")
+    console.log(id2,"nhbvubhkjnlm.")
     const handlePaynow = async () => {
       
         try {
