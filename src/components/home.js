@@ -56,34 +56,33 @@ function Home() {
       }
     }
   };
-  const handleUpdate2 = async (e) => {
-    e.preventDefault();
-    if (id2) {
+  useEffect(() => {
+    const fetchData = async () => {
       try {
-        const response = await axios.post(
-          `${baseUrl}/api/v1/order/payment/check-status`,
-          {
-            marchantTransactionId: id2,
-          }
-        );
-        console.log("anbcvjvsjklccsknd")
+        if (id2) {
+          const response = await axios.post(
+            `${baseUrl}/api/v1/order/payment/check-status`,
+            {
+              marchantTransactionId: id2,
+            }
+          );
+          console.log("anbcvjvsjklccsknd");
 
-        if (response.data.success === true) {
-         console.log("hi")
-          alert("hii");
+          if (response.data.success === true) {
+            console.log("hi");
+            alert("hii");
+          }
+        } else {
+          alert("nonnoijoji");
+          console.log("djnsbjkmvs");
         }
       } catch (error) {
         console.log(error);
       }
-    }
-    else{
-        alert("nonnoijoji")
-        console.log("djnsbjkmvs")
-    }
-  };
-  useEffect(()=>{
-    handleUpdate2()
-  },[])
+    };
+
+    fetchData(); // Call the function immediately when the component mounts
+  }, []);
 
 
   return (
