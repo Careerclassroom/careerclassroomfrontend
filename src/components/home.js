@@ -101,8 +101,7 @@ function Home() {
             handleUpdate();
           }
         } else {
-          alert("nonnoijoji");
-          console.log("djnsbjkmvs");
+        
         }
       } catch (error) {
         console.log(error);
