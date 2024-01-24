@@ -24,6 +24,7 @@ import PasswordReset from './components/reset';
 import ProfilePage from './pages/ProfilePage';
 import OtpVerification from './components/otp';
 import { ToastContainer } from 'react-toastify';
+import { Toaster } from 'react-hot-toast';
 import Dashboards from './components/dashboard';
 import Home2 from './components/profile';
 
@@ -55,6 +56,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboards/>} />
       </Routes>
  <ToastContainer/>
+ <Toaster/>
     </div>
   );
 }

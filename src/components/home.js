@@ -9,6 +9,7 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import { getPay } from "../Redux/actions/getPayid";
 import { useDispatch } from 'react-redux';
+import toast from "react-hot-toast";
 
 const no_profile = new URL("../images/arrow.png", import.meta.url);
 const About = new URL("../images/about.png", import.meta.url);
@@ -74,7 +75,7 @@ function Home() {
         console.log(response);
 
         if (response.data.statusbar === "success") {
-          alert("goood");
+          
           handleSendMail()
         }
 
@@ -97,7 +98,7 @@ function Home() {
 
           if (response.data.success === true) {
             console.log("hi");
-            alert("payment success");
+            toast.success("payment success");
             handleUpdate();
           }
         } else {
