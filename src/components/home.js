@@ -37,7 +37,7 @@ function Home() {
   }, []);
 
   const handleUpdate = async (e) => {
-    e.preventDefault();
+   
     if (id2) {
       try {
         const response = await axios.patch(`${baseUrl}/api/v1/order/updateData/${id}`, {
