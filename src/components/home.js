@@ -37,7 +37,7 @@ function Home() {
   }, []);
 
   const handleUpdate = async (e) => {
-    e.preventDefault();
+   
     if (id2) {
       try {
         const response = await axios.patch(`${baseUrl}/api/v1/order/updateData/${id}`, {
@@ -46,6 +46,9 @@ function Home() {
             "Post work timing What is data analytics and how to make use of it? What is power bi and how it is useful? Learn Power BI hands-on!! Build a project in 4 days- Learn data cleaning, Data visualization, data modeling, dax, power Query etc Road ahead to learn advance features and projects Day 4",
           courseName:
             "4 Days Bootcamp on Power BI Expert & Excel with Project. [ 1 hour per day ]",
+       
+       
+       
         });
 
 
