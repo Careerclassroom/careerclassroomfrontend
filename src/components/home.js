@@ -32,29 +32,49 @@ function Home() {
   const baseUrls = "http://localhost:8000";
   const id = useSelector((state) => state.get_seller_profile_id.user_id);
   const id2 = useSelector((state) => state.get_pay_id.trans_id);
+  const userEmail = useSelector((state) => state.get_seller_profile_id.email);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const handleUpdate = async (e) => {
-   
+  const handleSendMail= async (e) => {
     if (id2) {
       try {
-        const response = await axios.patch(`${baseUrl}/api/v1/order/updateData/${id}`, {
-          courseId: "64ce0e120dbd2932947c4778",
-          courseDescription:
-            "Post work timing What is data analytics and how to make use of it? What is power bi and how it is useful? Learn Power BI hands-on!! Build a project in 4 days- Learn data cleaning, Data visualization, data modeling, dax, power Query etc Road ahead to learn advance features and projects Day 4",
-          courseName:
-            "4 Days Bootcamp on Power BI Expert & Excel with Project. [ 1 hour per day ]",
-       
-       
-       
-        });
+        const response = await axios.post(
+          `${baseUrl}/api/v1/order/sendPaymentSucces`,
+          {
+            email:userEmail
+          }
+        );
+        console.log(response);
 
+        if (response.data.status === "success") {
+          alert("better");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  };
+  const handleUpdate = async (e) => {
+    if (id2) {
+      try {
+        const response = await axios.patch(
+          `${baseUrl}/api/v1/order/updateData/${id}`,
+          {
+            courseId: "64ce0e120dbd2932947c4778",
+            courseDescription:
+              "Post work timing What is data analytics and how to make use of it? What is power bi and how it is useful? Learn Power BI hands-on!! Build a project in 4 days- Learn data cleaning, Data visualization, data modeling, dax, power Query etc Road ahead to learn advance features and projects Day 4",
+            courseName:
+              "4 Days Bootcamp on Power BI Expert & Excel with Project. [ 1 hour per day ]",
+          }
+        );
+        console.log(response);
 
         if (response.data.statusbar === "success") {
           alert("goood");
+          handleSendMail()
         }
+
       } catch (error) {
         console.log(error);
       }
@@ -68,15 +88,14 @@ function Home() {
             `${baseUrl}/api/v1/order/payment/check-status`,
             {
               merchantTransactionId: id2,
-
             }
           );
-          console.log("anbcvjvsjklccsknd",response.data);
+          console.log("anbcvjvsjklccsknd", response.data);
 
           if (response.data.success === true) {
             console.log("hi");
             alert("payment success");
-            handleUpdate()
+            handleUpdate();
           }
         } else {
           alert("nonnoijoji");
@@ -89,7 +108,6 @@ function Home() {
 
     fetchData(); // Call the function immediately when the component mounts
   }, []);
-
 
   return (
     <>
