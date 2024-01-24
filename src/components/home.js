@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
+import { getPay } from "../Redux/actions/getPayid";
+import { useDispatch } from 'react-redux';
 
 const no_profile = new URL("../images/arrow.png", import.meta.url);
 const About = new URL("../images/about.png", import.meta.url);
@@ -30,6 +32,7 @@ function Home() {
   const [arrow, setArrow] = useState(true);
   const baseUrl = "https://server.careerclassroom.in";
   const baseUrls = "http://localhost:8000";
+  const dispatch=useDispatch("")
   const id = useSelector((state) => state.get_seller_profile_id.user_id);
   const id2 = useSelector((state) => state.get_pay_id.trans_id);
   const userEmail = useSelector((state) => state.get_seller_profile_id.email);
@@ -48,7 +51,7 @@ function Home() {
         console.log(response);
 
         if (response.data.status === "success") {
-          alert("better");
+         dispatch(getPay(""));  
         }
       } catch (error) {
         console.log(error);
