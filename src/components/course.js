@@ -26,7 +26,7 @@ function Course() {
             },
           });
         } else {
-          toast.error("You are not allowed to open this URL");
+
           navigate("/course");
           // Assuming fetchData is a function you want to call when 'id' is truthy
         }

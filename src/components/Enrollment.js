@@ -241,19 +241,7 @@ function Enroll() {
              
                  
               
-                  <br></br>
-                  <label className="form-label">
-                    Counry <span className="red">*</span>
-                  </label>
-                  <br></br>
-                  <input
-                    type="text"
-                    value={country}
-                    onChange={(e) => setcountry(e.target.value)}
-                    className="form-enroll"
-                  ></input>
-                  <br></br>
-                
+                  
                   <br></br>
                   <form onSubmit={handlePaynow}>
                   <label className="form-label">
@@ -270,7 +258,7 @@ function Enroll() {
                    <label className="form-label">
                     Phone <span className="red">*</span>
                   </label>
-                    <input className="form-enroll"  type="number" value={number} onChange={(e)=>setNumber(e.target.value)}></input>
+                    <input className="form-enroll" maxLength="10" type="text" value={number} onChange={(e)=>setNumber(e.target.value)}></input>
                     <button
                     style={{ marginTop: "50px" }}
                     type="submit"
