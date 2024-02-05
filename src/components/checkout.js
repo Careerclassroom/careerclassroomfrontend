@@ -163,8 +163,8 @@ function Checkout() {
                         <p style={{ marginTop: "20px" }}>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
 
                         <div style={{ width: "100%", textAlign: "center" }} >
-                            <Link to={id}>
-                        paynow</Link></div>
+                            <Link style={{textDecoration:"none"}} className="Proceed" to={id}>
+                        Pay Now</Link></div>
 
                     </div>
                     <Footer />

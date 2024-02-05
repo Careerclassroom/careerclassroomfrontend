@@ -4,7 +4,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 
   font-weight: 700;
 }
@@ -400,7 +400,6 @@ body {
   width: 40%;
   height: 100vh;
 
-
   text-align: center;
   padding: 20px;
   margin: auto;
@@ -431,12 +430,11 @@ body {
   border-top: none;
   border-bottom: 1px solid white;
   margin-top: 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: bolder;
-
 }
-.sign-form::placeholder{
-  font-family: 'Poppins', sans-serif;
+.sign-form::placeholder {
+  font-family: "Poppins", sans-serif;
   font-weight: bolder;
 }
 
@@ -447,10 +445,10 @@ body {
   border-radius: 5px;
   border: none;
   color: rgba(18, 3, 127, 1);
- 
+
   margin-top: 20px;
   border: 1px solid white;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 
   font-weight: bolder;
   transition: all 0.1s;
@@ -463,7 +461,7 @@ body {
   color: white;
 }
 
- .sign-btn::after {
+.sign-btn::after {
   background-color: white;
 }
 
@@ -471,8 +469,7 @@ body {
   border: none;
   color: white;
   background: transparent;
-  font-family: 'Poppins', sans-serif;
-
+  font-family: "Poppins", sans-serif;
 }
 
 .sign-head {
@@ -481,12 +478,9 @@ body {
   text-transform: capitalize;
   font-size: 30px;
   text-align: left;
-  margin-left:49px;
-  text-decoration:underline;
-  font-family: 'Poppins', sans-serif;
-
-
-
+  margin-left: 49px;
+  text-decoration: underline;
+  font-family: "Poppins", sans-serif;
 }
 
 /* headers */
@@ -1066,8 +1060,6 @@ body {
   .contactus-map {
     width: 100%;
   }
-
-
 }
 /* ----------------------Contact us css Ends----------------------- */
 
@@ -1178,7 +1170,20 @@ line-height: normal;
     padding: 10px;
     text-align: left;
   }
-
+  .dashboard-flex {
+    flex-direction: column;
+    height: auto;
+  }
+  .auth-logo {
+    display: none;
+  }
+  .auth-main {
+    width: 100%;
+  }
+  .sign-head {
+    margin: auto;
+    text-align: center;
+  }
   .checkout-main {
     width: 90%;
   }
@@ -1776,7 +1781,8 @@ section#home {
 /* dashboard */
 .dashboard {
   width: 95%;
-  height: 250px;
+  height: auto;
+  padding: 20px;
   background-color: #ecebf5;
   margin: 30px auto;
   border-radius: 5px;
@@ -1786,7 +1792,7 @@ section#home {
 
 .dashboard-flex {
   width: 100%;
-  height: 230px;
+  height: auto;
   position: relative;
   top: 10px;
   justify-content: space-between;
@@ -1804,8 +1810,8 @@ section#home {
 .dashboardImg {
   flex-basis: 30%;
   height: 230px;
-  margin-right: 10px;
 
+  text-align: center;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   border-radius: 5px;

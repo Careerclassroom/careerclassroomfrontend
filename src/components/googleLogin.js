@@ -217,14 +217,7 @@ function Goggle() {
                 type="password"
                 placeholder="Confirm password"
               />
-              <input
-                required
-                className="sign-form"
-                value={country}
-                onChange={(e) => setcountry(e.target.value)}
-                type="text"
-                placeholder="country"
-              />
+         
               <input
                 required
                 className="sign-form"
@@ -232,6 +225,7 @@ function Goggle() {
                 onChange={(e) => setNumber(e.target.value)}
                 type="text"
                 placeholder="contact number"
+                maxLength="10"
               />
               <br />
               <button className="sign-btn" type="submit">
