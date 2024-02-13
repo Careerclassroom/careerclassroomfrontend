@@ -14,10 +14,10 @@ function Dashboards() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const navigate =useNavigate('')
+  const navigate = useNavigate("");
   const id = useSelector((state) => state.get_seller_profile_id.user_id);
   const baseUrls = "http://localhost:8000";
-  const baseUrl= "https://server.careerclassroom.in";
+  const baseUrl = "https://server.careerclassroom.in";
   const [data, setData] = useState([]);
   const [data2, setData2] = useState([]);
   const [userData, setUserData] = useState([]);
@@ -34,7 +34,6 @@ function Dashboards() {
         },
       });
     } else {
-      
       navigate("/dashboard");
       // Assuming fetchData is a function you want to call when 'id' is truthy
     }
@@ -88,21 +87,25 @@ function Dashboards() {
         </div>
 
         <div></div>
-        {userData.map((item) => {
-          return (
-            <div className="dashboard">
-              <div className="dashboard-flex">
-                <div className="dashboardText">
-                  <h3 style={{ marginTop: "30px" }}>{item.courseName}</h3>
-                  <p>{item.courseDescription}</p>
-                </div>
-                <div className="dashboardImg">
-                  <img src={powerBi} width="100%" height="230px"></img>
+        {userData.length == 0 ? (
+          userData.map((item) => {
+            return (
+              <div className="dashboard">
+                <div className="dashboard-flex">
+                  <div className="dashboardText">
+                    <h3 style={{ marginTop: "30px" }}>{item.courseName}</h3>
+                    <p>{item.courseDescription}</p>
+                  </div>
+                  <div className="dashboardImg">
+                    <img src={powerBi} width="100%" height="230px"></img>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })
+        ) : (
+          <div style={{marginTop:"20px",color:"#11017e",fontSize:"30px"}}>No course found :(</div>
+        )}
         <Footer />
 
         {/*                 

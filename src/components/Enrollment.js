@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 import axios from "axios";
 import Header from "./header";
 import { useDispatch } from "react-redux";
@@ -103,7 +103,7 @@ function Enroll() {
      
 
 
-        toast("Go to checkout page");
+        toast.success("Go to checkout page");
 
         navigate("/checkout");
 
@@ -134,11 +134,11 @@ function Enroll() {
             courseName:"4 Days Bootcamp on Power BI Expert & Excel with Project. [ 1 hour per day ]",
             email:email
         });
-        console.log('hiii')
+    
 
 
 
-        console.log('Response from backend:', response);
+   
         dispatch(getPay(response.data.Data.payment_response.data.instrumentResponse.redirectInfo.url,response.data.Data.payment_request.merchantTransactionId))
 
         navigate('/checkout')
@@ -242,7 +242,7 @@ function Enroll() {
                  
               
                   
-                  <br></br>
+                  
                   <form onSubmit={handlePaynow}>
                   <label className="form-label">
                     Email <span className="red">*</span>
