@@ -1,14 +1,31 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { getUserIdFromAuth } from "../Redux/actions/GetSellerIdFromAuthActionCreators";
 import { toast } from "react-hot-toast";
 import "react-toastify/dist/ReactToastify.css";
-
+import { bounceInDown } from "react-animations";
+import { flip } from "react-animations";
+import { flipInY } from "react-animations";
+import { StyleSheet, css } from "aphrodite";
 const About2 = new URL("../images/logo.png", import.meta.url);
 
 function Goggle() {
+  const styles = StyleSheet.create({
+    fadeInAnimation: {
+      animationName: bounceInDown,
+      animationDuration: "1s",
+    },
+    Flip: {
+      animationName: flip,
+      animationDuration: "2s",
+    },
+    Flip2: {
+      animationName: flipInY,
+      animationDuration: "1s",
+    },
+  });
   const [name, setName] = useState("");
   const [lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -163,12 +180,14 @@ function Goggle() {
   return (
     <div className="sign-main">
       <div className="auth-logo">
-        <img
+        <Link to="/home">  <img
           style={{ position: "relative", top: "40%" }}
           width="500px"
           src={About2}
           alt="logo"
-        />
+          className={css(styles.fadeInAnimation)} 
+        /></Link>
+      
       </div>
 
       <div className="auth-main">

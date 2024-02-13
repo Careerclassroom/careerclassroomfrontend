@@ -153,7 +153,7 @@ function Home() {
               to="/enroll"
             >
               Enroll Now{" "}
-              {arrow ? <div></div> : <img width="20px" src={no_profile}></img>}{" "}
+              
             </Link>
           </button>
         </div>
