@@ -252,8 +252,8 @@ function Goggle() {
               </button>
             </form>
             <h5 style={{ marginTop: "20px", color: "white" }}>Or</h5>
-            <button className="sign-switch" onClick={() => setsign("login")}>
-              Have an account ?
+            <button className="sign-switch" >
+              Have an account ? <Link style={{color:"white"}} onClick={()=>setsign("login")} >Login</Link> 
             </button>
           </div>
         )}
@@ -289,14 +289,15 @@ function Goggle() {
                 border: "none",
                 color: "white",
                 marginTop: "10px",
+                textDecoration:"underline"
               }}
             >
               Forgot Password?
             </button>
             <br />
             <h5 style={{ marginTop: "10px", color: "white" }}>Or</h5>
-            <button className="sign-switch" onClick={() => setsign("signup")}>
-              Create your account
+            <button className="sign-switch" >
+              Create New ? <Link style={{color:"white"}} onClick={()=>setsign("signup")} >Signup</Link> 
             </button>
           </div>
         )}
