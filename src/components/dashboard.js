@@ -41,8 +41,9 @@ function Dashboards() {
   const handleGetUser = async () => {
     try {
       const res = await axios.get(`${baseUrl}/api/v1/user/getOneuser/${id}`);
-      console.log(res.data.data.user.userData, "hhoi");
-      setUserData([res.data.data.user.userData[0]]);
+      console.log([res], "hhoi");
+      console.log(res)
+      setUserData([res.data.data.user]);
     } catch (error) {
       console.log(error, "fjdksfndsklfmdsklfkmdsklfdsl");
     }
@@ -87,24 +88,30 @@ function Dashboards() {
         </div>
 
         <div></div>
-        {userData.length == 0 ? (
-          userData.map((item) => {
-            return (
-              <div className="dashboard">
-                <div className="dashboard-flex">
-                  <div className="dashboardText">
-                    <h3 style={{ marginTop: "30px" }}>{item.courseName}</h3>
-                    <p>{item.courseDescription}</p>
-                  </div>
-                  <div className="dashboardImg">
-                    <img src={powerBi} width="100%" height="230px"></img>
+
+        {userData.map((item) => {
+          return(
+            <div>
+          { item.userData.length!=0?
+            item.userData.map((item2) => {
+              return (
+                <div className="dashboard">
+                  <div className="dashboard-flex">
+                    <div className="dashboardText">
+                      <h3 style={{ marginTop: "30px" }}>{item2.courseName}</h3>
+                      <p>{item2.courseDescription}</p>
+                    </div>
+                    <div className="dashboardImg">
+                      <img src={powerBi} width="100%" height="230px"></img>
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })
-        ) : (
-          <div style={{marginTop:"20px",color:"#11017e",fontSize:"30px"}}>No course found :(</div>
+              );
+            }):  <div style={{marginTop:"20px",color:"#11017e",fontSize:"30px"}}>No course found :(</div>
+
+          }
+          </div>)
+        }
         )}
         <Footer />
 
