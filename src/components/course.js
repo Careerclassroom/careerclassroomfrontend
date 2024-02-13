@@ -117,7 +117,7 @@ function Course() {
                                             fontSize: "15px",
                                             marginTop: "10px"
                                         }}>Charges for 4 Days Boot Camp are 499 / student</h4>
-                                    <Link to="/enroll"><button  className='head-btn'>Enroll Now <img width="20px" src={no_profile}></img> </button></Link>    
+                                    <Link to="/enroll"><button  className='head-btn'>Enroll Now  </button></Link>    
 
                                     </div>
 
