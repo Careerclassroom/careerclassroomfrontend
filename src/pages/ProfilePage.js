@@ -13,7 +13,7 @@ import Multiselect from 'multiselect-react-dropdown';
 import axios from "axios";
 import { getUserIdFromAuth } from '../Redux/actions/GetSellerIdFromAuthActionCreators';
 import finalPropsSelectorFactory from 'react-redux/es/connect/selectorFactory';
-import { toast } from 'react-toastify';
+import { toast } from 'react-hot-toast';
 import Cookies from 'js-cookie';
 
 // console.log(id2)
@@ -133,7 +133,7 @@ function ProfilePage() {
       
         dispatch(getUserIdFromAuth(""));
 
-        toast("Logout successfull")
+        toast.success("Logout successfull")
 
         navigate("/")
 

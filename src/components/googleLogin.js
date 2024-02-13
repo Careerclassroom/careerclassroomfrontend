@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { getUserIdFromAuth } from "../Redux/actions/GetSellerIdFromAuthActionCreators";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 import "react-toastify/dist/ReactToastify.css";
 
 const About2 = new URL("../images/logo.png", import.meta.url);
@@ -56,10 +56,7 @@ function Goggle() {
       toast.error("Invalid number");
       return;
     }
-    if(!isEmailValid(country)){
-      toast.error('In valid country')
-    }
-
+    
     try {
       const response = await axios.post(`${baseUrl}/api/v1/user/signup`, {
         name: name,
@@ -83,7 +80,8 @@ function Goggle() {
             response.data.data.user.email
           )
         );
-        toast("Otp Sent to mail");
+        console.log(response)
+        toast.success("Otp Sent to mail");
         setsign("OTP");
         settoken(response.data.token);
       }
@@ -108,7 +106,7 @@ function Goggle() {
       });
 
       if (response.data.status === "false") {
-        toast(" Please verify your mail ");
+        toast.error(" Please verify your mail ");
         setsign("OTP");
       }
       if (response.data.statusbar === "success") {
@@ -121,7 +119,7 @@ function Goggle() {
           )
         );
 
-        toast("Login successful");
+        toast.success("Login successful");
         navigate("/home");
       }
     } catch (error) {
@@ -148,7 +146,7 @@ function Goggle() {
 
   const handleRegiter = async (e) => {
     e.preventDefault();
-    toast("Reset password email sent to your email");
+    toast.success("Reset password email sent to your email");
     try {
       const response = await axios.post(`${baseUrl}/api/v1/user/forgot`, {
         email: email,
@@ -204,6 +202,16 @@ function Goggle() {
               <input
                 required
                 className="sign-form"
+                value={number}
+                onChange={(e) => setNumber(e.target.value)}
+                type="text"
+                placeholder="Contact number"
+                maxLength="10"
+                minLength='10'
+              />
+              <input
+                required
+                className="sign-form"
                 value={password}
                 onChange={(e) => setpasswod(e.target.value)}
                 type="password"
@@ -218,15 +226,7 @@ function Goggle() {
                 placeholder="Confirm password"
               />
          
-              <input
-                required
-                className="sign-form"
-                value={number}
-                onChange={(e) => setNumber(e.target.value)}
-                type="text"
-                placeholder="contact number"
-                maxLength="10"
-              />
+              
               <br />
               <button className="sign-btn" type="submit">
                 Sign up
