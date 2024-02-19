@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -12,6 +12,7 @@ import { StyleSheet, css } from "aphrodite";
 const About2 = new URL("../images/logo.png", import.meta.url);
 
 function Goggle() {
+
   const styles = StyleSheet.create({
     fadeInAnimation: {
       animationName: bounceInDown,
@@ -38,7 +39,29 @@ function Goggle() {
   const [sign, setsign] = useState("signup");
   const navigate = useNavigate("");
   const dispatch = useDispatch("");
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
   const baseUrl = "https://server.careerclassroom.in";
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (seconds > 0) {
+        setSeconds(seconds - 1);
+      }
+
+      if (seconds === 0) {
+        if (minutes === 0) {
+          clearInterval(interval);
+        } else {
+          setSeconds(59);
+          setMinutes(minutes - 1);
+        }
+      }
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  });
 
   const isEmailValid = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -99,14 +122,59 @@ function Goggle() {
         );
         console.log(response)
         toast.success("Otp Sent to mail");
+        setMinutes(1)
+        setSeconds(0)
         setsign("OTP");
         settoken(response.data.token);
       }
     } catch (error) {
       console.log(error);
+      toast.error("Registred email or somthing went wrong ")
     }
   };
+  const handleSend2 = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(`${baseUrl}/api/v1/user/resendOtp`, {
+        // lastname:lastname,
+        email: email,
 
+        // isEmailVerified: isEmailVerified
+      });
+      if (response.data.status === true) {
+        console.log("verified");
+        setMinutes(1);
+        setSeconds(0);
+        setsign("OTP");
+        toast.success("mail send to mail");
+        console.log(response);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const handleOtpLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(`${baseUrl}/api/v1/user/loginWithotp`, {
+        // lastname:lastname,
+        email: email,
+        OTP:OTP
+
+        // isEmailVerified: isEmailVerified
+      });
+      if (response.data.status === true) {
+        console.log("verified");
+        setMinutes(1);
+        setSeconds(0);
+        setsign("OTP");
+        toast.success("mail send to mail");
+        console.log(response);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   const google = async () => {
     const popup = window.open(`${baseUrl}/auth/google`);
   };
@@ -141,6 +209,7 @@ function Goggle() {
       }
     } catch (error) {
       console.log(error);
+      toast.error("Wrong email or pass or somthing went wrong")
     }
   };
 
@@ -153,7 +222,7 @@ function Goggle() {
 
       if (response.data.statusbar === "true") {
         console.log("verified");
-        window.alert("User Created");
+        toast.success("User verification success");
         setsign("login");
       }
     } catch (error) {
@@ -301,6 +370,49 @@ function Goggle() {
             </button>
           </div>
         )}
+        {sign === "loginWithotp" && (
+          <div>
+            <h4 className="sign-head">Login </h4>
+            <form onSubmit={handleLogin}>
+              <input
+                required
+                className="sign-form"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                placeholder="Email address"
+              />
+              <input
+                required
+                className="sign-form"
+                value={password}
+                onChange={(e) => setpasswod(e.target.value)}
+                type="password"
+                placeholder="Password"
+              />
+              <button className="sign-btn" type="submit">
+                Login
+              </button>
+            </form>
+            <button
+              onClick={() => setsign("forgot")}
+              style={{
+                background: "transparent",
+                border: "none",
+                color: "white",
+                marginTop: "10px",
+                textDecoration:"underline"
+              }}
+            >
+              Forgot Password?
+            </button>
+            <br />
+            <h5 style={{ marginTop: "10px", color: "white" }}>Or</h5>
+            <button className="sign-switch" >
+              Create New ? <Link style={{color:"white"}} onClick={()=>setsign("signup")} >Signup</Link> 
+            </button>
+          </div>
+        )}
 
         {sign === "OTP" && (
           <div>
@@ -318,11 +430,35 @@ function Goggle() {
                 Verify
               </button>
             </form>
-            <h5 style={{ color: "white", marginTop: "20px" }}>Or</h5>
+            <br></br>
+            <div className="countdown-text" style={{color:"white"}}>
+                {seconds > 0 || minutes > 0 ? (
+                  <p>
+                    Time Remaining: {minutes < 10 ? `0${minutes}` : minutes}:
+                    {seconds < 10 ? `0${seconds}` : seconds}
+                  </p>
+                ) : (
+                  <button
+                    className="time-button"
+                    style={{
+                      background:"none",
+                      outline:"none",
+                      border:"none",color:"white",
+                      textDecoration:"underline"
+                    }}
+                    onClick={() => setsign("resend")}
+                  >
+                    Didn't recieve code?
+                  </button>
+                )}
+              </div>
+            {/* <h5 style={{ color: "white", marginTop: "20px" }}>Or</h5>
             <button className="sign-switch" onClick={() => setsign("login")}>
               Back to login
-            </button>
+            </button> */}
+         
           </div>
+          
         )}
 
         {sign === "forgot" && (
@@ -334,6 +470,62 @@ function Goggle() {
               Please Enter your email to get your reset password link{" "}
             </h6>
             <form onSubmit={handleRegiter}>
+              <input
+                required
+                className="sign-form"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                placeholder="Email address"
+              />
+              <button className="sign-btn" type="submit">
+                Submit
+              </button>
+            </form>
+            <button
+              className="sign-switch"
+              style={{ marginTop: "20px" }}
+              onClick={() => setsign("signup")}
+            >
+              Back to login
+            </button>
+          </div>
+        )}
+           {sign === "resend" && (
+          <div>
+            <h5 style={{}} className="sign-head">
+              Resend OTP
+            </h5>
+           
+            <form onSubmit={handleSend2}>
+              <input
+                required
+                className="sign-form"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                placeholder="Email address"
+              />
+              <button className="sign-btn" type="submit">
+                Submit
+              </button>
+            </form>
+            <button
+              className="sign-switch"
+              style={{ marginTop: "20px" }}
+              onClick={() => setsign("signup")}
+            >
+              Back to login
+            </button>
+          </div>
+        )}
+          {sign === "resend2" && (
+          <div>
+            <h5 style={{}} className="sign-head">
+              Genrate your OTP
+            </h5>
+           
+            <form onSubmit={handleSend2}>
               <input
                 required
                 className="sign-form"
