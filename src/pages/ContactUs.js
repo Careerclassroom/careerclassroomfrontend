@@ -19,25 +19,25 @@ const cardData=[
     "id":1,
     "name":"Visit Our Place",
     "icon":Location,
-    "text":"Lorem Ipsum is simply dummy text of the printing and typesetting"
+    "text":"Bangalore ,India "
   },
   {
     "id":2,
-    "name":"Office Schedule",
+    "name":"office schedule",
     "icon":Timer,
-    "text":"Lorem Ipsum is simply dummy text of the printing and typesetting"
+    "text":"monday-friday, 10:00 AM-5:30 PM"
   },
   {
     "id":3,
     "name":"Email Address",
     "icon":Mail,
-    "text":"Lorem Ipsum is simply dummy text of the printing and typesetting"
+    "text":"info@careerclassroom.in"
   },
   {
     "id":4,
     "name":"Quick Contact",
     "icon":Call,
-    "text":"Lorem Ipsum is simply dummy text of the printing and typesetting"
+    "text":"Tawk.to"
   },
 ]
 

@@ -15,7 +15,7 @@ import { getUserIdFromAuth } from '../Redux/actions/GetSellerIdFromAuthActionCre
 import finalPropsSelectorFactory from 'react-redux/es/connect/selectorFactory';
 import { toast } from 'react-hot-toast';
 import Cookies from 'js-cookie';
-
+import CameraAltIcon from '@mui/icons-material/CameraAlt';
 // console.log(id2)
 function ProfilePage() {
 
@@ -268,7 +268,7 @@ function ProfilePage() {
 
                       <img src={ `https://classroomdata.s3.ap-south-1.amazonaws.com/${item.photo}`} width="100" height="100" alt="" />
                       <div className="round">
-
+                       
                         <div>
 
 
@@ -289,7 +289,7 @@ function ProfilePage() {
                     <p>{item.bio}</p>
 
                   </div>
-                  <h5 style={{}}>MY Intrest</h5>
+                  <h5 style={{}}>My Intrest</h5>
                   <div style={{ textAlign: "center", marginTop: "30px", margin: "auto", width: "90%", height: "auto", display: "flex", flexWrap: "wrap" }}>
 
                     {
@@ -316,7 +316,7 @@ function ProfilePage() {
                       <div className="upload">
                         <img src={`https://classroomdata.s3.ap-south-1.amazonaws.com/${item.photo}`} width="100" height="100" alt="" />
                         <div className="round">
-
+                        < CameraAltIcon style={{color:"white"}}/>
                           <div>
                             <input onChange={handleFileChange} type="file" />
 
