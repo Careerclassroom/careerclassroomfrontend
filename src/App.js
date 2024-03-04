@@ -1,6 +1,7 @@
 import React from "react";
-
+import BackToUp from '@uiw/react-back-to-top';
 import { Route, Routes } from "react-router-dom";
+import NavigationIcon from '@mui/icons-material/Navigation';
 import ReactGA from "react-ga4";
 import "./App.css";
 import Home from "./components/home";
@@ -54,6 +55,7 @@ function App() {
       </Routes>
       <ToastContainer />
       <Toaster />
+      <BackToUp style={{float:"left",textAlign:"left"}}><NavigationIcon></NavigationIcon></BackToUp>
     </div>
   );
 }

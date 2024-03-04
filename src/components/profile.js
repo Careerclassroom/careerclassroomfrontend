@@ -30,7 +30,7 @@ function Home2(){
       }
     return(
         <div>
-            jkhkjk
+     
 
         </div>
     )

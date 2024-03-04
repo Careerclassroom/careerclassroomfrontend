@@ -107,7 +107,24 @@ function Dashboards() {
                   </div>
                 </div>
               );
-            }):  <div style={{marginTop:"20px",color:"#11017e",fontSize:"30px"}}>No course found :(</div>
+            }): <div><div style={{marginTop:"20px",color:"#11017e",fontSize:"30px"}}>No course found :(</div>
+            
+         <div>  <button
+            onMouseOver={() => setArrow(false)}
+            onMouseLeave={() => setArrow(true)}
+            style={{ marginTop: "50px" }}
+            className="head-btn"
+          >
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              to="/enroll"
+            >
+              Enroll Now{" "}
+              
+            </Link>
+          </button>
+          </div> 
+            </div> 
 
           }
           </div>)

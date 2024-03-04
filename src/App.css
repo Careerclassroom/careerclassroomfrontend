@@ -474,12 +474,11 @@ body {
 
 .sign-head {
   color: white;
-  font-weight: bolder;
-  text-transform: capitalize;
-  font-size: 30px;
-  text-align: left;
-  margin-left: 49px;
-  text-decoration: underline;
+  font-weight: 900;
+
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
   font-family: "Poppins", sans-serif;
 }
 
@@ -641,7 +640,6 @@ body {
 
 .foot-link {
   text-decoration: none;
- 
 }
 
 .social {
@@ -1625,31 +1623,37 @@ nav li a:hover::before {
 nav li:nth-of-type(1) {
   background-color: var(--navColor1);
   border-bottom: 1px solid white;
+  height: 100px;
 }
 
 nav li:nth-of-type(2) {
   background-color: var(--navColor2);
   border-bottom: 1px solid white;
+  height: 100px;
 }
 
 nav li:nth-of-type(3) {
   background-color: var(--navColor3);
   border-bottom: 1px solid white;
+  height: 100px;
 }
 
 nav li:nth-of-type(4) {
   background-color: var(--navColor4);
   border-bottom: 1px solid white;
+  height: 100px;
 }
 
 nav li:nth-of-type(5) {
   background-color: var(--navColor5);
   border-bottom: 1px solid white;
+  height: 100px;
 }
 
 nav li:nth-of-type(6) {
   background-color: var(--navColor5);
   border-bottom: 1px solid white;
+  height: 100px;
 }
 
 /* Slide in animation with delay for each */

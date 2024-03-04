@@ -62,7 +62,7 @@ function ContactUsForm() {
                     <div className='form-heading' ><p>Get In Touch With Us</p></div>
                     <div className='form-box1' >
                         <div className='formname' >
-                            <label className='required' >Nama</label>
+                            <label className='required' >Name</label>
                             <input type='text' name='name' value={name} onChange={(e) => setname(e.target.value)} required />
                         </div>
                         <div className='formemail' >

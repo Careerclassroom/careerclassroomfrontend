@@ -6,7 +6,8 @@ import toast, { Toaster } from "react-hot-toast";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-const phonePay = new URL("../images/PhonePe.webp", import.meta.url);
+const phonePay = new URL("../images/Group 1000006318.png", import.meta.url);
+const phonePay2 = new URL("../images/PhonePe.webp", import.meta.url);
 
 function Checkout() {
   const navigate = useNavigate("");
@@ -183,7 +184,7 @@ function Checkout() {
 
                         </div> */}
           </div>
-          <div className="Benefits">
+          {/* <div className="Benefits">
             <div className="Benefits-content">
               <h4 style={{ color: "#11017E" }}>Benefits</h4>
               <p style={{ marginTop: "20px" }}>
@@ -210,16 +211,18 @@ function Checkout() {
                 Yes, I want access
               </span>
             </div>
-          </div>
+          </div> */}
           <div className="gateway" style={{}}>
-            <h2> Credit Card/Debit Card/NetBanking</h2>
-            <h5>Pay securely by Credit or Debit card or Internet Banking </h5>
-            Pay securely by Credit or Debit card or Internet Banking
-            <p style={{ marginTop: "20px" }}>
+            <h2> Credit Card/Debit Card/NetBanking/UPI <img width="100px" src={phonePay2}></img></h2>
+            <br></br>
+            <h5 style={{fontSize:"16px", fontWeight:"bold"}}>Pay securely by Credit or Debit card or Internet Banking or UPI by PhonePe secure payment gateway </h5>
+           <br></br>
+            <div style={{fontWeight:"400",fontSize:"12px"}} >
               Your personal data will be used to process your order, support
               your experience throughout this website, and for other purposes
               described in our privacy policy.
-            </p>
+            </div>
+            <br></br>
             <div style={{ width: "100%", textAlign: "center" }}>
               <Link
                 style={{ textDecoration: "none" }}

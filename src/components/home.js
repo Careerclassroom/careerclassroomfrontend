@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { getPay } from "../Redux/actions/getPayid";
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 import toast from "react-hot-toast";
 
 const no_profile = new URL("../images/arrow.png", import.meta.url);
@@ -33,26 +33,26 @@ function Home() {
   const [arrow, setArrow] = useState(true);
   const baseUrl = "https://server.careerclassroom.in";
   const baseUrls = "http://localhost:8000";
-  const dispatch=useDispatch("")
+  const dispatch = useDispatch("");
   const id = useSelector((state) => state.get_seller_profile_id.user_id);
   const id2 = useSelector((state) => state.get_pay_id.trans_id);
   const userEmail = useSelector((state) => state.get_seller_profile_id.email);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const handleSendMail= async (e) => {
+  const handleSendMail = async (e) => {
     if (id2) {
       try {
         const response = await axios.post(
           `${baseUrl}/api/v1/order/sendPaymentSucces`,
           {
-            email:userEmail
+            email: userEmail,
           }
         );
         console.log(response);
 
         if (response.data.status === "success") {
-         dispatch(getPay(""));  
+          dispatch(getPay(""));
         }
       } catch (error) {
         console.log(error);
@@ -75,10 +75,8 @@ function Home() {
         console.log(response);
 
         if (response.data.statusbar === "success") {
-          
-          handleSendMail()
+          handleSendMail();
         }
-
       } catch (error) {
         console.log(error);
       }
@@ -102,7 +100,6 @@ function Home() {
             handleUpdate();
           }
         } else {
-        
         }
       } catch (error) {
         console.log(error);
@@ -153,7 +150,6 @@ function Home() {
               to="/enroll"
             >
               Enroll Now{" "}
-              
             </Link>
           </button>
         </div>
