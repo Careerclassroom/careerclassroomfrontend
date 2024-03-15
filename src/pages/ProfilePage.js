@@ -230,7 +230,8 @@ function ProfilePage() {
     setUpload("show")
   };
 
-  const handleSubmitphoto = async () => {
+  const handleSubmitphoto = async (e) => {
+    e.preventDefault()
     const formData = new FormData();
     formData.append('photo', file);
     try {
