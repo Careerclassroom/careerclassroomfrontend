@@ -25,6 +25,7 @@ function Enroll() {
   const [number, setNumber] = useState("");
   const [token, settoken] = useState("");
   const [data, setData] = useState("");
+  const [courseId,setCourseID]=useState('')
 
   const id = useSelector((state) => state.get_seller_profile_id.user_id);
   const username = useSelector((state) => state.get_seller_profile_id.name);
@@ -107,13 +108,7 @@ function Enroll() {
 
         navigate("/checkout");
 
-        // dispatch(getUserIdFromAuth(response.data.data.user._id,  response.data.data.user.name, response.data.data.user.email));
-        // console.log(response.data.data.user._id)
-
-        // settoken(response.data.token);
-        // navigate("/home")
-        // console.log(response.data.data.user.name)
-        // settoken(response.data.token);
+      
         console.log(response.data);
       }
     } catch (error) {
@@ -154,7 +149,7 @@ function Enroll() {
     try {
       const res = await axios.get(`${baseUrl}/api/v1/user/getOneuser/${id}`);
       setData([res.data.data.user]);
-      console.log(res.data.data.user);
+      console.log(res.data.data.user.userData[0].courseId);
     } catch (err) {
       console.log(err);
     }
@@ -166,8 +161,12 @@ function Enroll() {
     setLastName(data[0].lastname !== null ? data[0].lastname : "");
     setcountry(data[0].country !== null ? data[0].country : "");
     setNumber(data[0].number !== null ? data[0].number : "");
-  }, [data]);
 
+  }, [data]);
+  
+  console.log(courseId,"hiiiii")
+  const[check,setCheck]=useState()
+  
 
   return (
     <div>
@@ -259,14 +258,19 @@ function Enroll() {
                     Phone <span className="red">*</span>
                   </label>
                     <input className="form-enroll" maxLength="10" type="text" value={number} onChange={(e)=>setNumber(e.target.value)}></input>
+                   
+                   {
                     <button
                     style={{ marginTop: "50px" }}
                     type="submit"
                     className="Proceed"
                   >
                     {" "}
-                    Proceed Now
+                    Proceed
                   </button>
+                  
+
+}
                 </form>
                   
                

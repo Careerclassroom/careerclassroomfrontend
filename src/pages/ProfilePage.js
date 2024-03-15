@@ -17,6 +17,7 @@ import { toast } from 'react-hot-toast';
 import Cookies from 'js-cookie';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 // console.log(id2)
+const noprofile = new URL("../images/noprofile.jpg", import.meta.url);
 function ProfilePage() {
 
 // //   const [token,setToken]=useState(Cookies.get('user'))
@@ -229,7 +230,8 @@ function ProfilePage() {
     setUpload("show")
   };
 
-  const handleSubmitphoto = async () => {
+  const handleSubmitphoto = async (e) => {
+    e.preventDefault()
     const formData = new FormData();
     formData.append('photo', file);
     try {
@@ -266,7 +268,7 @@ function ProfilePage() {
                   <div className='profile_box_1' >
                     <div className='profile_avatar'>
 
-                      <img src={ `https://classroomdata.s3.ap-south-1.amazonaws.com/${item.photo}`} width="100" height="100" alt="" />
+                    <img width="100%" height="auto" src={item.photo !==undefined ? `https://classroomdata.s3.ap-south-1.amazonaws.com/${item.photo}`:noprofile} width="100" height="100" alt="" />
                       <div className="round">
                        
                         <div>
@@ -314,14 +316,14 @@ function ProfilePage() {
                   <div className='profile_box_1' >
                     <div className='profile_avatar'>
                       <div className="upload">
-                        <img src={`https://classroomdata.s3.ap-south-1.amazonaws.com/${item.photo}`} width="100" height="100" alt="" />
+                        <img src={item.photo !==undefined ? `https://classroomdata.s3.ap-south-1.amazonaws.com/${item.photo}`:noprofile} width="100" height="100" alt="" />
                         <div className="round">
                         < CameraAltIcon style={{color:"white"}}/>
                           <div>
                             <input onChange={handleFileChange} type="file" />
 
 
-
+                  
 
                             <i className="fa fa-camera" ></i>
                           </div>

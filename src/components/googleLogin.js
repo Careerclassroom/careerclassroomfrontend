@@ -153,6 +153,27 @@ function Goggle() {
       console.log(error);
     }
   };
+  const handleSend3= async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(`${baseUrl}/api/v1/user/resendOtp`, {
+        // lastname:lastname,
+        email: email,
+
+        // isEmailVerified: isEmailVerified
+      });
+      if (response.data.status === true) {
+        console.log("verified");
+        setMinutes(1);
+        setSeconds(0);
+        setsign("OTP2");
+        toast.success("mail send to mail");
+        console.log(response);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   const handleOtpLogin = async (e) => {
     e.preventDefault();
     try {
@@ -193,6 +214,8 @@ function Goggle() {
       if (response.data.status === "false") {
         toast.error(" Please verify your mail ");
         setsign("OTP");
+        setMinutes(1);
+        setSeconds(0);
       }
       if (response.data.statusbar === "success") {
         dispatch(
@@ -209,7 +232,7 @@ function Goggle() {
       }
     } catch (error) {
       console.log(error);
-      toast.error("Wrong email or pass or somthing went wrong")
+      toast.error("Wrong email or password ")
     }
   };
 
@@ -229,7 +252,31 @@ function Goggle() {
       console.log(error);
     }
   };
-
+  const handleVerify2 = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(`${baseUrl}/api/v1/user/verify`, {
+        OTP: OTP,
+      });
+      console.log(response)
+      if (response.data.statusbar === "true") {
+        
+        toast.success("Login success");
+        dispatch(
+          getUserIdFromAuth(
+            response.data.data.user._id,
+            response.data.data.user.lastname,
+            response.data.data.user.name,
+            response.data.data.user.email
+          )
+        );
+        navigate('/home')
+     
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   const handleRegiter = async (e) => {
     e.preventDefault();
     toast.success("Reset password email sent to your email");
@@ -260,10 +307,12 @@ function Goggle() {
       </div>
 
       <div className="auth-main">
+        {/* signup */}
         {sign === "signup" && (
           <div>
-            <div className="sign-head">Sign Up </div>
+           
             <form onSubmit={handleSignUp}>
+            <div className="sign-head">Sign Up </div>
               <input
                 required
                 className="sign-form"
@@ -320,13 +369,13 @@ function Goggle() {
                 Sign up
               </button>
             </form>
-            <h5 style={{ marginTop: "20px", color: "white" }}>Or</h5>
+            <br></br>
             <button className="sign-switch" >
-              Have an account ? <Link style={{color:"white"}} onClick={()=>setsign("login")} >Login</Link> 
+              Have an account ? <Link style={{color:"white"}} onClick={()=>setsign("resend2")} >Login</Link> 
             </button>
           </div>
         )}
-
+{/* login */}
         {sign === "login" && (
           <div>
             <h4 className="sign-head">Login </h4>
@@ -364,12 +413,20 @@ function Goggle() {
               Forgot Password?
             </button>
             <br />
-            <h5 style={{ marginTop: "10px", color: "white" }}>Or</h5>
+         <br></br>
             <button className="sign-switch" >
               Create New ? <Link style={{color:"white"}} onClick={()=>setsign("signup")} >Signup</Link> 
             </button>
-          </div>
+            <br />
+         <br></br>
+            <button className="sign-switch" >
+              Login with OTP <Link style={{color:"white"}} onClick={()=>setsign("resend2")} >Login</Link> 
+            </button>    
+         </div>
+          
         )}
+
+
         {sign === "loginWithotp" && (
           <div>
             <h4 className="sign-head">Login </h4>
@@ -424,7 +481,53 @@ function Goggle() {
                 value={OTP}
                 onChange={(e) => setOTP(e.target.value)}
                 type="text"
-                placeholder="otp"
+                placeholder="Enter 4 digit OTP"
+              />
+              <button className="sign-btn" type="submit">
+                Verify
+              </button>
+            </form>
+            <br></br>
+            <div className="countdown-text" style={{color:"white"}}>
+                {seconds > 0 || minutes > 0 ? (
+                  <p>
+                    Time Remaining: {minutes < 10 ? `0${minutes}` : minutes}:
+                    {seconds < 10 ? `0${seconds}` : seconds}
+                  </p>
+                ) : (
+                  <button
+                    className="time-button"
+                    style={{
+                      background:"none",
+                      outline:"none",
+                      border:"none",color:"white",
+                      textDecoration:"underline"
+                    }}
+                    onClick={() => setsign("resend")}
+                  >
+                    Didn't recieve code?
+                  </button>
+                )}
+              </div>
+            {/* <h5 style={{ color: "white", marginTop: "20px" }}>Or</h5>
+            <button className="sign-switch" onClick={() => setsign("login")}>
+              Back to login
+            </button> */}
+         
+          </div>
+          
+        )}
+         {sign === "OTP2" && (
+          <div>
+            <h4 className="sign-head">Verify Your Account</h4>
+            <form onSubmit={handleVerify2}>
+              <input
+                required
+                className="sign-form"
+                value={OTP}
+                onChange={(e) => setOTP(e.target.value)}
+                type="text"
+                placeholder="Enter 4 digit OTP"
               />
               <button className="sign-btn" type="submit">
                 Verify
@@ -466,9 +569,7 @@ function Goggle() {
             <h5 style={{}} className="sign-head">
               Forgot Password?
             </h5>
-            <h6 className="sign-head">
-              Please Enter your email to get your reset password link{" "}
-            </h6>
+           
             <form onSubmit={handleRegiter}>
               <input
                 required
@@ -522,10 +623,10 @@ function Goggle() {
           {sign === "resend2" && (
           <div>
             <h5 style={{}} className="sign-head">
-              Genrate your OTP
+             Login with OTP
             </h5>
            
-            <form onSubmit={handleSend2}>
+            <form onSubmit={handleSend3}>
               <input
                 required
                 className="sign-form"
@@ -541,9 +642,9 @@ function Goggle() {
             <button
               className="sign-switch"
               style={{ marginTop: "20px" }}
-              onClick={() => setsign("signup")}
+        
             >
-              Back to login
+              Login with password? <span   style={{textDecoration:"underline"}}    onClick={() => setsign("login")}> Login</span>
             </button>
           </div>
         )}
