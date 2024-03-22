@@ -41,7 +41,7 @@ function Goggle() {
   const dispatch = useDispatch("");
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
-  const baseUrl = "https://server.careerclassroom.in";
+  const baseUrl = "https://server.careerlassroom.in";
   useEffect(() => {
     const interval = setInterval(() => {
       if (seconds > 0) {

@@ -47,6 +47,7 @@ function Home() {
           `${baseUrl}/api/v1/order/sendPaymentSucces`,
           {
             email: userEmail,
+            order:id2
           }
         );
         console.log(response);
