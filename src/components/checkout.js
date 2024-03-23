@@ -6,7 +6,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-const phonePay = new URL("../images/Group 1000006318.png", import.meta.url);
+const phonePay = new URL("../images/phonePay.png", import.meta.url);
 const phonePay2 = new URL("../images/PhonePe.webp", import.meta.url);
 
 function Checkout() {

@@ -102,7 +102,7 @@ function Dashboards() {
                       <p>{item2.courseDescription}</p>
                     </div>
                     <div className="dashboardImg">
-                      <img src={powerBi} width="100%" height="230px"></img>
+                      <img src={`https://classroomdata.s3.ap-south-1.amazonaws.com/${item2.coursePhoto}`} width="100%" height="230px" alt="loading.."></img>
                     </div>
                   </div>
                 </div>
