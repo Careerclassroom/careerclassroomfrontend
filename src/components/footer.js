@@ -40,6 +40,7 @@ function Footer() {
           <Link className='foot-link' to="/dashboard">  <h5 className="foot-content">Dashboard</h5></Link>
           <Link className='foot-link' to="/contact-us"> <h5 className="foot-content">Contact Us </h5></Link>
           <Link className='foot-link' to="/userProfile">  <h5 className="foot-content">My Profile</h5></Link>
+          <Link className='foot-link' to="/blogs">  <h5 className="foot-content">Blogs</h5></Link>
 
         </div>
 
