@@ -1855,3 +1855,101 @@ section#home {
   border: none;
   color: white;
 }
+
+/* blogs */
+.cardsContainer {
+  width: 80%;
+  margin: 200px auto;
+}
+.cards {
+  width: 250px;
+
+  height: auto;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-sizing: border-box;
+  display: block;
+}
+.blogPhoto {
+  width: 100%;
+  margin: auto;
+  height: 200px;
+  background-color: #00b4ff;
+}
+.blogsTitle {
+  width: 90%;
+  margin: auto;
+}
+.title {
+  color: #5e5e5e;
+  font-size: 17px;
+  font-weight: 900;
+  margin-top: 10px;
+  text-align: left;
+}
+.date {
+  color: #11017e;
+  font-size: 17px;
+  font-weight: 900;
+  margin-top: 10px;
+  text-align: left;
+}
+.blog-banner{
+  height: 300px;
+  width: 90%;
+  margin: auto;
+
+
+}
+.blogsContent {
+  width: 100%;
+  color: #00000079;
+  box-sizing: border-box;
+  margin: auto;
+  text-align: left;
+  
+  height: auto;
+  font-size: 12px;
+  box-sizing: content-box;
+  word-wrap: break-word;
+}
+
+/* CSS */
+.button-89 {
+  --b: 3px; /* border thickness */
+  --s: 0.45em; /* size of the corner */
+  --color: #11017e;
+
+  padding: calc(0.3em + var(--s)) calc(0.5em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}

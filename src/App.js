@@ -1,7 +1,7 @@
 import React from "react";
-import BackToUp from '@uiw/react-back-to-top';
+import BackToUp from "@uiw/react-back-to-top";
 import { Route, Routes } from "react-router-dom";
-import NavigationIcon from '@mui/icons-material/Navigation';
+import NavigationIcon from "@mui/icons-material/Navigation";
 import ReactGA from "react-ga4";
 import "./App.css";
 import Home from "./components/home";
@@ -29,6 +29,9 @@ import { ToastContainer } from "react-toastify";
 import { Toaster } from "react-hot-toast";
 import Dashboards from "./components/dashboard";
 import Home2 from "./components/profile";
+import BlogForm from "./components/adminBlogs";
+import Blogs from "./components/AllBlogs";
+import BlogInsideView from "./components/blogInside";
 
 ReactGA.initialize("G-L8QPYQX9M7");
 function App() {
@@ -49,13 +52,17 @@ function App() {
         <Route path="verification" element={<Verification />}></Route>
         <Route path="/refund-policy" element={<RefundPolicy />}></Route>
         <Route path="/reset/:resetToken" element={<PasswordReset />} />
-
         <Route path="/" element={<Home2 />} />
+        <Route path="/blogs/:id" element={<BlogInsideView/>}></Route>
         <Route path="/dashboard" element={<Dashboards />} />
+        {/* <Route path="/admin" element={<BlogForm />} /> */}
+        <Route path="/blogs" element={<Blogs />}></Route>
       </Routes>
       <ToastContainer />
       <Toaster />
-      <BackToUp style={{float:"left",textAlign:"left"}}><NavigationIcon></NavigationIcon></BackToUp>
+      <BackToUp style={{ float: "left", textAlign: "left" }}>
+        <NavigationIcon></NavigationIcon>
+      </BackToUp>
     </div>
   );
 }
