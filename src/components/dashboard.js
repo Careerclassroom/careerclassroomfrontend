@@ -98,7 +98,7 @@ function Dashboards() {
                 <div className="dashboard">
                   <div className="dashboard-flex">
                     <div className="dashboardText">
-                      <h3 style={{ marginTop: "30px" }}>{item2.courseName}</h3>
+                      <h3 style={{ marginTop: " 30px" }}>{item2.courseName}</h3>
                       <p>{item2.courseDescription}</p>
                     </div>
                     <div className="dashboardImg">

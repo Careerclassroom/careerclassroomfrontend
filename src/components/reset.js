@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { toast } from "react-hot-toast";
+import "react-toastify/dist/ReactToastify.css";
 
 function PasswordReset() {
   const { resetToken } = useParams();
@@ -12,6 +14,7 @@ function PasswordReset() {
   const baseUrl = "https://server.careerclassroom.in"
  
   const handleResetPassword = async () => {
+  
     try {
       const response = await axios.post(`${baseUrl}/api/v1/user/reset/${resetToken}`, {
        password:newPassword,
@@ -19,8 +22,13 @@ function PasswordReset() {
       });
 
       setMessage(response.data.message);
+      if(response.data.statusbar=="success"){
+        toast.success("Password Updated")
+        
+      }
     } catch (error) {
       console.error('Error resetting password:', error);
+      toast.error("Error in updating password")
     }
   };
 
@@ -32,7 +40,7 @@ function PasswordReset() {
       <form onSubmit={handleResetPassword}>
       <input
       className='sign-form'
-        type="password"
+        type="New password"
         value={newPassword}
         onChange={(e) => setNewPassword(e.target.value)}
         placeholder='password'
@@ -42,7 +50,7 @@ function PasswordReset() {
         type="password"
         value={cPassword}
         onChange={(e) => setcPassword(e.target.value)}
-        placeholder='confirm password'
+        placeholder='Confirm password'
       /><br></br>
 
 
