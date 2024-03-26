@@ -1860,15 +1860,17 @@ section#home {
 .cardsContainer {
   width: 80%;
   margin: 200px auto;
+  display: flex;
 }
 .cards {
   width: 250px;
 
-  height: auto;
+  height: 500px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   box-sizing: border-box;
   display: block;
+  margin: auto;
 }
 .blogPhoto {
   width: 100%;

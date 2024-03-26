@@ -17,7 +17,7 @@ function BlogForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`http://localhost:8000/api/v1/blogs/create`, {
+      const response = await axios.post(`https://server.careerclassroom.in/api/v1/blogs/create`, {
         date: date,
         heading: heading,
         description: description,
@@ -48,7 +48,7 @@ function BlogForm() {
     const formData = new FormData();
     formData.append('photo', photo);
     try {
-      const response = await axios.patch(`http://localhost:8000/api/v1/blogs/upload/${id}`, formData, {
+      const response = await axios.patch(`https://server.careerclassroom.in/api/v1/blogs/upload/${id}`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       console.log(response); // Handle the response from the server
