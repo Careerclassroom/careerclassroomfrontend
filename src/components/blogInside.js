@@ -50,7 +50,7 @@ function BlogInsideView(props) {
 
     try {
 
-      const response = await axios.get(`https://server.careerclassroom.in/api/v1/blogs/getOneBlog/660159cc5f792fa22c3a275d`);
+      const response = await axios.get(`https://server.careerclassroom.in/api/v1/blogs/getOneBlog/${id}`);
 
       setData([response.data.data.blog]);
 
