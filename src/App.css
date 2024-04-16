@@ -8,7 +8,16 @@ body {
 
   font-weight: 700;
 }
+.home-description{
+  color: "#737373";
+  width: 80%;
+  font-size:17px;
+  margin: auto;
+  text-align: justify;
+  font-weight: 400;
+  line-height:30px;
 
+}
 .home-head {
   background-color: #d9d9d9;
   height: 740px;
@@ -62,6 +71,7 @@ body {
   display: flex;
   margin: auto;
   width: 95%;
+  justify-content: center;
 }
 
 .About-bi2 {
@@ -71,7 +81,7 @@ body {
 }
 
 .about-bi-flex1 {
-  flex-basis: 50%;
+  flex-basis: 40%;
 }
 
 .about-bi-flex2 {
@@ -1172,6 +1182,9 @@ line-height: normal;
   .dashboard-flex {
     flex-direction: column;
     height: auto;
+    text-align: center;
+    justify-content: center;
+   
   }
   .auth-logo {
     display: none;
@@ -1801,7 +1814,7 @@ section#home {
   position: relative;
   top: 10px;
   justify-content: space-between;
-
+   padding: 30px;
   display: flex;
 }
 
@@ -1809,7 +1822,7 @@ section#home {
   flex-basis: 60%;
 
   text-align: left;
-  margin-left: 50px;
+  
 }
 
 .dashboardImg {
@@ -1854,6 +1867,11 @@ section#home {
 
   border: none;
   color: white;
+}
+.mobile-secure{
+  text-align: center;
+  margin-top: 10px;
+  display:none;
 }
 
 /* blogs */
@@ -1955,4 +1973,28 @@ section#home {
 .button-89:active {
   background: var(--color);
   color: #fff;
+}
+
+
+@media (max-width:600px) {
+  .mobile-secure{
+    display: block;
+  }
+  .pc-secure{
+    display: none;
+  }
+  .home-description{
+    text-align: center;
+    width: 90%;
+    font-size: 15px;
+
+  }
+  .dashboardText{
+    width: 100%;
+    text-align: center;
+  }
+  .p{
+    text-align: center;
+  }
+  
 }

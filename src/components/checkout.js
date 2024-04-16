@@ -79,10 +79,16 @@ function Checkout() {
           >
             You are just one step away to start new journey
           </div>
-          <div className="checkout" style={{position:"relative"}}>
+          <div className="checkout" style={{ position: "relative" }}>
             <img
+            className="pc-secure"
               src={phonePay}
-              style={{ width: "100px",position:"absolute",top:"0",right:"10px" }}
+              style={{
+                width: "100px",
+                position: "absolute",
+                top: "0",
+                right: "10px",
+              }}
             ></img>
             <div className="checkout-main">
               <div
@@ -177,6 +183,12 @@ function Checkout() {
                   </h6>
                 </div>
               </div>
+              <div className="mobile-secure">
+                <img
+                  src={phonePay}
+                  style={{ width: "100px", top: "0", right: "10px" }}
+                ></img>
+              </div>
             </div>
 
             {/* <div className="coupon">
@@ -213,11 +225,18 @@ function Checkout() {
             </div>
           </div> */}
           <div className="gateway" style={{}}>
-            <h2> Credit Card/Debit Card/NetBanking/UPI <img width="100px" src={phonePay2}></img></h2>
+            <h2>
+              {" "}
+              Credit Card/Debit Card/NetBanking/UPI{" "}
+              <img width="100px" src={phonePay2}></img>
+            </h2>
             <br></br>
-            <h5 style={{fontSize:"16px", fontWeight:"bold"}}>Pay securely by Credit or Debit card or Internet Banking or UPI by PhonePe secure payment gateway </h5>
-           <br></br>
-            <div style={{fontWeight:"400",fontSize:"12px"}} >
+            <h5 style={{ fontSize: "16px", fontWeight: "bold" }}>
+              Pay securely by Credit or Debit card or Internet Banking or UPI by
+              PhonePe secure payment gateway{" "}
+            </h5>
+            <br></br>
+            <div style={{ fontWeight: "400", fontSize: "12px" }}>
               Your personal data will be used to process your order, support
               your experience throughout this website, and for other purposes
               described in our privacy policy.
