@@ -170,13 +170,8 @@ function Home() {
           <div className="about-bi-flex2">
             <h3 style={{ marginTop: "50px" }}>Welcome to Career classroom?</h3>
             <p
-              style={{
-                color: "#737373",
-                width: "80%",
-                fontSize: "20px",
-                margin: "auto",
-                textAlign: "justify",
-              }}
+              
+              className="home-description"
             >
               At Careerclassroom, we believe that everyone deserves the
               opportunity to thrive in their careers and achieve their
@@ -213,11 +208,7 @@ function Home() {
               >
                 Enroll Now{" "}
               </Link>{" "}
-              <img
-                width="20px"
-                style={{ position: "relative" }}
-                src={no_profile}
-              ></img>{" "}
+            
             </button>
 
             <p style={{ marginTop: "20px" }} className="para-font2">

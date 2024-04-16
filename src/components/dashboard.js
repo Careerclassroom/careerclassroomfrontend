@@ -83,7 +83,7 @@ function Dashboards() {
       >
         <div className="about-child">
           <span style={{ color: "#12037F" }} className="about-text">
-            Course
+         My Learning
           </span>
         </div>
 
@@ -98,8 +98,8 @@ function Dashboards() {
                 <div className="dashboard">
                   <div className="dashboard-flex">
                     <div className="dashboardText">
-                      <h3 style={{ marginTop: " 30px" }}>{item2.courseName}</h3>
-                      <p>{item2.courseDescription}</p>
+                      <h3 style={{ marginTop: "30px" }}>{item2.courseName}</h3>
+                      <p className="p">{item2.courseDescription}</p>
                     </div>
                     <div className="dashboardImg">
                       <img src={`https://classroomdata.s3.ap-south-1.amazonaws.com/${item2.coursePhoto}`} width="100%" height="230px" alt="loading.."></img>
