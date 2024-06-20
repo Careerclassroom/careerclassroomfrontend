@@ -1983,6 +1983,9 @@ section#home {
   .pc-secure{
     display: none;
   }
+  .join-content{
+    font-size: 20px;
+  }
   .home-description{
     text-align: center;
     width: 90%;

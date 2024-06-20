@@ -189,7 +189,7 @@ function Home() {
                   {item.CourseName}
                 </h1>
                 <div className="join">
-                  <h2 className="join-content">{item.Description.slice(0,200)}...</h2>
+                  <h2 className="join-content">{item.Description.slice(0, 120)}...</h2>
                 </div>
                 <button
                   onMouseOver={() => setArrow(false)}
@@ -201,7 +201,7 @@ function Home() {
                     style={{ textDecoration: "none", color: "white" }}
                     to={`/explore-course/${item._id}`}
                   >
-                    Enroll Now{" "}
+                    Explore Course{" "}
                   </Link>
                 </button>
               </div>
@@ -315,7 +315,7 @@ function Home() {
                     style={{ textDecoration: "none", color: "white" }}
                     to={`/explore-course/${item._id}`}
                   >
-                    Enroll Now{" "}
+                    Explore Course{" "}
                   </Link>{" "}
                 </button>
     
