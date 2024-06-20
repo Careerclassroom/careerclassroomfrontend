@@ -135,7 +135,7 @@ function Enroll() {
 
 
 
-  }, [data])
+  }, [data2])
   console.log(cid,cName,cDes,cPic)
   const handlePaynow = async (e) => {
     e.preventDefault();

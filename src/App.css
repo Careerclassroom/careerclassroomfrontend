@@ -119,6 +119,10 @@ body {
   .About-bi2 {
     flex-direction: column;
   }
+  .card{
+    width: 90%;
+    margin: auto;
+  }
 
   .about-bi-flex3,
   .about-bi-flex4,
