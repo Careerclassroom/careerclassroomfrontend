@@ -1159,22 +1159,7 @@ line-height: normal;
   width: 95%;
   margin: auto;
 }
-@media (max-width: 600px) {
-  .About-bi2 {
-    flex-direction: column;
-  }
-  .card{
-    width: 90%;
-    margin: 20px auto;
-  }
 
-  .about-bi-flex3,
-  .about-bi-flex4,
-  .about-bi-flex5,
-  .about-bi-flex6 {
-    margin-top: 20px;
-  }
-}
 @media (max-width: 990px) {
   .course-main {
     flex-direction: column;
@@ -2004,4 +1989,23 @@ section#home {
     text-align: center;
   }
   
+}
+
+
+
+@media (max-width: 600px) {
+  .About-bi2 {
+    flex-direction: column;
+  }
+  .card{
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .about-bi-flex3,
+  .about-bi-flex4,
+  .about-bi-flex5,
+  .about-bi-flex6 {
+    margin-top: 20px;
+  }
 }
